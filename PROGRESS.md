@@ -19,16 +19,16 @@
 - [x] 8. About, Contact, FAQ and 404 pages (2026-10-03)
 - [x] 9. SEO, performance and accessibility pass (2026-10-03)
 - [x] 10. Data validation script, GitHub Actions deployment, `.nojekyll` (2026-10-03)
-- [ ] 11. Owner README
+- [x] 11. Owner README (2026-10-03)
 - [ ] 12. Final QA: build, test all routes, WhatsApp links and mobile layouts
 
 ## Current status
-`npm run validate-data` checks JSON syntax (with line/column), duplicate IDs, required fields, price > MRP, numeric prices, unknown categories, missing/case-mismatched images, dates, booleans, WhatsApp number; warns about `[EDIT: …]` FAQ placeholders, placeholder address, large images, empty categories. `.github/workflows/deploy.yml` validates → builds → deploys on every push to `main`. `.nojekyll` ships in `dist/`. Next up: owner README.
+Owner README complete (editing on github.com, product template + field guide, images and naming, categories, banners/announcements/WhatsApp/contact, FAQ/About, how deploys and validation errors work, Pages setup, custom domain, local dev, pre-launch checklist). First CI run: validation ✓ and build ✓ on GitHub; "Configure GitHub Pages" failed because Pages is not enabled yet (needs Settings → Pages → Source: GitHub Actions). Next up: final QA.
 
 ## Next steps
-1. README for the non-technical owner (product/category/image/banner/WhatsApp editing, github.com editing, local dev, deployment, image sizes)
-2. Final QA across all routes and widths
-3. Enable Pages (Source: GitHub Actions) and verify the live URL
+1. Final QA: every route at 360/768/1024/1440, WhatsApp links, keyboard nav, dev server
+2. Owner enables Pages (Settings → Pages → Source: GitHub Actions) and re-runs the workflow
+3. Verify https://prasad1101.github.io/branded-factory/ loads
 
 ## Decisions log
 - 2026-10-03: Using **HashRouter** because GitHub Pages has no server-side routing (deep links/refresh would 404).
@@ -55,6 +55,7 @@
 - Owner to fill in: business address, email, social links, real product photos, FAQ answers marked `[EDIT: ...]` (payment options, delivery areas/time/charges, returns), About copy.
 
 ## Changelog
+- 2026-10-03: Owner README.
 - 2026-10-03: Data validator (`scripts/validate-data.js`) with GitHub Actions annotations; deploy workflow (checkout v7, setup-node v7, configure-pages v6, upload-pages-artifact v5, deploy-pages v5, Node 22).
 - 2026-10-03: Performance/a11y pass: PNG icons + OG image, non-blocking fonts, early JSON fetch + route chunk modulepreload + LCP image preload from index.html, LazyMotion (main bundle 102→~60 KB gz), lazy Fuse.js, `<Deferred>` sections, single-SVG rating stars (DOM −40%), no first-paint entrance animations, blur-free placeholder SVGs, AA contrast for WhatsApp teal (#0F7C70), heading order, label/target-size fixes.
 - 2026-10-03: About, Contact, FAQ, 404 pages. Added `faq`, `aboutValues`, `businessHours` to site.json.
