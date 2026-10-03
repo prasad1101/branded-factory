@@ -1,0 +1,59 @@
+{
+  "storeName": "Branded Factory",
+  "tagline": "Bumper Discounts. Assured Savings. Greatest Deals.",
+  "whatsappNumber": "917218150034",
+  "phoneDisplay": "+91 72181 50034",
+  "currency": "₹",
+  "announcementBar": [
+    "🎉 Bumper Discounts on 500+ brands",
+    "✅ Assured savings on every order",
+    "💬 Order instantly on WhatsApp"
+  ],
+  "heroBanners": [
+    {
+      "id": "b1",
+      "eyebrow": "Limited time",
+      "title": "Mega Skincare Sale",
+      "subtitle": "Up to 60% off serums, sunscreens and moisturisers from top brands.",
+      "image": "images/banners/skincare.svg",
+      "ctaText": "Shop Skincare",
+      "ctaLink": "/category/skincare"
+    },
+    {
+      "id": "b2",
+      "eyebrow": "Stock up & save",
+      "title": "Pantry Staples, Bumper Prices",
+      "subtitle": "Premium basmati, ghee, oils and atta at prices you will love.",
+      "image": "images/banners/grocery.svg",
+      "ctaText": "Shop Grocery",
+      "ctaLink": "/category/grocery-staples"
+    },
+    {
+      "id": "b3",
+      "eyebrow": "Signature scents",
+      "title": "Luxury Fragrances for Less",
+      "subtitle": "Eau de parfums and body sprays, up to 50% off.",
+      "image": "images/banners/fragrances.svg",
+      "ctaText": "Explore Fragrances",
+      "ctaLink": "/category/fragrances"
+    },
+    {
+      "id": "b4",
+      "eyebrow": "Home essentials",
+      "title": "A Sparkling Home, Smarter Savings",
+      "subtitle": "Detergents, cleaners and kitchen must-haves at assured savings.",
+      "image": "images/banners/household.svg",
+      "ctaText": "Shop Household",
+      "ctaLink": "/category/household"
+    }
+  ],
+  "socialLinks": {
+    "instagram": "",
+    "facebook": ""
+  },
+  "address": "Your shop address here (edit in public/data/site.json)",
+  "email": "",
+  "businessHours": "Mon–Sun, 9:00 AM – 9:00 PM",
+  "about": "Branded Factory is an online supermart that brings you genuine branded products at bumper discounts. From skincare and fragrances to groceries and household essentials, we source directly from authorised distributors and pass the savings straight to you.",
+  "footerNote": "Prices and availability are subject to change. All brand names and trademarks belong to their respective owners."
+}

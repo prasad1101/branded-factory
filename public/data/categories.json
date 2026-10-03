@@ -1,0 +1,98 @@
+[
+  {
+    "id": "skincare",
+    "name": "Skincare",
+    "image": "images/categories/skincare.svg",
+    "description": "Glow for less with dermatologist-loved formulas",
+    "featured": true,
+    "order": 1
+  },
+  {
+    "id": "hair-care",
+    "name": "Hair Care",
+    "image": "images/categories/hair-care.svg",
+    "description": "Salon-grade care at everyday prices",
+    "featured": true,
+    "order": 2
+  },
+  {
+    "id": "personal-care",
+    "name": "Personal Care",
+    "image": "images/categories/personal-care.svg",
+    "description": "Daily essentials, beautifully priced",
+    "featured": true,
+    "order": 3
+  },
+  {
+    "id": "makeup",
+    "name": "Makeup",
+    "image": "images/categories/makeup.svg",
+    "description": "Iconic shades, unbeatable deals",
+    "featured": false,
+    "order": 4
+  },
+  {
+    "id": "fragrances",
+    "name": "Fragrances",
+    "image": "images/categories/fragrances.svg",
+    "description": "Signature scents for every mood",
+    "featured": true,
+    "order": 5
+  },
+  {
+    "id": "household",
+    "name": "Household",
+    "image": "images/categories/household.svg",
+    "description": "Sparkling homes, smarter savings",
+    "featured": true,
+    "order": 6
+  },
+  {
+    "id": "grocery-staples",
+    "name": "Grocery & Staples",
+    "image": "images/categories/grocery-staples.svg",
+    "description": "Pantry favourites at bumper discounts",
+    "featured": true,
+    "order": 7
+  },
+  {
+    "id": "beverages",
+    "name": "Beverages",
+    "image": "images/categories/beverages.svg",
+    "description": "Teas, coffees and refreshing sips",
+    "featured": false,
+    "order": 8
+  },
+  {
+    "id": "snacks",
+    "name": "Snacks",
+    "image": "images/categories/snacks.svg",
+    "description": "Munchies you love, for less",
+    "featured": false,
+    "order": 9
+  },
+  {
+    "id": "baby-care",
+    "name": "Baby Care",
+    "image": "images/categories/baby-care.svg",
+    "description": "Gentle care for little ones",
+    "featured": true,
+    "order": 10
+  },
+  {
+    "id": "home-kitchen",
+    "name": "Home & Kitchen",
+    "image": "images/categories/home-kitchen.svg",
+    "description": "Upgrade your kitchen for less",
+    "featured": false,
+    "order": 11
+  },
+  {
+    "id": "health-wellness",
+    "name": "Health & Wellness",
+    "image": "images/categories/health-wellness.svg",
+    "description": "Feel good, save more",
+    "featured": true,
+    "order": 12
+  }
+]

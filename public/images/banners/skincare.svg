@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 700" width="1600" height="700" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Mega Skincare Sale">
+  <defs>
+    <linearGradient id="bgb" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0F1B2D"/><stop offset="1" stop-color="#1C2B43"/></linearGradient>
+    <radialGradient id="glow" cx="72%" cy="45%" r="45%"><stop offset="0" stop-color="#C9A24B" stop-opacity=".45"/><stop offset="1" stop-color="#C9A24B" stop-opacity="0"/></radialGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#E8CF8D"/><stop offset="1" stop-color="#A9843A"/></linearGradient>
+    <linearGradient id="ink" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0F1B2D"/><stop offset="1" stop-color="#0F1B2D"/></linearGradient>
+    <filter id="soft" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="24"/></filter>
+  </defs>
+  <rect width="1600" height="700" fill="url(#bgb)"/>
+  <rect width="1600" height="700" fill="url(#glow)"/>
+  <circle cx="1180" cy="360" r="300" fill="none" stroke="#C9A24B" stroke-opacity=".25" stroke-width="1.5"/>
+  <circle cx="1180" cy="360" r="240" fill="none" stroke="#C9A24B" stroke-opacity=".15" stroke-width="1"/>
+  <ellipse cx="1180" cy="640" rx="380" ry="30" fill="#000" opacity=".35" filter="url(#soft)"/>
+  <g transform="translate(960 430) scale(0.72)"><defs><linearGradient id="body1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#E9B79A"/><stop offset="1" stop-color="#C98A6B"/></linearGradient></defs><rect x="-140" y="-120" width="280" height="70" rx="14" fill="url(#gold)"/>
+        <rect x="-150" y="-55" width="300" height="230" rx="34" fill="url(#body1)"/><rect x="-125" y="-35" width="14" height="180" rx="7" fill="#fff" opacity=".28"/>
+    <rect x="-105" y="-15" width="210" height="130" rx="10" fill="#FFFDF8" opacity=".95"/>
+    <text x="0" y="54" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="46" font-weight="700" fill="url(#ink)">D</text>
+    <text x="0" y="80" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="11" letter-spacing="1.5" fill="url(#ink)" opacity=".75">DERMAPURE</text>
+    <line x1="-83" x2="83" y1="3" y2="3" stroke="url(#ink)" stroke-width="1" opacity=".3"/></g>
+<g transform="translate(1400 430) scale(0.72)"><defs><linearGradient id="body2" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#E9B79A"/><stop offset="1" stop-color="#C98A6B"/></linearGradient></defs><rect x="-26" y="-215" width="52" height="70" rx="22" fill="#2B2B2B"/>
+        <rect x="-40" y="-150" width="80" height="40" rx="6" fill="url(#gold)"/>
+        <rect x="-95" y="-115" width="190" height="320" rx="34" fill="url(#body2)"/><rect x="-75" y="-95" width="14" height="260" rx="7" fill="#fff" opacity=".28"/>
+    <rect x="-75" y="-10" width="150" height="130" rx="10" fill="#FFFDF8" opacity=".95"/>
+    <text x="0" y="59" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="46" font-weight="700" fill="url(#ink)">TS</text>
+    <text x="0" y="85" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="10" letter-spacing="1.5" fill="url(#ink)" opacity=".75">THE SKIN LAB</text>
+    <line x1="-53" x2="53" y1="8" y2="8" stroke="url(#ink)" stroke-width="1" opacity=".3"/></g>
+<g transform="translate(1180 380) scale(0.95)"><defs><linearGradient id="body0" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#E9B79A"/><stop offset="1" stop-color="#C98A6B"/></linearGradient></defs><rect x="-26" y="-215" width="52" height="70" rx="22" fill="#2B2B2B"/>
+        <rect x="-40" y="-150" width="80" height="40" rx="6" fill="url(#gold)"/>
+        <rect x="-95" y="-115" width="190" height="320" rx="34" fill="url(#body0)"/><rect x="-75" y="-95" width="14" height="260" rx="7" fill="#fff" opacity=".28"/>
+    <rect x="-75" y="-10" width="150" height="130" rx="10" fill="#FFFDF8" opacity=".95"/>
+    <text x="0" y="59" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="46" font-weight="700" fill="url(#ink)">LB</text>
+    <text x="0" y="85" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="10" letter-spacing="1.5" fill="url(#ink)" opacity=".75">LUMIÈRE BOTANICS</text>
+    <line x1="-53" x2="53" y1="8" y2="8" stroke="url(#ink)" stroke-width="1" opacity=".3"/></g>
+</svg>
