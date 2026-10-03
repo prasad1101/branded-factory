@@ -57,9 +57,10 @@ Fonts: **Fraunces** (serif headings, `font-serif`) and **Manrope** (body, `font-
 Shared component classes in `src/index.css`: `container-px`, `btn-primary`, `btn-gold`, `btn-outline`, `btn-whatsapp`, `chip`, `eyebrow`, `input`, `skeleton`.
 
 ## Data schemas
-**site.json**: `storeName, tagline, whatsappNumber, currency, announcementBar[], heroBanners[{id,title,subtitle,eyebrow?,image,ctaText,ctaLink,theme?}], socialLinks{instagram,facebook}, address, email, phoneDisplay, about, footerNote`
+**site.json**: `storeName, tagline, whatsappNumber, phoneDisplay, currency, announcementBar[], heroBanners[{id,eyebrow?,title,subtitle,image,ctaText,ctaLink}], socialLinks{instagram,facebook}, address, email, businessHours, about, aboutValues[{title,text}], faq[{q,a}], footerNote`
+- FAQ answers may contain `[EDIT: ...]` placeholders; the FAQ page highlights them so the owner notices.
 
-**categories.json**: `[{ id, name, image, description, featured, order }]`
+**categories.json**: `[{ id, name, image, description, featured, order }]` (`featured: true` = show a showcase row on the home page)
 
 **products.json**: `[{ id, name, brand, category, subcategory, mrp, price, size, images[], shortDescription, description, highlights[], tags[], inStock, featured, rating, dateAdded }]`
 - Tags with special meaning: `bestseller`, `deal-of-the-day`, `new`.

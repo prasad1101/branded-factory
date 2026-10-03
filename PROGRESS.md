@@ -16,20 +16,20 @@
 - [x] 5. Category, shop and search pages with filters and sorting (2026-10-03)
 - [ ] 6. Product detail page
 - [x] 7. Enquiry list and WhatsApp message builder (2026-10-03)
-- [ ] 8. About, Contact, FAQ and 404 pages
+- [x] 8. About, Contact, FAQ and 404 pages (2026-10-03)
 - [ ] 9. SEO, performance and accessibility pass
 - [ ] 10. Data validation script, GitHub Actions deployment, `.nojekyll`
 - [ ] 11. Owner README
 - [ ] 12. Final QA: build, test all routes, WhatsApp links and mobile layouts
 
 ## Current status
-Enquiry list complete: line items with quantity/remove (with Undo), clear list, totals (MRP, discount, total, savings %), optional name/area/notes persisted in localStorage, message preview, and "Send Enquiry on WhatsApp" producing the exact message format from the brief. Next up: About, Contact, FAQ and 404 pages.
+All pages built: About (story, live stats, values), Contact (WhatsApp card, message-to-WhatsApp form, address/hours/email), FAQ (accordion from `site.json`, `[EDIT: ...]` placeholders highlighted), and a styled 404. Next up: SEO, performance and accessibility pass.
 
 ## Next steps
-1. About page (story + values, copy from `site.about`)
-2. Contact page (WhatsApp, email, address, hours from `site.json`)
-3. FAQ page with placeholder answers clearly marked for the owner
-4. Styled 404 page
+1. PNG icons (192/512) + OG image; verify meta tags per page
+2. Lighthouse audit (mobile + desktop), fix anything under 90
+3. Bundle check: vendor chunk splitting, preload fonts
+4. Accessibility: contrast, focus states, labels, keyboard nav through mega-menu/drawer/search
 
 ## Decisions log
 - 2026-10-03: Using **HashRouter** because GitHub Pages has no server-side routing (deep links/refresh would 404).
@@ -45,12 +45,14 @@ Enquiry list complete: line items with quantity/remove (with Undo), clear list, 
 - 2026-10-03: `featured: true` on a **category** means "show a showcase row for it on the home page" (4 enabled in sample data).
 - 2026-10-03: Filter changes use `replace` navigation so the Back button isn't flooded with filter states.
 - 2026-10-03: Shop/search pages filter by **Category**; category pages filter by **Type** (subcategory).
+- 2026-10-03: FAQ content lives in `site.json` (owner-editable); unfinished answers use visible `[EDIT: ...]` markers.
 - 2026-10-03: Discount badges use `coral-600` (#C9363B) rather than #E5484D so white text meets WCAG AA.
 
 ## Known issues / TODO
-- Owner to fill in: business address, email, social links, real product photos, FAQ/About copy (placeholders marked).
+- Owner to fill in: business address, email, social links, real product photos, FAQ answers marked `[EDIT: ...]` (payment options, delivery areas/time/charges, returns), About copy.
 
 ## Changelog
+- 2026-10-03: About, Contact, FAQ, 404 pages. Added `faq`, `aboutValues`, `businessHours` to site.json.
 - 2026-10-03: Enquiry page with summary, customer details, message preview and WhatsApp send. Fixed SmartImage so cached images never stay hidden.
 - 2026-10-03: Category, shop, search and categories pages; `useFilters` (URL query state: cat, sub, brand, min, max, disc, stock, tag, sort), FilterPanel, PriceRangeSlider, ProductListing, EmptyState, Breadcrumbs. Header search collapses to an icon at 1024–1279px.
 - 2026-10-03: Home page + components: ProductCard, PriceBlock, DiscountBadge, RatingStars, CategoryCard, SectionHeader, Reveal, ProductCarousel, HeroCarousel, Countdown. Biggest Savings excludes Deal of the Day items for variety.

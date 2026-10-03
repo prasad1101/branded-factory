@@ -55,5 +55,57 @@
   "email": "",
   "businessHours": "Mon–Sun, 9:00 AM – 9:00 PM",
   "about": "Branded Factory is an online supermart that brings you genuine branded products at bumper discounts. From skincare and fragrances to groceries and household essentials, we source directly from authorised distributors and pass the savings straight to you.",
-  "footerNote": "Prices and availability are subject to change. All brand names and trademarks belong to their respective owners."
+  "footerNote": "Prices and availability are subject to change. All brand names and trademarks belong to their respective owners.",
+  "faq": [
+    {
+      "q": "How do I place an order?",
+      "a": "Browse the store and tap “Add” on any product to add it to your enquiry list. When you’re ready, open your list and tap “Send Enquiry on WhatsApp”. Your list arrives as a neat message, and we reply to confirm availability, the final price and delivery."
+    },
+    {
+      "q": "Do I need to pay online?",
+      "a": "No. There is no online payment on this website. We confirm your order on WhatsApp first. [EDIT: describe your payment options, e.g. UPI, cash on delivery or bank transfer.]"
+    },
+    {
+      "q": "Are the products genuine?",
+      "a": "Yes. Every product is 100% genuine and sourced from authorised distributors. Products arrive sealed in their original packaging."
+    },
+    {
+      "q": "How are your prices so low?",
+      "a": "We buy in bulk directly from distributors and keep our costs low, so we can pass bumper discounts on to you. The discount shown on every product is calculated from the MRP printed on the pack."
+    },
+    {
+      "q": "Where do you deliver and how long does it take?",
+      "a": "[EDIT: list your delivery areas, e.g. “We deliver across Pune and PCMC”.] Delivery usually takes [EDIT: e.g. 1–3 working days] after your order is confirmed on WhatsApp."
+    },
+    {
+      "q": "Are there delivery charges?",
+      "a": "[EDIT: e.g. “Free delivery on orders above ₹999. A small fee of ₹49 applies below that.”]"
+    },
+    {
+      "q": "What is your return or exchange policy?",
+      "a": "[EDIT: describe your policy, e.g. “If a product arrives damaged or incorrect, message us on WhatsApp within 48 hours with a photo and we will replace it.”]"
+    },
+    {
+      "q": "Can you get a product that isn’t listed?",
+      "a": "Very likely! Message us on WhatsApp with the product name and we’ll try to source it for you at the best price."
+    },
+    {
+      "q": "Why might the final price differ from the website?",
+      "a": "Prices and stock change quickly with our deals. If anything has changed, we’ll tell you on WhatsApp before confirming your order, so you never pay a surprise price."
+    }
+  ],
+  "aboutValues": [
+    {
+      "title": "Genuine, always",
+      "text": "Only original products from authorised distributors. No grey-market stock, ever."
+    },
+    {
+      "title": "Savings you can see",
+      "text": "Every price shows the MRP and exactly how much you save. No hidden maths."
+    },
+    {
+      "title": "Personal service",
+      "text": "Real people on WhatsApp who help you choose, confirm and deliver."
+    }
+  ]
 }
