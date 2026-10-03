@@ -13,7 +13,7 @@
 - [x] 2. Data layer and sample JSON (10+ categories, ~40 products, placeholder images) (2026-10-03)
 - [x] 3. Global layout: announcement bar, header, mega-menu, mobile bottom nav, footer, floating WhatsApp button (2026-10-03)
 - [x] 4. Home page (all sections) (2026-10-03)
-- [ ] 5. Category, shop and search pages with filters and sorting
+- [x] 5. Category, shop and search pages with filters and sorting (2026-10-03)
 - [ ] 6. Product detail page
 - [ ] 7. Enquiry list and WhatsApp message builder
 - [ ] 8. About, Contact, FAQ and 404 pages
@@ -23,13 +23,13 @@
 - [ ] 12. Final QA: build, test all routes, WhatsApp links and mobile layouts
 
 ## Current status
-Home page complete: hero carousel (Embla + autoplay, pause control), trust strip, category grid with "Up to X% off", Deal of the Day with live IST countdown, Biggest Savings, Bestsellers, New Arrivals, Featured, per-category rows for `featured` categories, How to order, closing WhatsApp CTA. Next up: category/shop/search pages.
+Category (`/category/:id`), shop (`/shop`), search (`/search?q=`) and all-categories (`/categories`) pages complete. Filters (category/type, brand, price slider, discount bands, in-stock) and sort live in the URL; sidebar on desktop, bottom sheet on mobile; Load more (24 per page); empty state with suggested categories. Next up: product detail page.
 
 ## Next steps
-1. `useFilters` hook syncing filters + sort with the URL query string
-2. FilterPanel (sidebar desktop / bottom sheet mobile): subcategory, brand, price range, discount bands, in-stock
-3. ProductGrid with "Load more"
-4. Category page, `/shop`, `/search?q=` with fuzzy search and empty state
+1. Product gallery with thumbnails, hover zoom (desktop) and swipe (mobile)
+2. Price block, quantity selector, Add to Enquiry List, Order on WhatsApp (single product)
+3. Out-of-stock state → "Ask about availability on WhatsApp"
+4. You may also like + Recently viewed (localStorage)
 
 ## Decisions log
 - 2026-10-03: Using **HashRouter** because GitHub Pages has no server-side routing (deep links/refresh would 404).
@@ -43,12 +43,15 @@ Home page complete: hero carousel (Embla + autoplay, pause control), trust strip
 - 2026-10-03: JSON is fetched with `cache: 'no-cache'` so edits show right after deploy.
 - 2026-10-03: Added a `/categories` page so the mobile bottom-nav "Categories" tab has a real destination.
 - 2026-10-03: `featured: true` on a **category** means "show a showcase row for it on the home page" (4 enabled in sample data).
+- 2026-10-03: Filter changes use `replace` navigation so the Back button isn't flooded with filter states.
+- 2026-10-03: Shop/search pages filter by **Category**; category pages filter by **Type** (subcategory).
 - 2026-10-03: Discount badges use `coral-600` (#C9363B) rather than #E5484D so white text meets WCAG AA.
 
 ## Known issues / TODO
 - Owner to fill in: business address, email, social links, real product photos, FAQ/About copy (placeholders marked).
 
 ## Changelog
+- 2026-10-03: Category, shop, search and categories pages; `useFilters` (URL query state: cat, sub, brand, min, max, disc, stock, tag, sort), FilterPanel, PriceRangeSlider, ProductListing, EmptyState, Breadcrumbs. Header search collapses to an icon at 1024–1279px.
 - 2026-10-03: Home page + components: ProductCard, PriceBlock, DiscountBadge, RatingStars, CategoryCard, SectionHeader, Reveal, ProductCarousel, HeroCarousel, Countdown. Biggest Savings excludes Deal of the Day items for variety.
 - 2026-10-03: Global layout (AnnouncementBar, Header with SearchBar + MegaMenu, MobileDrawer, MobileNav, Footer, FloatingWhatsApp, Seo, Layout with ScrollToTop and data error state). Added `/categories` route for the mobile nav.
 - 2026-10-03: Data layer: sample JSON (12 categories, 45 products), SVG placeholder generator (`npm run generate-placeholders`), DataContext/EnquiryContext/ToastContext, `useCatalog`/`useSite`/`useCategories`/`useProducts`/`useProduct`/`useEnquiry`/`useToast`, SmartImage with branded fallback, skeleton loaders.

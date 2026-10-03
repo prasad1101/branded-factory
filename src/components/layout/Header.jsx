@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { AnimatePresence, motion } from 'framer-motion'
-import { ChevronDown, Menu, ShoppingBag } from 'lucide-react'
+import { ChevronDown, Menu, Search, ShoppingBag } from 'lucide-react'
 import Logo from '../Logo'
 import SearchBar from './SearchBar'
 import MegaMenu from './MegaMenu'
@@ -132,7 +132,10 @@ export default function Header() {
             })}
           </nav>
 
-          <SearchBar className="hidden flex-1 md:block lg:ml-auto lg:max-w-sm xl:max-w-md" />
+          <SearchBar className="hidden flex-1 md:block lg:hidden xl:ml-auto xl:block xl:max-w-sm 2xl:max-w-md" />
+          <Link to="/search" className="ml-auto hidden rounded-full p-2.5 text-navy hover:bg-cream-200 lg:flex xl:hidden" aria-label="Search">
+            <Search className="h-5 w-5" aria-hidden="true" />
+          </Link>
 
           <Link
             to="/enquiry"
