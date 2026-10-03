@@ -39,14 +39,14 @@ export default function Layout() {
   const { status, error, retry } = useCatalog()
 
   return (
-    <div className="flex min-h-screen flex-col">
+    <div className="flex min-h-screen flex-col pb-[calc(4rem+env(safe-area-inset-bottom))] md:pb-0">
       <a href="#main" className="sr-only z-[80] rounded-full bg-navy px-4 py-2 text-white focus:not-sr-only focus:fixed focus:left-4 focus:top-4">
         Skip to content
       </a>
       <ScrollToTop />
       <AnnouncementBar />
       <Header />
-      <main id="main" className="flex-1 pb-20 md:pb-0">
+      <main id="main" className="flex-1">
         {status === 'error' ? (
           <DataError error={error} retry={retry} />
         ) : (

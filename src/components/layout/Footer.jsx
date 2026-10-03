@@ -90,7 +90,7 @@ export default function Footer() {
         </div>
       </div>
       <div className="border-t border-white/10">
-        <div className="container-px flex flex-col gap-2 py-6 text-xs text-white/60 sm:flex-row sm:items-center sm:justify-between">
+        <div className="container-px flex flex-col gap-2 py-6 text-xs text-white/60 sm:flex-row sm:items-center sm:justify-between md:pr-24">
           <p>© {year} {site.storeName || 'Branded Factory'}. All rights reserved.</p>
           <p className="max-w-xl sm:text-right">{site.footerNote || 'Prices and availability subject to change.'}</p>
         </div>

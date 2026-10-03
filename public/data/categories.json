@@ -12,7 +12,7 @@
     "name": "Hair Care",
     "image": "images/categories/hair-care.svg",
     "description": "Salon-grade care at everyday prices",
-    "featured": true,
+    "featured": false,
     "order": 2
   },
   {
@@ -20,7 +20,7 @@
     "name": "Personal Care",
     "image": "images/categories/personal-care.svg",
     "description": "Daily essentials, beautifully priced",
-    "featured": true,
+    "featured": false,
     "order": 3
   },
   {
@@ -76,7 +76,7 @@
     "name": "Baby Care",
     "image": "images/categories/baby-care.svg",
     "description": "Gentle care for little ones",
-    "featured": true,
+    "featured": false,
     "order": 10
   },
   {
@@ -92,7 +92,7 @@
     "name": "Health & Wellness",
     "image": "images/categories/health-wellness.svg",
     "description": "Feel good, save more",
-    "featured": true,
+    "featured": false,
     "order": 12
   }
 ]
