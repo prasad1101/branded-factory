@@ -50,7 +50,13 @@ export default function SmartImage({ src, alt = '', className = '', imgClassName
       sizes={sizes}
       onError={() => setFailedSrc(src)}
       onLoad={() => setLoadedSrc(src)}
-      className={cn('transition-opacity duration-500', loadedSrc === src ? 'opacity-100' : 'opacity-0', imgClassName, className)}
+      className={cn(
+        // Above-the-fold (eager) images skip the fade so they count for LCP immediately
+        !eager && 'transition-opacity duration-500',
+        eager || loadedSrc === src ? 'opacity-100' : 'opacity-0',
+        imgClassName,
+        className,
+      )}
       {...rest}
     />
   )

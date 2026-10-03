@@ -1,5 +1,5 @@
-import { useEffect, useMemo, useState } from 'react'
-import { AnimatePresence, motion } from 'framer-motion'
+import { useEffect, useMemo, useRef, useState } from 'react'
+import { AnimatePresence, m } from 'framer-motion'
 import { SlidersHorizontal, X } from 'lucide-react'
 import ProductCard from './ProductCard'
 import FilterPanel from './FilterPanel'
@@ -51,8 +51,8 @@ function MobileFilterSheet({ open, onClose, resultCount, children, onClear, acti
     <AnimatePresence>
       {open && (
         <div className="fixed inset-0 z-[60] lg:hidden" role="dialog" aria-modal="true" aria-label="Filters">
-          <motion.div className="absolute inset-0 bg-navy/50 backdrop-blur-sm" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} onClick={onClose} />
-          <motion.div
+          <m.div className="absolute inset-0 bg-navy/50 backdrop-blur-sm" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} onClick={onClose} />
+          <m.div
             initial={{ y: '100%' }}
             animate={{ y: 0 }}
             exit={{ y: '100%' }}
@@ -78,7 +78,7 @@ function MobileFilterSheet({ open, onClose, resultCount, children, onClear, acti
                 Show {pluralize(resultCount, 'product')}
               </button>
             </div>
-          </motion.div>
+          </m.div>
         </div>
       )}
     </AnimatePresence>
@@ -92,6 +92,11 @@ export default function ProductListing({ products, loading, showSubcategories = 
   const baseSort = keepOrder ? 'relevance' : defaultSort
   const { filters, update, toggle, clearAll, facets, results, activeCount } = useFilters(products, { defaultSort: baseSort, keepOrder })
   const [visible, setVisible] = useState(PAGE_SIZE)
+  // Skip the stagger on the first paint (faster LCP); animate when filters change
+  const firstRender = useRef(true)
+  useEffect(() => {
+    firstRender.current = false
+  }, [])
   const [sheetOpen, setSheetOpen] = useState(false)
 
   const filterKey = JSON.stringify([filters, products.length])
@@ -134,6 +139,7 @@ export default function ProductListing({ products, loading, showSubcategories = 
       </aside>
 
       <div className="min-w-0">
+        <h2 className="sr-only">Products</h2>
         <div className="sticky top-14 z-30 -mx-4 mb-4 flex items-center gap-3 bg-cream/90 px-4 py-3 backdrop-blur-lg sm:static sm:mx-0 sm:bg-transparent sm:px-0 sm:py-0 sm:backdrop-blur-none">
           <button
             type="button"
@@ -177,13 +183,13 @@ export default function ProductListing({ products, loading, showSubcategories = 
           />
         ) : (
           <>
-            <motion.ul key={filterKey} initial="hidden" animate="show" variants={{ show: { transition: { staggerChildren: 0.04 } } }} className="grid grid-cols-2 gap-3 sm:gap-5 md:grid-cols-3">
+            <m.ul key={filterKey} initial={firstRender.current ? false : 'hidden'} animate="show" variants={{ show: { transition: { staggerChildren: 0.04 } } }} className="grid grid-cols-2 gap-3 sm:gap-5 md:grid-cols-3">
               {shown.map((p, i) => (
-                <motion.li key={p.id} variants={{ hidden: { opacity: 0, y: 14 }, show: { opacity: 1, y: 0 } }} transition={{ duration: 0.35 }}>
+                <m.li key={p.id} variants={{ hidden: { opacity: 0, y: 14 }, show: { opacity: 1, y: 0 } }} transition={{ duration: 0.35 }}>
                   <ProductCard product={p} eager={i < 4} />
-                </motion.li>
+                </m.li>
               ))}
-            </motion.ul>
+            </m.ul>
             {results.length > visible && (
               <div className="mt-10 flex flex-col items-center gap-3">
                 <p className="text-sm text-ink-muted">

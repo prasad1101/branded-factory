@@ -1,10 +1,25 @@
-import { useMemo } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import { useProducts } from './useData'
-import { createProductIndex, searchProducts } from '../lib/search'
+import { createProductIndex, loadFuse, searchProducts } from '../lib/search'
 
-/** Builds the Fuse index once per catalog and returns a search function. */
-export function useProductSearch() {
+/**
+ * Returns a search function backed by a Fuse index (built once per catalog).
+ * Pass `enabled = false` to postpone loading Fuse.js until the user starts searching.
+ */
+export function useProductSearch(enabled = true) {
   const { products } = useProducts()
-  const index = useMemo(() => (products.length ? createProductIndex(products) : null), [products])
-  return useMemo(() => (q) => searchProducts(index, q), [index])
+  const [Fuse, setFuse] = useState(null)
+
+  useEffect(() => {
+    if (!enabled || Fuse) return
+    let alive = true
+    loadFuse().then((F) => alive && setFuse(() => F))
+    return () => {
+      alive = false
+    }
+  }, [enabled, Fuse])
+
+  const index = useMemo(() => (Fuse && products.length ? createProductIndex(Fuse, products) : null), [Fuse, products])
+  const search = useMemo(() => (q) => searchProducts(index, q), [index])
+  return { search, ready: Boolean(index) }
 }

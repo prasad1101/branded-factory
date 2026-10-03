@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { motion } from 'framer-motion'
+import { m } from 'framer-motion'
 import { Check, Plus } from 'lucide-react'
 import SmartImage from './SmartImage'
 import PriceBlock from './PriceBlock'
@@ -15,7 +15,7 @@ export default function ProductCard({ product, className = '', eager = false }) 
   const to = `/product/${product.id}`
 
   return (
-    <motion.article
+    <m.article
       whileHover={{ y: -4 }}
       transition={{ type: 'spring', stiffness: 400, damping: 30 }}
       className={cn(
@@ -69,7 +69,7 @@ export default function ProductCard({ product, className = '', eager = false }) 
         <div className="mt-auto flex items-end justify-between gap-2 pt-3">
           <PriceBlock mrp={product.mrp} price={product.price} />
           {product.inStock && (
-            <motion.button
+            <m.button
               type="button"
               whileTap={{ scale: 0.88 }}
               onClick={() => addToList(product)}
@@ -80,10 +80,10 @@ export default function ProductCard({ product, className = '', eager = false }) 
               )}
             >
               {inList ? <Check className="h-5 w-5" aria-hidden="true" /> : <Plus className="h-5 w-5" aria-hidden="true" />}
-            </motion.button>
+            </m.button>
           )}
         </div>
       </div>
-    </motion.article>
+    </m.article>
   )
 }

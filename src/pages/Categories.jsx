@@ -1,5 +1,5 @@
 import { useMemo } from 'react'
-import { motion } from 'framer-motion'
+import { m } from 'framer-motion'
 import Seo from '../components/Seo'
 import Breadcrumbs from '../components/Breadcrumbs'
 import CategoryCard from '../components/CategoryCard'
@@ -34,13 +34,13 @@ export default function Categories() {
             ))}
           </div>
         ) : (
-          <motion.div variants={staggerContainer} initial="hidden" animate="show" className="mt-8 grid grid-cols-2 gap-4 sm:grid-cols-3 sm:gap-5 lg:grid-cols-4">
+          <m.div variants={staggerContainer} initial={false} animate="show" className="mt-8 grid grid-cols-2 gap-4 sm:grid-cols-3 sm:gap-5 lg:grid-cols-4">
             {categories.map((c) => (
-              <motion.div key={c.id} variants={staggerItem}>
+              <m.div key={c.id} variants={staggerItem}>
                 <CategoryCard category={c} count={stats[c.id]?.count || 0} maxDiscount={stats[c.id]?.max || 0} className="h-full" />
-              </motion.div>
+              </m.div>
             ))}
-          </motion.div>
+          </m.div>
         )}
       </section>
     </>

@@ -4,13 +4,13 @@
     <radialGradient id="glow" cx="72%" cy="45%" r="45%"><stop offset="0" stop-color="#B9C2F0" stop-opacity=".45"/><stop offset="1" stop-color="#B9C2F0" stop-opacity="0"/></radialGradient>
     <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#E8CF8D"/><stop offset="1" stop-color="#A9843A"/></linearGradient>
     <linearGradient id="ink" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0F1B2D"/><stop offset="1" stop-color="#0F1B2D"/></linearGradient>
-    <filter id="soft" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="24"/></filter>
+    <radialGradient id="shadow"><stop offset="0" stop-color="#000" stop-opacity=".45"/><stop offset="1" stop-color="#000" stop-opacity="0"/></radialGradient>
   </defs>
   <rect width="1600" height="700" fill="url(#bgb)"/>
   <rect width="1600" height="700" fill="url(#glow)"/>
   <circle cx="1180" cy="360" r="300" fill="none" stroke="#B9C2F0" stroke-opacity=".25" stroke-width="1.5"/>
   <circle cx="1180" cy="360" r="240" fill="none" stroke="#B9C2F0" stroke-opacity=".15" stroke-width="1"/>
-  <ellipse cx="1180" cy="640" rx="380" ry="30" fill="#000" opacity=".35" filter="url(#soft)"/>
+  <ellipse cx="1180" cy="640" rx="420" ry="40" fill="url(#shadow)"/>
   <g transform="translate(960 430) scale(0.72)"><defs><linearGradient id="body1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#8C95D6"/><stop offset="1" stop-color="#5B64B0"/></linearGradient></defs><path d="M-10,-230 L60,-230 L60,-212 L10,-212 L10,-190 L-10,-190 Z" fill="#2B2B2B"/>
         <rect x="-30" y="-195" width="60" height="45" rx="6" fill="#2B2B2B"/>
         <rect x="-85" y="-155" width="170" height="370" rx="38" fill="url(#body1)"/><rect x="-65" y="-130" width="14" height="320" rx="7" fill="#fff" opacity=".28"/>

@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import { Helmet } from 'react-helmet-async'
-import { AnimatePresence, motion } from 'framer-motion'
+import { AnimatePresence, m } from 'framer-motion'
 import { BadgeCheck, Check, CircleAlert, PiggyBank, ShoppingBag, Truck } from 'lucide-react'
 import Seo from '../components/Seo'
 import Breadcrumbs from '../components/Breadcrumbs'
@@ -14,6 +14,7 @@ import ProductCarousel from '../components/ProductCarousel'
 import SectionHeader from '../components/SectionHeader'
 import EmptyState from '../components/EmptyState'
 import Skeleton from '../components/Skeleton'
+import Deferred from '../components/Deferred'
 import { useCatalog } from '../hooks/useData'
 import { useAddToList, useEnquiry } from '../hooks/useEnquiry'
 import { useRecentlyViewed } from '../hooks/useRecentlyViewed'
@@ -168,9 +169,9 @@ export default function Product() {
                 <>
                   <div className="flex gap-3">
                     <QuantitySelector value={qty} onChange={setQty} />
-                    <motion.button whileTap={{ scale: 0.97 }} type="button" onClick={() => addToList(product, qty)} className="btn-primary flex-1 py-3.5 text-base">
+                    <m.button whileTap={{ scale: 0.97 }} type="button" onClick={() => addToList(product, qty)} className="btn-primary flex-1 py-3.5 text-base">
                       <ShoppingBag className="h-5 w-5" aria-hidden="true" /> Add to <span className="hidden sm:inline">Enquiry</span> List
-                    </motion.button>
+                    </m.button>
                   </div>
                   <WhatsAppButton size="lg" className="w-full" message={message}>
                     Order on WhatsApp
@@ -229,6 +230,7 @@ export default function Product() {
         </div>
       </div>
 
+      <Deferred minHeight={520}>
       {related.length > 0 && (
         <section className="container-px mt-20" aria-labelledby="related-heading">
           <ProductCarousel products={related} label="You may also like" header={<SectionHeader eyebrow={`More in ${product.categoryName}`} title={<span id="related-heading">You may also like</span>} to={`/category/${product.category}`} />} />
@@ -239,11 +241,12 @@ export default function Product() {
           <ProductCarousel products={recent} label="Recently viewed" header={<SectionHeader eyebrow="Pick up where you left off" title={<span id="recent-heading">Recently viewed</span>} />} />
         </section>
       )}
+      </Deferred>
 
       {/* Mobile sticky action bar */}
       <AnimatePresence>
         {showSticky && (
-          <motion.div
+          <m.div
             initial={{ y: 80, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             exit={{ y: 80, opacity: 0 }}
@@ -267,7 +270,7 @@ export default function Product() {
                 {product.inStock ? 'Order' : 'Ask'}
               </WhatsAppButton>
             </div>
-          </motion.div>
+          </m.div>
         )}
       </AnimatePresence>
     </>

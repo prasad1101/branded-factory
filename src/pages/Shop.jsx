@@ -32,8 +32,8 @@ export default function Shop({ mode }) {
   const [params] = useSearchParams()
   const { products, categories, status } = useCatalog()
   const loading = status === 'loading'
-  const search = useProductSearch()
   const isSearch = mode === 'search'
+  const { search, ready: searchReady } = useProductSearch(isSearch)
   const q = (params.get('q') || '').trim()
 
   const base = useMemo(() => (isSearch ? (q ? search(q) : []) : products), [isSearch, q, search, products])
@@ -50,7 +50,7 @@ export default function Shop({ mode }) {
         </section>
         {q ? (
           <section className="container-px mt-10" aria-label="Search results">
-            <ProductListing products={base} loading={loading} keepOrder query={q} showCategories showSubcategories={false} />
+            <ProductListing products={base} loading={loading || !searchReady} keepOrder query={q} showCategories showSubcategories={false} />
           </section>
         ) : (
           <>

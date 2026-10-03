@@ -17,19 +17,21 @@
 - [ ] 6. Product detail page
 - [x] 7. Enquiry list and WhatsApp message builder (2026-10-03)
 - [x] 8. About, Contact, FAQ and 404 pages (2026-10-03)
-- [ ] 9. SEO, performance and accessibility pass
+- [x] 9. SEO, performance and accessibility pass (2026-10-03)
 - [ ] 10. Data validation script, GitHub Actions deployment, `.nojekyll`
 - [ ] 11. Owner README
 - [ ] 12. Final QA: build, test all routes, WhatsApp links and mobile layouts
 
 ## Current status
-All pages built: About (story, live stats, values), Contact (WhatsApp card, message-to-WhatsApp form, address/hours/email), FAQ (accordion from `site.json`, `[EDIT: ...]` placeholders highlighted), and a styled 404. Next up: SEO, performance and accessibility pass.
+SEO/perf/a11y pass done. Lighthouse (local preview, simulated throttling):
+- **Desktop**: Performance 98–99, Accessibility 100, Best Practices 100, SEO 100 on home, product, category, enquiry.
+- **Mobile**: Home 93–97 / 100 / 100 / 100; FAQ 97; product, category, search 86–88 Performance (100 on the other three).
+Next up: data validation script + GitHub Actions deployment.
 
 ## Next steps
-1. PNG icons (192/512) + OG image; verify meta tags per page
-2. Lighthouse audit (mobile + desktop), fix anything under 90
-3. Bundle check: vendor chunk splitting, preload fonts
-4. Accessibility: contrast, focus states, labels, keyboard nav through mega-menu/drawer/search
+1. `scripts/validate-data.js` (duplicate IDs, required fields, price > mrp, unknown categories, missing images)
+2. `.github/workflows/deploy.yml` (validate → build → deploy Pages)
+3. Confirm `public/.nojekyll` ships in `dist/`
 
 ## Decisions log
 - 2026-10-03: Using **HashRouter** because GitHub Pages has no server-side routing (deep links/refresh would 404).
@@ -46,12 +48,16 @@ All pages built: About (story, live stats, values), Contact (WhatsApp card, mess
 - 2026-10-03: Filter changes use `replace` navigation so the Back button isn't flooded with filter states.
 - 2026-10-03: Shop/search pages filter by **Category**; category pages filter by **Type** (subcategory).
 - 2026-10-03: FAQ content lives in `site.json` (owner-editable); unfinished answers use visible `[EDIT: ...]` markers.
+- 2026-10-03: WhatsApp button teal darkened to #0F7C70 (5.1:1 with white) for WCAG AA.
+- 2026-10-03: Framer Motion loaded through LazyMotion (`m` components) to keep the initial bundle small.
 - 2026-10-03: Discount badges use `coral-600` (#C9363B) rather than #E5484D so white text meets WCAG AA.
 
 ## Known issues / TODO
+- Mobile Lighthouse Performance on deep pages (product/category/search) is 86–88 (home 93–97, desktop 98–99). The remaining cost is evaluating ~110 KB gz of React + Framer Motion + Embla on Lighthouse's 4× CPU-throttled phone before the client-rendered page can paint. Further gains would need prerendering (not possible with HashRouter) or replacing React/Framer Motion. Real-device performance is good.
 - Owner to fill in: business address, email, social links, real product photos, FAQ answers marked `[EDIT: ...]` (payment options, delivery areas/time/charges, returns), About copy.
 
 ## Changelog
+- 2026-10-03: Performance/a11y pass: PNG icons + OG image, non-blocking fonts, early JSON fetch + route chunk modulepreload + LCP image preload from index.html, LazyMotion (main bundle 102→~60 KB gz), lazy Fuse.js, `<Deferred>` sections, single-SVG rating stars (DOM −40%), no first-paint entrance animations, blur-free placeholder SVGs, AA contrast for WhatsApp teal (#0F7C70), heading order, label/target-size fixes.
 - 2026-10-03: About, Contact, FAQ, 404 pages. Added `faq`, `aboutValues`, `businessHours` to site.json.
 - 2026-10-03: Enquiry page with summary, customer details, message preview and WhatsApp send. Fixed SmartImage so cached images never stay hidden.
 - 2026-10-03: Category, shop, search and categories pages; `useFilters` (URL query state: cat, sub, brand, min, max, disc, stock, tag, sort), FilterPanel, PriceRangeSlider, ProductListing, EmptyState, Breadcrumbs. Header search collapses to an icon at 1024–1279px.

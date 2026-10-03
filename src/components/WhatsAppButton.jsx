@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion'
+import { m } from 'framer-motion'
 import { WhatsAppIcon } from './BrandIcons'
 import { useSite } from '../hooks/useData'
 import { buildWhatsAppUrl, cn } from '../lib/utils'
@@ -11,7 +11,7 @@ export default function WhatsAppButton({ message = '', children = 'Order on What
   const { site } = useSite()
   const href = buildWhatsAppUrl(site.whatsappNumber, message)
   return (
-    <motion.a
+    <m.a
       whileTap={{ scale: 0.97 }}
       href={href}
       target="_blank"
@@ -22,7 +22,7 @@ export default function WhatsAppButton({ message = '', children = 'Order on What
     >
       <WhatsAppIcon className={size === 'lg' ? 'h-6 w-6' : 'h-5 w-5'} />
       {children}
-    </motion.a>
+    </m.a>
   )
 }
 

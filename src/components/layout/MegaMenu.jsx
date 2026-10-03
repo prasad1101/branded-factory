@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { motion } from 'framer-motion'
+import { m } from 'framer-motion'
 import { ArrowRight, Percent } from 'lucide-react'
 import { useCategories, useProducts } from '../../hooks/useData'
 import { getSubcategories } from '../../lib/data'
@@ -9,7 +9,7 @@ export default function MegaMenu({ onClose, id }) {
   const { categories } = useCategories()
   const { products } = useProducts()
   return (
-    <motion.div
+    <m.div
       id={id}
       initial={{ opacity: 0, y: -8 }}
       animate={{ opacity: 1, y: 0 }}
@@ -59,6 +59,6 @@ export default function MegaMenu({ onClose, id }) {
           </span>
         </Link>
       </div>
-    </motion.div>
+    </m.div>
   )
 }

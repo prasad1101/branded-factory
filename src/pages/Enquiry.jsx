@@ -1,6 +1,6 @@
 import { useMemo } from 'react'
 import { Link } from 'react-router-dom'
-import { AnimatePresence, motion } from 'framer-motion'
+import { AnimatePresence, m } from 'framer-motion'
 import { ArrowLeft, ChevronDown, Info, ShoppingBag, Sparkles, Trash2 } from 'lucide-react'
 import Seo from '../components/Seo'
 import SmartImage from '../components/SmartImage'
@@ -17,7 +17,7 @@ import { byFeatured, withTag } from '../lib/data'
 function LineItem({ product, qty, onQty, onRemove, currency }) {
   const { savings } = getDiscount(product.mrp, product.price)
   return (
-    <motion.li
+    <m.li
       layout
       initial={{ opacity: 0, y: 10 }}
       animate={{ opacity: 1, y: 0 }}
@@ -62,7 +62,7 @@ function LineItem({ product, qty, onQty, onRemove, currency }) {
           </div>
         </div>
       </div>
-    </motion.li>
+    </m.li>
   )
 }
 
@@ -136,9 +136,9 @@ export default function Enquiry() {
       <>
         <Seo title="Your Enquiry List" path="/enquiry" />
         <section className="container-px pt-10 text-center sm:pt-16">
-          <motion.div initial={{ scale: 0.9, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} className="mx-auto flex h-24 w-24 items-center justify-center rounded-full bg-white shadow-soft ring-8 ring-gold-50">
+          <m.div initial={{ scale: 0.9, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} className="mx-auto flex h-24 w-24 items-center justify-center rounded-full bg-white shadow-soft ring-8 ring-gold-50">
             <ShoppingBag className="h-10 w-10 text-gold-700" aria-hidden="true" />
-          </motion.div>
+          </m.div>
           <h1 className="mt-6 text-3xl font-semibold sm:text-4xl">Your enquiry list is empty</h1>
           <p className="mx-auto mt-3 max-w-md text-ink-muted">
             Add products you love, then send the whole list to us on WhatsApp in one tap. No sign-up, no payment online.
@@ -218,7 +218,7 @@ export default function Enquiry() {
                   </div>
                 </dl>
                 {totals.savings > 0 && (
-                  <motion.div
+                  <m.div
                     key={totals.savings}
                     initial={{ scale: 0.96, opacity: 0.6 }}
                     animate={{ scale: 1, opacity: 1 }}
@@ -229,7 +229,7 @@ export default function Enquiry() {
                       You save <span className="text-lg font-bold">{formatINR(totals.savings, currency)}</span>
                       {totals.percent > 0 && <> ({totals.percent}% off MRP)</>}
                     </p>
-                  </motion.div>
+                  </m.div>
                 )}
 
                 <form className="mt-6 space-y-4" onSubmit={(e) => e.preventDefault()}>

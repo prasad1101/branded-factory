@@ -65,7 +65,7 @@ export default {
         },
         whatsapp: {
           DEFAULT: '#25D366',
-          dark: '#128C7E',
+          dark: '#0F7C70', // darkened from #128C7E for WCAG AA with white text
           deep: '#075E54',
         },
       },

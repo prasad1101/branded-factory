@@ -1,8 +1,8 @@
-import { motion } from 'framer-motion'
+import { m } from 'framer-motion'
 
 /** Fade/slide content in once when it scrolls into view. */
 export default function Reveal({ children, className = '', delay = 0, y = 18, as = 'div' }) {
-  const M = motion[as] || motion.div
+  const M = m[as] || m.div
   return (
     <M
       className={className}

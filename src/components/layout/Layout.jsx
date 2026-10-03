@@ -1,6 +1,6 @@
-import { Suspense, useEffect } from 'react'
+import { Suspense, useEffect, useRef } from 'react'
 import { Outlet, useLocation } from 'react-router-dom'
-import { motion } from 'framer-motion'
+import { m } from 'framer-motion'
 import { RefreshCw } from 'lucide-react'
 import AnnouncementBar from './AnnouncementBar'
 import Header from './Header'
@@ -37,6 +37,11 @@ function DataError({ error, retry }) {
 export default function Layout() {
   const location = useLocation()
   const { status, error, retry } = useCatalog()
+  // No entrance animation on the very first paint (faster LCP); animate later route changes only
+  const firstRender = useRef(true)
+  useEffect(() => {
+    firstRender.current = false
+  }, [])
 
   return (
     <div className="flex min-h-screen flex-col pb-[calc(4rem+env(safe-area-inset-bottom))] md:pb-0">
@@ -51,14 +56,14 @@ export default function Layout() {
           <DataError error={error} retry={retry} />
         ) : (
           <Suspense fallback={<PageLoader />}>
-            <motion.div
+            <m.div
               key={location.pathname}
-              initial={{ opacity: 0, y: 10 }}
+              initial={firstRender.current ? false : { opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
             >
               <Outlet />
-            </motion.div>
+            </m.div>
           </Suspense>
         )}
       </main>

@@ -15,10 +15,10 @@ Brand promise: **Bumper Discounts · Assured Savings · Greatest Deals**. The UI
 - Vite + React 18 (JavaScript, **no TypeScript**)
 - React Router v6 with **HashRouter**
 - Tailwind CSS v3 (`tailwind.config.js` holds design tokens)
-- Framer Motion (wrapped in `<MotionConfig reducedMotion="user">`)
+- Framer Motion via **`LazyMotion` + `m` components** (features load async from `src/lib/motionFeatures.js`), wrapped in `<MotionConfig reducedMotion="user">`. Always import `m`, never `motion` (LazyMotion runs in `strict` mode and will throw).
 - lucide-react icons (v1 has **no brand icons**, so WhatsApp/Instagram/Facebook are custom SVGs in `src/components/BrandIcons.jsx`)
 - Embla Carousel (`embla-carousel-react` + autoplay) for carousels
-- Fuse.js for fuzzy search
+- Fuse.js for fuzzy search, loaded on demand on first search (`src/lib/search.js`, `useProductSearch(enabled)`)
 - react-helmet-async for per-page `<title>`/meta (via `src/components/Seo.jsx`)
 
 ## Folder structure
@@ -30,6 +30,7 @@ public/
 scripts/
   validate-data.js          ← `npm run validate-data` (runs in CI before build)
   generate-placeholders.js  ← regenerates sample SVG placeholder images
+  vite-route-preload.js     ← Vite plugin: injects route→chunk map into index.html for modulepreload
 src/
   App.jsx                   ← providers + routes (lazy-loaded pages)
   components/               ← reusable UI (ProductCard, PriceBlock, DiscountBadge, ...)
@@ -51,7 +52,7 @@ src/
 | `save` | `#15803D` | "You save ₹X" |
 | `cream` | `#FAF7F2` | page background |
 | `ink` / `ink-muted` | `#1B2333` / `#5B6577` | body text |
-| `whatsapp-dark` | `#128C7E` | WhatsApp buttons (white text) |
+| `whatsapp-dark` | `#0F7C70` | WhatsApp buttons (white text) |
 
 Fonts: **Fraunces** (serif headings, `font-serif`) and **Manrope** (body, `font-sans`), loaded from Google Fonts in `index.html`.
 Shared component classes in `src/index.css`: `container-px`, `btn-primary`, `btn-gold`, `btn-outline`, `btn-whatsapp`, `chip`, `eyebrow`, `input`, `skeleton`.
@@ -76,6 +77,15 @@ Shared component classes in `src/index.css`: `container-px`, `btn-primary`, `btn
 7. Missing images fall back to the branded placeholder (`<SmartImage>`), never a broken icon.
 8. Keep `npm run build` and `npm run validate-data` passing before every commit.
 
+## Performance architecture (keep these when editing)
+- `index.html` has an inline script that (1) starts fetching the 3 JSON files (`window.__BF_PRELOAD__`, consumed once by `lib/data.js`), (2) modulepreloads the current route's chunks (map injected at build time by `scripts/vite-route-preload.js`), (3) preloads the first hero banner on home / the product's first image on product pages.
+- Google Fonts load non-blocking (`rel=preload` + `onload`).
+- Home is imported eagerly; other routes are `React.lazy`.
+- Long pages wrap below-the-fold sections in `<Deferred>` (mounts near the viewport).
+- No entrance animation on the very first render (Layout page transition, hero text, product grid) because hidden-until-animated content delays LCP.
+- `SmartImage` with `eager` renders immediately (no fade-in) for LCP.
+- Placeholder SVGs avoid `feGaussianBlur` (costly to rasterise on phones).
+
 ## Coding conventions
 - Functional components + hooks, named default exports per file, PascalCase component files.
 - Tailwind utility classes; reuse the component classes above rather than inventing new colours.
@@ -83,6 +93,7 @@ Shared component classes in `src/index.css`: `container-px`, `btn-primary`, `btn
 - Filter/sort state lives in the URL query string (`useFilters` hook).
 - localStorage keys: `bf_enquiry_v1`, `bf_recent_v1`, `bf_customer_v1`. Always wrap access in try/catch.
 - Respect `prefers-reduced-motion` (MotionConfig + CSS media query).
+- Headings must not skip levels (Lighthouse a11y): listing grids include a sr-only `<h2>`.
 
 ## Deployment
 - `.github/workflows/deploy.yml`: on push to `main` → `npm ci` → `npm run validate-data` → `npm run build` → `actions/upload-pages-artifact` → `actions/deploy-pages`.

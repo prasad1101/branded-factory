@@ -2,13 +2,13 @@ import { useCallback, useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import useEmblaCarousel from 'embla-carousel-react'
 import Autoplay from 'embla-carousel-autoplay'
-import { motion, useReducedMotion } from 'framer-motion'
+import { m, useReducedMotion } from 'framer-motion'
 import { ArrowRight, ChevronLeft, ChevronRight, Pause, Play } from 'lucide-react'
 import SmartImage from './SmartImage'
 import Skeleton from './Skeleton'
 import { cn } from '../lib/utils'
 
-function Slide({ banner, active, index }) {
+function Slide({ banner, active, index, firstPaint }) {
   return (
     <div className="relative min-w-0 flex-[0_0_100%]" role="group" aria-roledescription="slide" aria-label={`${index + 1}: ${banner.title}`}>
       <div className="relative h-[460px] overflow-hidden sm:h-[440px] lg:h-[520px]">
@@ -23,9 +23,9 @@ function Slide({ banner, active, index }) {
         />
         <div className="absolute inset-0 bg-gradient-to-t from-navy via-navy/70 to-navy/10 sm:bg-gradient-to-r sm:from-navy sm:via-navy/75 sm:to-transparent" aria-hidden="true" />
         <div className="relative flex h-full items-end px-6 pb-14 sm:items-center sm:px-12 sm:pb-0 lg:px-16">
-          <motion.div
+          <m.div
             key={active ? 'on' : 'off'}
-            initial={{ opacity: 0, y: 24 }}
+            initial={firstPaint && index === 0 ? false : { opacity: 0, y: 24 }}
             animate={{ opacity: active ? 1 : 0, y: active ? 0 : 24 }}
             transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1], delay: 0.1 }}
             className="max-w-xl"
@@ -46,7 +46,7 @@ function Slide({ banner, active, index }) {
                 {banner.ctaText} <ArrowRight className="h-4 w-4" aria-hidden="true" />
               </Link>
             )}
-          </motion.div>
+          </m.div>
         </div>
       </div>
     </div>
@@ -59,6 +59,10 @@ export default function HeroCarousel({ banners = [], loading = false }) {
   const [ref, api] = useEmblaCarousel({ loop: true, duration: 30 }, reduce ? [] : [autoplay])
   const [selected, setSelected] = useState(0)
   const [playing, setPlaying] = useState(!reduce)
+  const [firstPaint, setFirstPaint] = useState(true)
+  useEffect(() => {
+    if (selected !== 0) setFirstPaint(false)
+  }, [selected])
 
   useEffect(() => {
     if (!api) return
@@ -88,14 +92,14 @@ export default function HeroCarousel({ banners = [], loading = false }) {
       <div ref={ref} className="overflow-hidden">
         <div className="flex touch-pan-y">
           {banners.map((b, i) => (
-            <Slide key={b.id || i} banner={b} index={i} active={selected === i} />
+            <Slide key={b.id || i} banner={b} index={i} active={selected === i} firstPaint={firstPaint} />
           ))}
         </div>
       </div>
 
       {banners.length > 1 && (
         <div className="absolute bottom-5 left-6 right-6 flex items-center justify-between sm:left-12 lg:left-16">
-          <div className="flex items-center gap-2">
+          <div className="-ml-1 flex items-center">
             {banners.map((b, i) => (
               <button
                 key={b.id || i}
@@ -103,7 +107,7 @@ export default function HeroCarousel({ banners = [], loading = false }) {
                 onClick={() => api?.scrollTo(i)}
                 aria-label={`Go to slide ${i + 1}`}
                 aria-current={selected === i}
-                className="group flex h-6 items-center"
+                className="group flex h-6 min-w-6 items-center justify-center px-1"
               >
                 <span className={cn('block h-1.5 rounded-full transition-all duration-500', selected === i ? 'w-8 bg-gold-400' : 'w-1.5 bg-white/40 group-hover:bg-white/70')} />
               </button>

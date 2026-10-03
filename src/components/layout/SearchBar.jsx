@@ -1,6 +1,6 @@
 import { useEffect, useId, useMemo, useRef, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
-import { AnimatePresence, motion } from 'framer-motion'
+import { AnimatePresence, m } from 'framer-motion'
 import { ArrowRight, Search, X } from 'lucide-react'
 import { useCategories } from '../../hooks/useData'
 import { useProductSearch } from '../../hooks/useSearch'
@@ -12,7 +12,8 @@ export default function SearchBar({ className = '', autoFocus = false, initialQu
   const [query, setQuery] = useState(initialQuery)
   const [open, setOpen] = useState(false)
   const [active, setActive] = useState(-1)
-  const search = useProductSearch()
+  const [engaged, setEngaged] = useState(Boolean(initialQuery))
+  const { search } = useProductSearch(engaged)
   const { categories } = useCategories()
   const navigate = useNavigate()
   const wrapRef = useRef(null)
@@ -85,10 +86,15 @@ export default function SearchBar({ className = '', autoFocus = false, initialQu
           autoFocus={autoFocus}
           value={query}
           onChange={(e) => {
+            setEngaged(true)
             setQuery(e.target.value)
             setOpen(true)
           }}
-          onFocus={() => setOpen(true)}
+          onFocus={() => {
+            setEngaged(true)
+            setOpen(true)
+          }}
+          onPointerEnter={() => setEngaged(true)}
           onKeyDown={onKeyDown}
           placeholder="Search serums, basmati, perfumes…"
           role="combobox"
@@ -118,7 +124,7 @@ export default function SearchBar({ className = '', autoFocus = false, initialQu
 
       <AnimatePresence>
         {showPanel && (
-          <motion.ul
+          <m.ul
             id={listId}
             role="listbox"
             initial={{ opacity: 0, y: -6 }}
@@ -177,7 +183,7 @@ export default function SearchBar({ className = '', autoFocus = false, initialQu
                 </Link>
               </li>
             ))}
-          </motion.ul>
+          </m.ul>
         )}
       </AnimatePresence>
     </div>

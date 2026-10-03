@@ -12,7 +12,7 @@ export default function Seo({ title, description, image, path = '' }) {
     description ||
     `${site.tagline || 'Bumper Discounts. Assured Savings. Greatest Deals.'} Shop genuine branded products and order instantly on WhatsApp.`
   const url = SITE_URL + (path ? `#${path}` : '')
-  const img = image && !image.endsWith('.svg') ? new URL(assetUrl(image), SITE_URL).href : `${SITE_URL}og-image.png`
+  const img = image && !image.endsWith('.svg') ? new URL(assetUrl(image), SITE_URL).href : `${SITE_URL}og-image.jpg`
   return (
     <Helmet>
       <title>{fullTitle}</title>

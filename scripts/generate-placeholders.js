@@ -140,7 +140,7 @@ function defs(c, darker = false) {
     <linearGradient id="body" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="${b1}"/><stop offset="1" stop-color="${b2}"/></linearGradient>
     <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#E8CF8D"/><stop offset="1" stop-color="#A9843A"/></linearGradient>
     <linearGradient id="ink" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="${c.accent}"/><stop offset="1" stop-color="${c.accent}"/></linearGradient>
-    <filter id="soft" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="18"/></filter>
+    <radialGradient id="shadow"><stop offset="0" stop-color="${c.accent}" stop-opacity=".35"/><stop offset="1" stop-color="${c.accent}" stop-opacity="0"/></radialGradient>
   </defs>`
 }
 
@@ -158,7 +158,7 @@ function productSvg(p, variant) {
   ${defs(c, alt)}
   <rect width="800" height="800" fill="url(#bg)"/>
   ${extra}
-  <ellipse cx="${alt ? 430 : 400}" cy="${alt ? 660 : 650}" rx="210" ry="26" fill="${c.accent}" opacity=".22" filter="url(#soft)"/>
+  <ellipse cx="${alt ? 430 : 400}" cy="${alt ? 660 : 650}" rx="240" ry="34" fill="url(#shadow)"/>
   <g transform="${transform}">${silhouette(shape, label, p.brand)}</g>
 </svg>
 `
@@ -171,7 +171,7 @@ function categorySvg(cat) {
   ${defs(c)}
   <rect width="600" height="600" fill="url(#bg)"/>
   <circle cx="300" cy="290" r="210" fill="#fff" opacity=".45"/>
-  <ellipse cx="300" cy="500" rx="170" ry="20" fill="${c.accent}" opacity=".2" filter="url(#soft)"/>
+  <ellipse cx="300" cy="500" rx="190" ry="26" fill="url(#shadow)"/>
   <g transform="translate(300 290) scale(.72)">${silhouette(shapeFor(sample), initials(cat.name), cat.name)}</g>
 </svg>
 `
@@ -202,13 +202,13 @@ function bannerSvg(banner, idx) {
     <radialGradient id="glow" cx="72%" cy="45%" r="45%"><stop offset="0" stop-color="${g}" stop-opacity=".45"/><stop offset="1" stop-color="${g}" stop-opacity="0"/></radialGradient>
     <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#E8CF8D"/><stop offset="1" stop-color="#A9843A"/></linearGradient>
     <linearGradient id="ink" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0F1B2D"/><stop offset="1" stop-color="#0F1B2D"/></linearGradient>
-    <filter id="soft" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="24"/></filter>
+    <radialGradient id="shadow"><stop offset="0" stop-color="#000" stop-opacity=".45"/><stop offset="1" stop-color="#000" stop-opacity="0"/></radialGradient>
   </defs>
   <rect width="1600" height="700" fill="url(#bgb)"/>
   <rect width="1600" height="700" fill="url(#glow)"/>
   <circle cx="1180" cy="360" r="300" fill="none" stroke="${g}" stroke-opacity=".25" stroke-width="1.5"/>
   <circle cx="1180" cy="360" r="240" fill="none" stroke="${g}" stroke-opacity=".15" stroke-width="1"/>
-  <ellipse cx="1180" cy="640" rx="380" ry="30" fill="#000" opacity=".35" filter="url(#soft)"/>
+  <ellipse cx="1180" cy="640" rx="420" ry="40" fill="url(#shadow)"/>
   ${order}
 </svg>
 `

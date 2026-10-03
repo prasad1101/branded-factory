@@ -1,6 +1,6 @@
 import { useMemo } from 'react'
 import { Link } from 'react-router-dom'
-import { motion } from 'framer-motion'
+import { m } from 'framer-motion'
 import { BadgeCheck, BadgePercent, ClipboardList, PackageCheck, PiggyBank, Search, Send, Sparkles } from 'lucide-react'
 import Seo from '../components/Seo'
 import HeroCarousel from '../components/HeroCarousel'
@@ -10,6 +10,7 @@ import CategoryCard from '../components/CategoryCard'
 import Countdown from '../components/Countdown'
 import Reveal, { staggerContainer, staggerItem } from '../components/Reveal'
 import Skeleton from '../components/Skeleton'
+import Deferred from '../components/Deferred'
 import WhatsAppButton from '../components/WhatsAppButton'
 import { WhatsAppIcon } from '../components/BrandIcons'
 import { useCatalog } from '../hooks/useData'
@@ -32,7 +33,7 @@ const STEPS = [
 function TrustStrip() {
   return (
     <section aria-label="Why shop with us" className="container-px mt-6 sm:mt-8">
-      <motion.ul
+      <m.ul
         variants={staggerContainer}
         initial="hidden"
         whileInView="show"
@@ -40,7 +41,7 @@ function TrustStrip() {
         className="grid grid-cols-2 gap-3 rounded-3xl border border-navy/5 bg-white p-3 shadow-soft sm:gap-4 sm:p-4 lg:grid-cols-4"
       >
         {TRUST.map(({ icon: Icon, title, text }) => (
-          <motion.li key={title} variants={staggerItem} className="flex flex-col items-center gap-2 rounded-2xl p-2 text-center sm:flex-row sm:gap-3 sm:p-3 sm:text-left">
+          <m.li key={title} variants={staggerItem} className="flex flex-col items-center gap-2 rounded-2xl p-2 text-center sm:flex-row sm:gap-3 sm:p-3 sm:text-left">
             <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-gold-50 text-gold-700 ring-1 ring-gold-200 sm:h-12 sm:w-12">
               <Icon className="h-5 w-5 sm:h-6 sm:w-6" aria-hidden="true" />
             </span>
@@ -48,9 +49,9 @@ function TrustStrip() {
               <span className="block text-[13px] font-bold leading-tight text-navy sm:text-sm">{title}</span>
               <span className="mt-0.5 block text-xs leading-snug text-ink-muted">{text}</span>
             </span>
-          </motion.li>
+          </m.li>
         ))}
-      </motion.ul>
+      </m.ul>
     </section>
   )
 }
@@ -75,7 +76,7 @@ function CategoryGrid({ categories, products, loading }) {
           ))}
         </div>
       ) : (
-        <motion.div
+        <m.div
           variants={staggerContainer}
           initial="hidden"
           whileInView="show"
@@ -83,11 +84,11 @@ function CategoryGrid({ categories, products, loading }) {
           className="grid grid-cols-3 gap-3 sm:grid-cols-4 sm:gap-5 lg:grid-cols-6"
         >
           {categories.map((c) => (
-            <motion.div key={c.id} variants={staggerItem}>
+            <m.div key={c.id} variants={staggerItem}>
               <CategoryCard category={c} count={stats[c.id]?.count || 0} maxDiscount={stats[c.id]?.max || 0} className="h-full" />
-            </motion.div>
+            </m.div>
           ))}
-        </motion.div>
+        </m.div>
       )}
     </section>
   )
@@ -142,7 +143,7 @@ function HowToOrder() {
   return (
     <section className="container-px mt-20 sm:mt-24" aria-labelledby="how-heading">
       <SectionHeader center eyebrow="Simple & personal" title={<span id="how-heading">How to order</span>} subtitle="No payment gateway, no sign-up. Just pick, send and relax." />
-      <motion.ol
+      <m.ol
         variants={staggerContainer}
         initial="hidden"
         whileInView="show"
@@ -151,16 +152,16 @@ function HowToOrder() {
       >
         <div className="pointer-events-none absolute left-[12%] right-[12%] top-10 hidden h-px bg-gradient-to-r from-gold-200 via-gold-500 to-gold-200 lg:block" aria-hidden="true" />
         {STEPS.map(({ icon: Icon, title, text }, i) => (
-          <motion.li key={title} variants={staggerItem} className="relative rounded-2xl bg-white p-6 text-center shadow-soft">
+          <m.li key={title} variants={staggerItem} className="relative rounded-2xl bg-white p-6 text-center shadow-soft">
             <span className="relative mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-navy text-gold-400 ring-8 ring-cream">
               <Icon className="h-6 w-6" aria-hidden="true" />
               <span className="absolute -right-1 -top-1 flex h-6 w-6 items-center justify-center rounded-full bg-gold-500 text-xs font-bold text-navy">{i + 1}</span>
             </span>
             <h3 className="mt-4 text-xl font-semibold">{title}</h3>
             <p className="mt-2 text-sm text-ink-muted">{text}</p>
-          </motion.li>
+          </m.li>
         ))}
-      </motion.ol>
+      </m.ol>
     </section>
   )
 }
@@ -226,24 +227,31 @@ export default function Home() {
       </div>
       <TrustStrip />
       <CategoryGrid categories={categories} products={products} loading={loading} />
-      <DealOfTheDay products={rows.deals} loading={loading} />
-      <ProductRow id="savings-heading" eyebrow="Assured savings" title="Biggest Savings" subtitle="Our deepest discounts right now, sorted by % off." to="/shop?sort=discount" products={rows.savings} loading={loading} />
-      <ProductRow id="best-heading" eyebrow="Customer favourites" title="Bestsellers" to="/shop?tag=bestseller" products={rows.bestsellers} loading={loading} />
-      <ProductRow id="new-heading" eyebrow="Just landed" title="New Arrivals" to="/shop?sort=newest" products={rows.newest} loading={loading} />
-      <ProductRow id="feat-heading" eyebrow="Editor’s picks" title="Featured Products" to="/shop" products={rows.featured} loading={loading} />
-      {showcase.map(({ category, items }) => (
-        <ProductRow
-          key={category.id}
-          id={`cat-${category.id}-heading`}
-          eyebrow={category.description}
-          title={category.name}
-          to={`/category/${category.id}`}
-          products={items}
-          loading={false}
-        />
+      {/* Below-the-fold sections mount as they approach the viewport */}
+      <Deferred minHeight={640}>
+        <DealOfTheDay products={rows.deals} loading={loading} />
+      </Deferred>
+      {[
+        { id: 'savings-heading', eyebrow: 'Assured savings', title: 'Biggest Savings', subtitle: 'Our deepest discounts right now, sorted by % off.', to: '/shop?sort=discount', products: rows.savings },
+        { id: 'best-heading', eyebrow: 'Customer favourites', title: 'Bestsellers', to: '/shop?tag=bestseller', products: rows.bestsellers },
+        { id: 'new-heading', eyebrow: 'Just landed', title: 'New Arrivals', to: '/shop?sort=newest', products: rows.newest },
+        { id: 'feat-heading', eyebrow: 'Editor’s picks', title: 'Featured Products', to: '/shop', products: rows.featured },
+        ...showcase.map(({ category, items }) => ({
+          id: `cat-${category.id}-heading`,
+          eyebrow: category.description,
+          title: category.name,
+          to: `/category/${category.id}`,
+          products: items,
+        })),
+      ].map((row) => (
+        <Deferred key={row.id} minHeight={560}>
+          <ProductRow {...row} loading={loading} />
+        </Deferred>
       ))}
-      <HowToOrder />
-      <ClosingCta site={site} />
+      <Deferred minHeight={500}>
+        <HowToOrder />
+        <ClosingCta site={site} />
+      </Deferred>
     </>
   )
 }

@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { AnimatePresence, motion } from 'framer-motion'
+import { AnimatePresence, m } from 'framer-motion'
 import { Plus } from 'lucide-react'
 import Seo from '../components/Seo'
 import Breadcrumbs from '../components/Breadcrumbs'
@@ -22,17 +22,17 @@ function Answer({ text }) {
 function Item({ q, a, open, onToggle, id }) {
   return (
     <li className="rounded-2xl bg-white shadow-soft">
-      <h3 className="font-sans text-base">
+      <h2 className="font-sans text-base">
         <button type="button" onClick={onToggle} aria-expanded={open} aria-controls={`${id}-a`} id={`${id}-q`} className="flex w-full items-center justify-between gap-4 px-5 py-5 text-left font-semibold text-navy sm:px-6">
           {q}
           <span className={cn('flex h-8 w-8 shrink-0 items-center justify-center rounded-full transition-all', open ? 'rotate-45 bg-navy text-white' : 'bg-cream-100 text-navy')} aria-hidden="true">
             <Plus className="h-4 w-4" />
           </span>
         </button>
-      </h3>
+      </h2>
       <AnimatePresence initial={false}>
         {open && (
-          <motion.div
+          <m.div
             id={`${id}-a`}
             role="region"
             aria-labelledby={`${id}-q`}
@@ -45,7 +45,7 @@ function Item({ q, a, open, onToggle, id }) {
             <p className="px-5 pb-5 leading-relaxed text-ink-muted sm:px-6">
               <Answer text={a} />
             </p>
-          </motion.div>
+          </m.div>
         )}
       </AnimatePresence>
     </li>

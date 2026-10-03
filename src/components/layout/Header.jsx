@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
-import { AnimatePresence, motion } from 'framer-motion'
+import { AnimatePresence, m } from 'framer-motion'
 import { ChevronDown, Menu, Search, ShoppingBag } from 'lucide-react'
 import Logo from '../Logo'
 import SearchBar from './SearchBar'
@@ -20,7 +20,7 @@ export function EnquiryBadge({ count, className = '' }) {
   return (
     <AnimatePresence>
       {count > 0 && (
-        <motion.span
+        <m.span
           key={count}
           initial={{ scale: 0.4, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
@@ -32,7 +32,7 @@ export function EnquiryBadge({ count, className = '' }) {
           )}
         >
           {count > 99 ? '99+' : count}
-        </motion.span>
+        </m.span>
       )}
     </AnimatePresence>
   )

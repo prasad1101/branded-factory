@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
-import { AnimatePresence, motion } from 'framer-motion'
+import { AnimatePresence, m } from 'framer-motion'
 import { ChevronRight, X } from 'lucide-react'
 import { useCategories, useSite } from '../../hooks/useData'
 import Logo from '../Logo'
@@ -37,14 +37,14 @@ export default function MobileDrawer({ open, onClose }) {
     <AnimatePresence>
       {open && (
         <div className="fixed inset-0 z-[60] lg:hidden" role="dialog" aria-modal="true" aria-label="Menu">
-          <motion.div
+          <m.div
             className="absolute inset-0 bg-navy/50 backdrop-blur-sm"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             onClick={onClose}
           />
-          <motion.aside
+          <m.aside
             initial={{ x: '-100%' }}
             animate={{ x: 0 }}
             exit={{ x: '-100%' }}
@@ -88,7 +88,7 @@ export default function MobileDrawer({ open, onClose }) {
                 Chat on WhatsApp
               </WhatsAppButton>
             </div>
-          </motion.aside>
+          </m.aside>
         </div>
       )}
     </AnimatePresence>

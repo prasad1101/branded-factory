@@ -7,8 +7,14 @@ import { assetUrl, getDiscount } from './utils'
 let catalogPromise = null
 
 async function fetchJSON(file) {
+  // index.html starts these downloads early (window.__BF_PRELOAD__) so they run in parallel with the JS.
+  const key = file.replace('.json', '')
+  const preloaded = typeof window !== 'undefined' && window.__BF_PRELOAD__?.[key]
+  if (preloaded) delete window.__BF_PRELOAD__[key]
   // "no-cache" revalidates with the server, so owners see their edits right after a deploy.
-  const res = await fetch(assetUrl(`data/${file}`), { cache: 'no-cache' })
+  const res = await (preloaded || fetch(assetUrl(`data/${file}`), { cache: 'no-cache' })).catch(() =>
+    fetch(assetUrl(`data/${file}`), { cache: 'no-cache' }),
+  )
   if (!res.ok) throw new Error(`Could not load ${file} (HTTP ${res.status})`)
   try {
     return await res.json()

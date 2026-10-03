@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { AnimatePresence, motion } from 'framer-motion'
+import { AnimatePresence, m } from 'framer-motion'
 import { useSite } from '../../hooks/useData'
 
 export default function AnnouncementBar() {
@@ -24,7 +24,7 @@ export default function AnnouncementBar() {
       <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-gold-500/60 to-transparent" aria-hidden="true" />
       <AnimatePresence mode="wait" initial={false}>
         {messages.length > 0 && (
-          <motion.p
+          <m.p
             key={index}
             initial={{ y: 18, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
@@ -33,7 +33,7 @@ export default function AnnouncementBar() {
             className="flex h-9 items-center justify-center px-4 text-center tracking-wide"
           >
             {messages[index % messages.length]}
-          </motion.p>
+          </m.p>
         )}
       </AnimatePresence>
     </div>

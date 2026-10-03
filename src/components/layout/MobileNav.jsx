@@ -57,7 +57,7 @@ export default function MobileNav() {
             </>
           )}
         </NavLink>
-        <NavLink to="/enquiry" className={itemClass} aria-label={`Enquiry list, ${count} items`}>
+        <NavLink to="/enquiry" className={itemClass}>
           {({ isActive }) => (
             <>
               <Dot isActive={isActive} />
@@ -66,6 +66,7 @@ export default function MobileNav() {
                 <EnquiryBadge count={count} className="-right-3 -top-2" />
               </span>
               My List
+              <span className="sr-only">, enquiry list with {count} {count === 1 ? 'item' : 'items'}</span>
             </>
           )}
         </NavLink>
