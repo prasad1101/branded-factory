@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { assetUrl, cn } from '../lib/utils'
 
 /** Elegant branded placeholder shown when an image is missing or fails to load. */
@@ -26,27 +26,31 @@ export function ImagePlaceholder({ label = '', className = '' }) {
  * falls back to the branded placeholder on error.
  */
 export default function SmartImage({ src, alt = '', className = '', imgClassName = '', eager = false, sizes, ...rest }) {
-  const [failed, setFailed] = useState(!src)
-  const [loaded, setLoaded] = useState(false)
+  // State is keyed by src so a cached image that loads instantly is never reset back to hidden.
+  const [failedSrc, setFailedSrc] = useState(null)
+  const [loadedSrc, setLoadedSrc] = useState(null)
+  const imgRef = useRef(null)
 
+  // Catch images that finished loading before React attached the onLoad handler
   useEffect(() => {
-    setFailed(!src)
-    setLoaded(false)
+    const img = imgRef.current
+    if (img && img.complete && img.naturalWidth > 0) setLoadedSrc(src)
   }, [src])
 
-  if (failed) return <ImagePlaceholder label={alt} className={className} />
+  if (!src || failedSrc === src) return <ImagePlaceholder label={alt} className={className} />
 
   return (
     <img
+      ref={imgRef}
       src={assetUrl(src)}
       alt={alt}
       loading={eager ? 'eager' : 'lazy'}
       decoding="async"
       fetchpriority={eager ? 'high' : undefined}
       sizes={sizes}
-      onError={() => setFailed(true)}
-      onLoad={() => setLoaded(true)}
-      className={cn('transition-opacity duration-500', loaded ? 'opacity-100' : 'opacity-0', imgClassName, className)}
+      onError={() => setFailedSrc(src)}
+      onLoad={() => setLoadedSrc(src)}
+      className={cn('transition-opacity duration-500', loadedSrc === src ? 'opacity-100' : 'opacity-0', imgClassName, className)}
       {...rest}
     />
   )

@@ -15,7 +15,7 @@
 - [x] 4. Home page (all sections) (2026-10-03)
 - [x] 5. Category, shop and search pages with filters and sorting (2026-10-03)
 - [ ] 6. Product detail page
-- [ ] 7. Enquiry list and WhatsApp message builder
+- [x] 7. Enquiry list and WhatsApp message builder (2026-10-03)
 - [ ] 8. About, Contact, FAQ and 404 pages
 - [ ] 9. SEO, performance and accessibility pass
 - [ ] 10. Data validation script, GitHub Actions deployment, `.nojekyll`
@@ -23,13 +23,13 @@
 - [ ] 12. Final QA: build, test all routes, WhatsApp links and mobile layouts
 
 ## Current status
-Category (`/category/:id`), shop (`/shop`), search (`/search?q=`) and all-categories (`/categories`) pages complete. Filters (category/type, brand, price slider, discount bands, in-stock) and sort live in the URL; sidebar on desktop, bottom sheet on mobile; Load more (24 per page); empty state with suggested categories. Next up: product detail page.
+Enquiry list complete: line items with quantity/remove (with Undo), clear list, totals (MRP, discount, total, savings %), optional name/area/notes persisted in localStorage, message preview, and "Send Enquiry on WhatsApp" producing the exact message format from the brief. Next up: About, Contact, FAQ and 404 pages.
 
 ## Next steps
-1. Product gallery with thumbnails, hover zoom (desktop) and swipe (mobile)
-2. Price block, quantity selector, Add to Enquiry List, Order on WhatsApp (single product)
-3. Out-of-stock state → "Ask about availability on WhatsApp"
-4. You may also like + Recently viewed (localStorage)
+1. About page (story + values, copy from `site.about`)
+2. Contact page (WhatsApp, email, address, hours from `site.json`)
+3. FAQ page with placeholder answers clearly marked for the owner
+4. Styled 404 page
 
 ## Decisions log
 - 2026-10-03: Using **HashRouter** because GitHub Pages has no server-side routing (deep links/refresh would 404).
@@ -51,6 +51,7 @@ Category (`/category/:id`), shop (`/shop`), search (`/search?q=`) and all-catego
 - Owner to fill in: business address, email, social links, real product photos, FAQ/About copy (placeholders marked).
 
 ## Changelog
+- 2026-10-03: Enquiry page with summary, customer details, message preview and WhatsApp send. Fixed SmartImage so cached images never stay hidden.
 - 2026-10-03: Category, shop, search and categories pages; `useFilters` (URL query state: cat, sub, brand, min, max, disc, stock, tag, sort), FilterPanel, PriceRangeSlider, ProductListing, EmptyState, Breadcrumbs. Header search collapses to an icon at 1024–1279px.
 - 2026-10-03: Home page + components: ProductCard, PriceBlock, DiscountBadge, RatingStars, CategoryCard, SectionHeader, Reveal, ProductCarousel, HeroCarousel, Countdown. Biggest Savings excludes Deal of the Day items for variety.
 - 2026-10-03: Global layout (AnnouncementBar, Header with SearchBar + MegaMenu, MobileDrawer, MobileNav, Footer, FloatingWhatsApp, Seo, Layout with ScrollToTop and data error state). Added `/categories` route for the mobile nav.
