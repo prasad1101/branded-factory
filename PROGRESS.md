@@ -18,20 +18,17 @@
 - [x] 7. Enquiry list and WhatsApp message builder (2026-10-03)
 - [x] 8. About, Contact, FAQ and 404 pages (2026-10-03)
 - [x] 9. SEO, performance and accessibility pass (2026-10-03)
-- [ ] 10. Data validation script, GitHub Actions deployment, `.nojekyll`
+- [x] 10. Data validation script, GitHub Actions deployment, `.nojekyll` (2026-10-03)
 - [ ] 11. Owner README
 - [ ] 12. Final QA: build, test all routes, WhatsApp links and mobile layouts
 
 ## Current status
-SEO/perf/a11y pass done. Lighthouse (local preview, simulated throttling):
-- **Desktop**: Performance 98–99, Accessibility 100, Best Practices 100, SEO 100 on home, product, category, enquiry.
-- **Mobile**: Home 93–97 / 100 / 100 / 100; FAQ 97; product, category, search 86–88 Performance (100 on the other three).
-Next up: data validation script + GitHub Actions deployment.
+`npm run validate-data` checks JSON syntax (with line/column), duplicate IDs, required fields, price > MRP, numeric prices, unknown categories, missing/case-mismatched images, dates, booleans, WhatsApp number; warns about `[EDIT: …]` FAQ placeholders, placeholder address, large images, empty categories. `.github/workflows/deploy.yml` validates → builds → deploys on every push to `main`. `.nojekyll` ships in `dist/`. Next up: owner README.
 
 ## Next steps
-1. `scripts/validate-data.js` (duplicate IDs, required fields, price > mrp, unknown categories, missing images)
-2. `.github/workflows/deploy.yml` (validate → build → deploy Pages)
-3. Confirm `public/.nojekyll` ships in `dist/`
+1. README for the non-technical owner (product/category/image/banner/WhatsApp editing, github.com editing, local dev, deployment, image sizes)
+2. Final QA across all routes and widths
+3. Enable Pages (Source: GitHub Actions) and verify the live URL
 
 ## Decisions log
 - 2026-10-03: Using **HashRouter** because GitHub Pages has no server-side routing (deep links/refresh would 404).
@@ -50,6 +47,7 @@ Next up: data validation script + GitHub Actions deployment.
 - 2026-10-03: FAQ content lives in `site.json` (owner-editable); unfinished answers use visible `[EDIT: ...]` markers.
 - 2026-10-03: WhatsApp button teal darkened to #0F7C70 (5.1:1 with white) for WCAG AA.
 - 2026-10-03: Framer Motion loaded through LazyMotion (`m` components) to keep the initial bundle small.
+- 2026-10-03: Missing image files are **errors** in validation (deploy stops), so a listing never goes live with a missing photo by accident. Image paths are checked case-sensitively, like GitHub Pages.
 - 2026-10-03: Discount badges use `coral-600` (#C9363B) rather than #E5484D so white text meets WCAG AA.
 
 ## Known issues / TODO
@@ -57,6 +55,7 @@ Next up: data validation script + GitHub Actions deployment.
 - Owner to fill in: business address, email, social links, real product photos, FAQ answers marked `[EDIT: ...]` (payment options, delivery areas/time/charges, returns), About copy.
 
 ## Changelog
+- 2026-10-03: Data validator (`scripts/validate-data.js`) with GitHub Actions annotations; deploy workflow (checkout v7, setup-node v7, configure-pages v6, upload-pages-artifact v5, deploy-pages v5, Node 22).
 - 2026-10-03: Performance/a11y pass: PNG icons + OG image, non-blocking fonts, early JSON fetch + route chunk modulepreload + LCP image preload from index.html, LazyMotion (main bundle 102→~60 KB gz), lazy Fuse.js, `<Deferred>` sections, single-SVG rating stars (DOM −40%), no first-paint entrance animations, blur-free placeholder SVGs, AA contrast for WhatsApp teal (#0F7C70), heading order, label/target-size fixes.
 - 2026-10-03: About, Contact, FAQ, 404 pages. Added `faq`, `aboutValues`, `businessHours` to site.json.
 - 2026-10-03: Enquiry page with summary, customer details, message preview and WhatsApp send. Fixed SmartImage so cached images never stay hidden.
