@@ -82,3 +82,10 @@
     scroll-behavior: auto !important;
   }
 }
+
+/* Lift the floating WhatsApp button above a page's sticky mobile CTA bar */
+@media (max-width: 767px) {
+  body[data-sticky-cta] .bf-fab {
+    bottom: calc(9.5rem + env(safe-area-inset-bottom));
+  }
+}

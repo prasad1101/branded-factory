@@ -36,7 +36,7 @@ export function FloatingWhatsApp() {
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Chat with us on WhatsApp"
-      className="group fixed bottom-24 right-4 z-40 md:bottom-6 md:right-6"
+      className="bf-fab group fixed bottom-24 right-4 z-40 transition-[bottom] duration-300 md:bottom-6 md:right-6"
     >
       <span className="absolute inset-0 rounded-full bg-whatsapp animate-pulse-ring" aria-hidden="true" />
       <span className="relative flex h-14 w-14 items-center justify-center rounded-full bg-whatsapp text-white shadow-lift transition-transform duration-200 group-hover:scale-105 group-active:scale-95">

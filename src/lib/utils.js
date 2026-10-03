@@ -51,7 +51,7 @@ export function buildWhatsAppUrl(number, message = '') {
 
 function productLine(product, qty, currency) {
   const size = product.size ? ` (${product.size})` : ''
-  return `${product.name}${size} × ${qty}: ${formatINR(product.price * qty, currency)}`
+  return `${product.name}${size} × ${qty} — ${formatINR(product.price * qty, currency)}`
 }
 
 /**
