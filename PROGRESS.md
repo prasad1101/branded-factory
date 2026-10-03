@@ -11,7 +11,7 @@
 ## Milestones
 - [x] 1. Project setup: Vite, React, Tailwind, router, fonts, folder structure, CLAUDE.md, PROGRESS.md (2026-10-03)
 - [x] 2. Data layer and sample JSON (10+ categories, ~40 products, placeholder images) (2026-10-03)
-- [ ] 3. Global layout: announcement bar, header, mega-menu, mobile bottom nav, footer, floating WhatsApp button
+- [x] 3. Global layout: announcement bar, header, mega-menu, mobile bottom nav, footer, floating WhatsApp button (2026-10-03)
 - [ ] 4. Home page (all sections)
 - [ ] 5. Category, shop and search pages with filters and sorting
 - [ ] 6. Product detail page
@@ -23,13 +23,13 @@
 - [ ] 12. Final QA: build, test all routes, WhatsApp links and mobile layouts
 
 ## Current status
-Data layer complete: 12 categories and 45 sample products in `public/data/`, 106 generated SVG placeholders, `src/lib/data.js` + `utils.js`, Data/Enquiry/Toast contexts and hooks. Next up: global layout.
+Global layout complete: rotating announcement bar, sticky glass header (collapses on scroll) with live search suggestions and category mega-menu, mobile drawer + bottom nav, footer, floating WhatsApp button, skip link, lazy routes with page transitions. Pages are stubs. Next up: home page.
 
 ## Next steps
-1. Announcement bar, sticky glass header with search suggestions and mega-menu
-2. Mobile bottom nav and slide-in drawer
-3. Footer and floating WhatsApp button
-4. Route skeleton with lazy-loaded pages and page transitions
+1. Hero carousel (Embla) from `heroBanners`
+2. Trust strip, category tiles, Deal of the Day with IST countdown
+3. ProductCard / PriceBlock / DiscountBadge / ProductCarousel components
+4. Biggest Savings, Bestsellers, New Arrivals, Featured, per-category rows, How to order, closing CTA
 
 ## Decisions log
 - 2026-10-03: Using **HashRouter** because GitHub Pages has no server-side routing (deep links/refresh would 404).
@@ -41,11 +41,13 @@ Data layer complete: 12 categories and 45 sample products in `public/data/`, 106
 - 2026-10-03: Enquiry list stores only `{id, qty}` in localStorage so prices always come from the latest products.json.
 - 2026-10-03: Discount % is rounded **down** so savings are never overstated.
 - 2026-10-03: JSON is fetched with `cache: 'no-cache'` so edits show right after deploy.
+- 2026-10-03: Added a `/categories` page so the mobile bottom-nav "Categories" tab has a real destination.
 - 2026-10-03: Discount badges use `coral-600` (#C9363B) rather than #E5484D so white text meets WCAG AA.
 
 ## Known issues / TODO
 - Owner to fill in: business address, email, social links, real product photos, FAQ/About copy (placeholders marked).
 
 ## Changelog
+- 2026-10-03: Global layout (AnnouncementBar, Header with SearchBar + MegaMenu, MobileDrawer, MobileNav, Footer, FloatingWhatsApp, Seo, Layout with ScrollToTop and data error state). Added `/categories` route for the mobile nav.
 - 2026-10-03: Data layer: sample JSON (12 categories, 45 products), SVG placeholder generator (`npm run generate-placeholders`), DataContext/EnquiryContext/ToastContext, `useCatalog`/`useSite`/`useCategories`/`useProducts`/`useProduct`/`useEnquiry`/`useToast`, SmartImage with branded fallback, skeleton loaders.
 - 2026-10-03: Project setup (Vite, React 18, Tailwind tokens, HashRouter shell, fonts, favicon, manifest, CLAUDE.md, PROGRESS.md).

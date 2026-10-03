@@ -1,23 +1,23 @@
+import { lazy } from 'react'
 import { HashRouter, Routes, Route } from 'react-router-dom'
 import { HelmetProvider } from 'react-helmet-async'
 import { MotionConfig } from 'framer-motion'
 import { DataProvider } from './context/DataContext'
 import { EnquiryProvider } from './context/EnquiryContext'
 import { ToastProvider } from './context/ToastContext'
-import { useCatalog } from './hooks/useData'
-import { ProductGridSkeleton } from './components/Skeleton'
+import Layout from './components/layout/Layout'
 
-function Placeholder() {
-  const { status, products, categories, error } = useCatalog()
-  return (
-    <main className="container-px py-24">
-      <h1 className="text-4xl">Branded Factory</h1>
-      {status === 'loading' && <ProductGridSkeleton count={4} />}
-      {status === 'error' && <p>{error.message}</p>}
-      {status === 'ready' && <p>{categories.length} categories · {products.length} products</p>}
-    </main>
-  )
-}
+// Route-level code splitting
+const Home = lazy(() => import('./pages/Home'))
+const Categories = lazy(() => import('./pages/Categories'))
+const Category = lazy(() => import('./pages/Category'))
+const Shop = lazy(() => import('./pages/Shop'))
+const Product = lazy(() => import('./pages/Product'))
+const Enquiry = lazy(() => import('./pages/Enquiry'))
+const About = lazy(() => import('./pages/About'))
+const Contact = lazy(() => import('./pages/Contact'))
+const Faq = lazy(() => import('./pages/Faq'))
+const NotFound = lazy(() => import('./pages/NotFound'))
 
 export default function App() {
   return (
@@ -29,7 +29,19 @@ export default function App() {
               {/* HashRouter is required: GitHub Pages has no server-side routing */}
               <HashRouter>
                 <Routes>
-                  <Route path="*" element={<Placeholder />} />
+                  <Route element={<Layout />}>
+                    <Route index element={<Home />} />
+                    <Route path="categories" element={<Categories />} />
+                    <Route path="category/:id" element={<Category />} />
+                    <Route path="shop" element={<Shop />} />
+                    <Route path="search" element={<Shop mode="search" />} />
+                    <Route path="product/:id" element={<Product />} />
+                    <Route path="enquiry" element={<Enquiry />} />
+                    <Route path="about" element={<About />} />
+                    <Route path="contact" element={<Contact />} />
+                    <Route path="faq" element={<Faq />} />
+                    <Route path="*" element={<NotFound />} />
+                  </Route>
                 </Routes>
               </HashRouter>
             </ToastProvider>

@@ -72,3 +72,17 @@ export const byFeatured = (a, b) =>
 export function withTag(products, tag) {
   return products.filter((p) => p.tags.includes(tag))
 }
+
+/** Unique subcategories for a category (or all products), in first-seen order. */
+export function getSubcategories(products, categoryId) {
+  const set = new Set()
+  products.forEach((p) => {
+    if ((!categoryId || p.category === categoryId) && p.subcategory) set.add(p.subcategory)
+  })
+  return [...set]
+}
+
+/** Product counts per category id. */
+export function countByCategory(products) {
+  return products.reduce((acc, p) => ((acc[p.category] = (acc[p.category] || 0) + 1), acc), {})
+}
