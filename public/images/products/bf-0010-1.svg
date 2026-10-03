@@ -1,23 +1,26 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" width="800" height="800" role="img" aria-label="Charcoal Detox Body Wash">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" width="800" height="800" role="img" aria-label="Training Cross-Fit Shoes">
   <defs>
     <radialGradient id="bg" cx="50%" cy="38%" r="75%">
       <stop offset="0" stop-color="#FFFFFF"/>
-      <stop offset=".55" stop-color="#EDF4F7"/>
-      <stop offset="1" stop-color="#D2E4EC" stop-opacity="1"/>
+      <stop offset=".6" stop-color="#EEF2F6"/>
+      <stop offset="1" stop-color="#D9E1EA"/>
     </radialGradient>
-    <linearGradient id="body" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#7FB2C8"/><stop offset="1" stop-color="#4B88A3"/></linearGradient>
+    <linearGradient id="b" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#3a3a3a"/><stop offset="1" stop-color="#1b1b1b"/></linearGradient>
+    <linearGradient id="d" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#111111"/><stop offset="1" stop-color="#0c0c0c"/></linearGradient>
     <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#E8CF8D"/><stop offset="1" stop-color="#A9843A"/></linearGradient>
-    <linearGradient id="ink" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#22546B"/><stop offset="1" stop-color="#22546B"/></linearGradient>
-    <radialGradient id="shadow"><stop offset="0" stop-color="#22546B" stop-opacity=".35"/><stop offset="1" stop-color="#22546B" stop-opacity="0"/></radialGradient>
+    <linearGradient id="ink" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1E2A4A"/><stop offset="1" stop-color="#1E2A4A"/></linearGradient>
+    <radialGradient id="shadow"><stop offset="0" stop-color="#1E2A4A" stop-opacity=".3"/><stop offset="1" stop-color="#1E2A4A" stop-opacity="0"/></radialGradient>
   </defs>
   <rect width="800" height="800" fill="url(#bg)"/>
-  <circle cx="140" cy="150" r="5" fill="#22546B" opacity=".25"/><circle cx="670" cy="620" r="7" fill="#22546B" opacity=".18"/>
-  <ellipse cx="400" cy="650" rx="240" ry="34" fill="url(#shadow)"/>
-  <g transform="translate(400 410)"><path d="M-10,-230 L60,-230 L60,-212 L10,-212 L10,-190 L-10,-190 Z" fill="#2B2B2B"/>
-        <rect x="-30" y="-195" width="60" height="45" rx="6" fill="#2B2B2B"/>
-        <rect x="-85" y="-155" width="170" height="370" rx="38" fill="url(#body)"/><rect x="-65" y="-130" width="14" height="320" rx="7" fill="#fff" opacity=".28"/>
-    <rect x="-70" y="-20" width="140" height="140" rx="10" fill="#FFFDF8" opacity=".95"/>
-    <text x="0" y="54" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="46" font-weight="700" fill="url(#ink)">AF</text>
-    <text x="0" y="80" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="9.333333333333334" letter-spacing="1.5" fill="url(#ink)" opacity=".75">AQUA FRESH CO.</text>
-    <line x1="-48" x2="48" y1="-2" y2="-2" stroke="url(#ink)" stroke-width="1" opacity=".3"/></g>
+  <circle cx="140" cy="150" r="5" fill="#1E2A4A" opacity=".2"/><circle cx="670" cy="620" r="7" fill="#1E2A4A" opacity=".15"/>
+  <ellipse cx="400" cy="640" rx="260" ry="34" fill="url(#shadow)"/>
+  <g transform="translate(400 395) scale(.95)"><g transform="translate(-15 10) scale(1.35)">
+        <path d="M-200,40 C-200,-10 -170,-40 -120,-50 L-60,-60 C-30,-110 30,-130 70,-120 L110,-80 C150,-60 200,-40 225,0 C240,25 235,45 225,55 L-195,55 C-205,55 -205,45 -200,40Z" fill="url(#b)"/>
+        <path d="M-205,50 L232,50 C238,70 228,85 210,85 L-185,85 C-205,85 -212,70 -205,50Z" fill="#FFFDF8" stroke="#00000022" stroke-width="2"/>
+        <path d="M-205,72 L230,72" stroke="url(#d)" stroke-width="4" opacity=".35"/>
+        <path d="M-120,-10 C-40,-30 60,-30 170,10" fill="none" stroke="url(#d)" stroke-width="16" stroke-linecap="round" opacity=".55"/>
+        <path d="M-40,-75 L40,-95 M-30,-55 L50,-75 M-20,-35 L60,-55" stroke="#FFFDF8" stroke-width="6" stroke-linecap="round" opacity=".9"/>
+        <path d="M70,-120 L110,-80" stroke="url(#d)" stroke-width="10" stroke-linecap="round" opacity=".5"/>
+        <rect x="-175" y="-5" width="50" height="24" rx="4" fill="#FFFDF8" opacity=".92"/><text x="-150" y="12" text-anchor="middle" font-family="Georgia, serif" font-size="14" font-weight="700" fill="url(#ink)">R</text>
+      </g></g>
 </svg>

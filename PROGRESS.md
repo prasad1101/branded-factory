@@ -1,6 +1,7 @@
 # PROGRESS.md: Branded Factory
 
 ## Goals
+- Fashion-focused catalog (sneakers, clothing, activewear, bags, watches, accessories, skincare, fragrances) with size + colour selection
 - Premium, modern, trustworthy storefront UI that reinforces savings (Bumper Discounts · Assured Savings · Greatest Deals)
 - JSON-driven catalog (`public/data/*.json`) editable by a non-developer on github.com
 - WhatsApp ordering (enquiry list → pre-filled WhatsApp message to +91 72181 50034)
@@ -23,12 +24,13 @@
 - [x] 12. Final QA: build, test all routes, WhatsApp links and mobile layouts (2026-10-03)
 
 ## Current status
-All 12 milestones done. QA: 18 routes × 360/768/1024/1440 with no console errors, no horizontal overflow, no broken images, one h1 per page; every WhatsApp link uses 917218150034; keyboard (skip link, mega-menu Enter/Escape, search suggestions with arrow keys), mobile drawer/bottom nav, refresh on filtered deep links and Back button all verified. GitHub Pages is not enabled yet (owner action). The owner has said they will sell **fashion** (clothes and shoes from brands like Puma, Nike, Adidas), so the catalog and data model are being adapted next.
+All 12 milestones are done, plus the fashion pivot. Catalog is now 11 fashion/beauty categories and 45 sample products using real brand names (Nike, Adidas, Puma, Levi's, Tommy Hilfiger, Fossil, Cetaphil, Davidoff…) with generic product names and generated placeholder art (no logos). Products support `sizes`, `unavailableSizes` and `colors`; size is required before Add/Order on WhatsApp; cards have a quick size picker; enquiry lines and WhatsApp messages include size + colour; shop/category pages filter by Size and Colour. GitHub Pages is not enabled yet (owner action).
 
 ## Next steps
 1. Owner: Settings → Pages → Source: GitHub Actions, then re-run the workflow
-2. Adapt catalog to fashion (categories, size/colour options, WhatsApp message with chosen size)
-3. Verify the live URL
+2. Verify the live URL
+3. Owner replaces sample listings with real stock, prices and photos
+4. (Session paused 2026-10-03) Re-run interaction QA with fashion test data: the old script used 'ghee' search and the household category, which no longer exist. Route sweep passed at all widths after the pivot; Lighthouse mobile: home 91, product 88, a11y/BP/SEO 100.
 
 ## Decisions log
 - 2026-10-03: Using **HashRouter** because GitHub Pages has no server-side routing (deep links/refresh would 404).
@@ -48,13 +50,21 @@ All 12 milestones done. QA: 18 routes × 360/768/1024/1440 with no console error
 - 2026-10-03: WhatsApp button teal darkened to #0F7C70 (5.1:1 with white) for WCAG AA.
 - 2026-10-03: Framer Motion loaded through LazyMotion (`m` components) to keep the initial bundle small.
 - 2026-10-03: Missing image files are **errors** in validation (deploy stops), so a listing never goes live with a missing photo by accident. Image paths are checked case-sensitively, like GitHub Pages.
+- 2026-10-03: Owner will sell fashion, shoes, bags, skincare and branded goods only, so grocery/household/beverage categories were removed.
+- 2026-10-03: Size + colour are product options (not separate products); each size/colour combination is its own enquiry line so the WhatsApp order is unambiguous.
+- 2026-10-03: Sample data uses real brand names (owner's choice) with generic product names, made-up prices and placeholder art; no brand logos.
 - 2026-10-03: Discount badges use `coral-600` (#C9363B) rather than #E5484D so white text meets WCAG AA.
+
+## Post-launch changes
+- [x] 13. Pivot to fashion catalog with size + colour options (2026-10-03)
 
 ## Known issues / TODO
 - Mobile Lighthouse Performance on deep pages (product/category/search) is 86–88 (home 93–97, desktop 98–99). The remaining cost is evaluating ~110 KB gz of React + Framer Motion + Embla on Lighthouse's 4× CPU-throttled phone before the client-rendered page can paint. Further gains would need prerendering (not possible with HashRouter) or replacing React/Framer Motion. Real-device performance is good.
+- Sample listings use real brand names with made-up prices: replace or remove before launch.
 - Owner to fill in: business address, email, social links, real product photos, FAQ answers marked `[EDIT: ...]` (payment options, delivery areas/time/charges, returns), About copy.
 
 ## Changelog
+- 2026-10-03: **Fashion pivot**: new categories/products/banners/FAQ (size guide + size exchange), fashion SVG placeholder generator (shoes, apparel, bags, watches, accessories), VariantPicker (ColorSwatches, SizeSelector, ColorDots), card quick-pick, size-required validation, variant-keyed enquiry lines, Size/Colour filters, validator support for sizes/unavailableSizes/colors.
 - 2026-10-03: Final QA pass; not-found states now have an h1.
 - 2026-10-03: Owner README.
 - 2026-10-03: Data validator (`scripts/validate-data.js`) with GitHub Actions annotations; deploy workflow (checkout v7, setup-node v7, configure-pages v6, upload-pages-artifact v5, deploy-pages v5, Node 22).

@@ -2,7 +2,7 @@
 
 **Bumper Discounts · Assured Savings · Greatest Deals**
 
-This is the website for Branded Factory, an online supermart. Customers browse products, add them to an **enquiry list**, and send the list to you on **WhatsApp**. There is no online payment and no database.
+This is the website for Branded Factory, an online store for **original branded fashion**: sneakers, clothing, activewear, bags, watches, accessories, skincare and fragrances (Nike, Adidas, Puma and more). Customers browse products, **pick a size and colour**, add them to an **enquiry list**, and send the list to you on **WhatsApp**. There is no online payment and no database.
 
 - **Live site:** https://prasad1101.github.io/branded-factory/
 - **WhatsApp orders go to:** +91 72181 50034
@@ -33,7 +33,7 @@ Everything you'll want to change (products, categories, banners, messages, phone
 | File | What's in it |
 |---|---|
 | [`public/data/products.json`](public/data/products.json) | Every product: name, brand, prices, images, description… |
-| [`public/data/categories.json`](public/data/categories.json) | The list of categories (Skincare, Grocery, …) |
+| [`public/data/categories.json`](public/data/categories.json) | The list of categories (Sneakers, Men's Clothing, Bags, …) |
 | [`public/data/site.json`](public/data/site.json) | Store name, WhatsApp number, banners, announcement messages, address, email, FAQ, About text |
 
 Images go in [`public/images/`](public/images/):
@@ -64,7 +64,7 @@ Don't worry about breaking the site: every change is checked automatically befor
 2. Click into the folders: **public** → **data** → click the file (for example `products.json`).
 3. Click the **pencil icon ✏️** ("Edit this file") at the top right of the file.
 4. Make your change.
-5. Click the green **Commit changes…** button, type a short note (e.g. "Add Nivea body lotion"), and click **Commit changes** again.
+5. Click the green **Commit changes…** button, type a short note (e.g. "Add Nike running shoes"), and click **Commit changes** again.
 6. Wait about 2 minutes, then refresh the website.
 
 **Tip:** to find a product quickly in a long file, press `Ctrl + F` (Windows) or `Cmd + F` (Mac) while editing and type its name or ID.
@@ -90,23 +90,28 @@ Don't worry about breaking the site: every change is checked automatically befor
 ```json
   {
     "id": "bf-0046",
-    "name": "Aloe Vera Soothing Gel",
-    "brand": "Brand Name",
-    "category": "skincare",
-    "subcategory": "Moisturisers",
-    "mrp": 399,
-    "price": 249,
-    "size": "150 ml",
+    "name": "Men's Running Shoes",
+    "brand": "Nike",
+    "category": "sports-shoes",
+    "subcategory": "Running",
+    "mrp": 7995,
+    "price": 4797,
+    "sizes": ["UK 6", "UK 7", "UK 8", "UK 9", "UK 10", "UK 11"],
+    "unavailableSizes": ["UK 11"],
+    "colors": [
+      { "name": "Black", "hex": "#1F1F1F" },
+      { "name": "White", "hex": "#F4F4F2" }
+    ],
     "images": [
       "images/products/bf-0046-1.jpg",
       "images/products/bf-0046-2.jpg"
     ],
     "shortDescription": "One line that sells the product.",
-    "description": "A longer description. Ingredients, how to use, who it is for.",
+    "description": "A longer description: material, fit, how it feels, who it is for.",
     "highlights": [
-      "Dermatologically tested",
-      "Suitable for all skin types",
-      "100% genuine, sealed pack"
+      "100% original, brand-sealed box",
+      "Breathable mesh upper",
+      "Easy exchange for size (see FAQ)"
     ],
     "tags": ["bestseller"],
     "inStock": true,
@@ -116,6 +121,8 @@ Don't worry about breaking the site: every change is checked automatically befor
   }
 ```
 
+**For items without sizes** (skincare, perfume, bags, watches): leave out `sizes`, `unavailableSizes` and `colors` (or keep `colors` if it comes in several colours), and use `"size"` for the pack size instead, e.g. `"size": "100 ml"`.
+
 ### What each field means
 
 | Field | Required? | What to write |
@@ -123,11 +130,14 @@ Don't worry about breaking the site: every change is checked automatically befor
 | `id` | ✅ | A unique code. Continue the pattern: `bf-0046`, `bf-0047`, … **Never reuse an ID.** |
 | `name` | ✅ | Product name as customers should see it. |
 | `brand` | ✅ | Brand name. Customers can filter by brand. |
-| `category` | ✅ | Must exactly match an `id` from `categories.json`, e.g. `skincare`, `grocery-staples`, `baby-care`. |
-| `subcategory` | recommended | A type within the category, e.g. `Serums`, `Shampoo`, `Rice`. Used for the "Type" filter. |
-| `mrp` | ✅ | The MRP printed on the pack. **Number only**, no ₹, no quotes: `399` |
+| `category` | ✅ | Must exactly match an `id` from `categories.json`, e.g. `sneakers`, `men-clothing`, `bags`, `skincare`. |
+| `subcategory` | recommended | A type within the category, e.g. `Running`, `T-Shirts`, `Jeans`, `Backpacks`. Used for the "Type" filter. |
+| `mrp` | ✅ | The MRP on the tag/box. **Number only**, no ₹, no quotes: `7995` |
 | `price` | ✅ | Your selling price. Must be **less than or equal to** MRP. |
-| `size` | recommended | `"150 ml"`, `"1 kg"`, `"Pack of 4"`… Shown on the product and in WhatsApp orders. |
+| `sizes` | for clothing & footwear | The sizes customers choose from, in order: `["S", "M", "L", "XL"]`, `["UK 6", "UK 7", "UK 8"]`, `["28", "30", "32"]`. Customers must pick one before ordering. |
+| `unavailableSizes` | optional | Sizes that are sold out right now, e.g. `["UK 11"]`. They show crossed out and can't be chosen. Spelling must match `sizes` exactly. Delete the line (or use `[]`) when everything is back. |
+| `colors` | optional | Colours customers choose from: `[{ "name": "Black", "hex": "#1F1F1F" }]`. `hex` is the swatch colour (find codes at [htmlcolorcodes.com](https://htmlcolorcodes.com)). Optional per colour: `"images": ["images/products/bf-0046-red-1.jpg"]` to show different photos for that colour. |
+| `size` | for other items | One fixed size like `"100 ml"`, `"30 L"`, `"43 mm"`, `"One size"`. Shown on the product and in WhatsApp orders. |
 | `images` | recommended | List of image paths (first one is the main photo). See [section 5](#5-upload-product-images). If empty `[]`, a tasteful placeholder is shown. |
 | `shortDescription` | recommended | One short line shown near the price. |
 | `description` | optional | Longer text. Start a new paragraph by typing `\n\n` inside the text. |
@@ -155,6 +165,8 @@ Example with two tags: `"tags": ["bestseller", "deal-of-the-day"]`
 **Change a price, mark out of stock, fix a typo:** open `products.json`, find the product (`Ctrl/Cmd + F` its name or ID), change the value, commit.
 
 - Out of stock → change `"inStock": true` to `"inStock": false`
+- One size sold out → add it to `"unavailableSizes"`, e.g. `"unavailableSizes": ["UK 9"]`
+- New colour → add `{ "name": "Olive", "hex": "#5E6B3A" }` to `"colors"`
 - New price → change `"price": 449` to the new number (MRP stays the same unless it changed on the pack)
 
 **Remove a product:** delete everything from its opening `{` to its closing `},`, including the comma. If it's the **last** product in the file, also delete the comma after the product **before** it, so the file still ends with `}` then `]`.
@@ -173,7 +185,7 @@ Example with two tags: `"tags": ["bestseller", "deal-of-the-day"]`
 | Category pictures | **600 × 600 px** (square) | WebP or JPG | under 150 KB |
 | Home banners | **1600 × 700 px** (wide) | WebP or JPG | under 300 KB |
 
-- Use a plain light background for product photos so the site looks consistent.
+- Use a plain light background for product photos so the site looks consistent. Shoes look best from the side, facing left; clothing laid flat or on a plain hanger.
 - Keep the product in the **centre**. Banners: keep the important part on the **right half** (text sits on the left).
 - Free tools to resize/compress: [squoosh.app](https://squoosh.app) or [tinypng.com](https://tinypng.com).
 
@@ -209,25 +221,25 @@ Open `public/data/categories.json`, add a comma after the last `}`, and paste:
 
 ```json
   {
-    "id": "pet-care",
-    "name": "Pet Care",
-    "image": "images/categories/pet-care.jpg",
-    "description": "Treats and care for furry friends",
+    "id": "kids-footwear",
+    "name": "Kids' Footwear",
+    "image": "images/categories/kids-footwear.jpg",
+    "description": "Little sizes, big brands",
     "featured": false,
-    "order": 13
+    "order": 12
   }
 ```
 
 | Field | What to write |
 |---|---|
-| `id` | Lowercase letters and hyphens only (`pet-care`). This is what products use in their `category` field and what appears in the web address. **Don't change it later**, or products and old links will stop matching. |
+| `id` | Lowercase letters and hyphens only (`kids-footwear`). This is what products use in their `category` field and what appears in the web address. **Don't change it later**, or products and old links will stop matching. |
 | `name` | The name customers see. |
 | `image` | A square picture uploaded to `public/images/categories/`. |
 | `description` | Short tagline shown on the category page. |
 | `featured` | `true` adds a row of this category's products to the home page. |
 | `order` | Position in menus and grids (1 = first). |
 
-Then add products with `"category": "pet-care"`.
+Then add products with `"category": "kids-footwear"`.
 
 ---
 
@@ -239,9 +251,9 @@ All of these are in `public/data/site.json`.
 
 ```json
 "announcementBar": [
-  "🎉 Bumper Discounts on 500+ brands",
-  "✅ Assured savings on every order",
-  "💬 Order instantly on WhatsApp"
+  "🎉 Bumper discounts on Nike, Adidas, Puma & more",
+  "✅ 100% original brands, assured savings",
+  "💬 Pick your size & order on WhatsApp"
 ],
 ```
 
@@ -253,23 +265,25 @@ Add, remove or reword messages. They rotate every few seconds.
 "heroBanners": [
   {
     "id": "b1",
-    "eyebrow": "Limited time",
-    "title": "Mega Skincare Sale",
-    "subtitle": "Up to 60% off serums, sunscreens and moisturisers.",
-    "image": "images/banners/skincare.jpg",
-    "ctaText": "Shop Skincare",
-    "ctaLink": "/category/skincare"
+    "eyebrow": "Sneaker week",
+    "title": "Iconic Sneakers, Bumper Prices",
+    "subtitle": "Nike, Adidas, Puma and more. Up to 50% off MRP.",
+    "image": "images/banners/sneakers.jpg",
+    "ctaText": "Shop Sneakers",
+    "ctaLink": "/category/sneakers"
   }
 ]
 ```
 
 - `eyebrow`: small label above the title (optional).
 - `ctaText` / `ctaLink`: the button. Useful links:
-  - a category: `/category/skincare`
+  - a category: `/category/sneakers`
   - a product: `/product/bf-0001`
   - biggest discounts: `/shop?sort=discount`
   - all products: `/shop`
-  - a search: `/search?q=serum`
+  - a search: `/search?q=nike`
+  - a brand: `/shop?brand=Nike`
+  - a size: `/shop?size=UK%209` (`%20` = space)
 - Each banner needs a different `id` (`b1`, `b2`, …). The first banner is the one people see first.
 
 ### WhatsApp number
@@ -315,7 +329,7 @@ Also in `site.json`:
   { "q": "Do you deliver on Sundays?", "a": "Yes, between 10 AM and 6 PM." }
   ```
 
-Some answers contain **`[EDIT: …]`** notes, e.g. your delivery areas, charges and return policy. These are highlighted in yellow on the FAQ page so you can spot them. **Replace each one with your real policy.** The checker also lists any you've missed.
+Some answers contain **`[EDIT: …]`** notes, e.g. your size-exchange policy, delivery areas, charges and return policy. These are highlighted in yellow on the FAQ page so you can spot them. **Replace each one with your real policy.** The checker also lists any you've missed.
 
 ---
 
@@ -335,8 +349,8 @@ To fix it:
 2. Read the message. It tells you the file, the product and what's wrong, for example:
 
    ```
-   • products.json › item 46 (id "bf-0046") "Aloe Vera Soothing Gel"
-     "price" (449) is greater than "mrp" (399). The selling price can't be more than the MRP.
+   • products.json › item 46 (id "bf-0046") "Men's Running Shoes"
+     "price" (8995) is greater than "mrp" (7995). The selling price can't be more than the MRP.
    ```
 
    or, for a typo in the JSON:
@@ -404,10 +418,11 @@ Vite + React 18 + Tailwind CSS + React Router (HashRouter) + Framer Motion + Emb
 
 ## 12. Things to fill in before launch
 
-- [ ] **Real product photos** (replace the sample `.svg` placeholders) and your real catalog in `products.json`
+- [ ] **Real product photos** (replace the sample `.svg` placeholders) and your real catalog, prices and stock in `products.json`. The sample listings use real brand names with made-up prices, so replace or remove them before launch.
 - [ ] **Shop address**, **email** and **business hours** in `site.json`
 - [ ] **Instagram / Facebook** links in `site.json` (or leave empty to hide)
-- [ ] **FAQ answers** marked `[EDIT: …]`: payment options, delivery areas & time, delivery charges, return policy
+- [ ] **FAQ answers** marked `[EDIT: …]`: payment options, size guide, size exchange policy, delivery areas & time, delivery charges, return policy
+- [ ] Check **sizes**, **sold-out sizes** and **colours** on every clothing/footwear product
 - [ ] **About** text (`about` and `aboutValues`) in your own words
 - [ ] **Banner images** for the home page (1600 × 700)
 - [ ] Check the WhatsApp number: **+91 72181 50034**

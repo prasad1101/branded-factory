@@ -1,18 +1,79 @@
+import { useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
-import { m } from 'framer-motion'
-import { Check, Plus } from 'lucide-react'
+import { AnimatePresence, m } from 'framer-motion'
+import { Check, Plus, X } from 'lucide-react'
 import SmartImage from './SmartImage'
 import PriceBlock from './PriceBlock'
 import RatingStars from './RatingStars'
+import { ColorDots, ColorSwatches, SizeSelector, needsOptions } from './VariantPicker'
 import { useAddToList, useEnquiry } from '../hooks/useEnquiry'
 import { cn } from '../lib/utils'
+
+/** Quick size/colour picker that slides up over the card. */
+function QuickPick({ product, onDone, onClose }) {
+  const sizes = product.sizes || []
+  const colors = product.colors || []
+  const [color, setColor] = useState(colors[0]?.name || '')
+  const [size, setSize] = useState(sizes.length === 1 ? sizes[0] : '')
+  const ref = useRef(null)
+
+  useEffect(() => {
+    ref.current?.querySelector('button')?.focus()
+    const onKey = (e) => e.key === 'Escape' && onClose()
+    window.addEventListener('keydown', onKey)
+    return () => window.removeEventListener('keydown', onKey)
+  }, [onClose])
+
+  const ready = !sizes.length || size
+  return (
+    <m.div
+      ref={ref}
+      initial={{ y: '100%' }}
+      animate={{ y: 0 }}
+      exit={{ y: '100%' }}
+      transition={{ type: 'spring', stiffness: 420, damping: 38 }}
+      className="absolute inset-x-0 bottom-0 z-20 rounded-2xl border-t border-navy/5 bg-white p-3 shadow-lift"
+      role="dialog"
+      aria-label={`Choose options for ${product.name}`}
+    >
+      <div className="mb-2 flex items-center justify-between">
+        <p className="text-xs font-bold uppercase tracking-wider text-navy">{sizes.length ? 'Select size' : 'Select colour'}</p>
+        <button type="button" onClick={onClose} className="-mr-1 rounded-full p-1 text-ink-muted hover:bg-cream-100" aria-label="Close">
+          <X className="h-4 w-4" />
+        </button>
+      </div>
+      {colors.length > 1 && (
+        <div className="mb-2.5">
+          <ColorSwatches colors={colors} value={color} onChange={setColor} size="sm" showLabel={false} />
+        </div>
+      )}
+      <SizeSelector sizes={sizes} unavailable={product.unavailableSizes || []} value={size} onChange={setSize} size="sm" showLabel={false} />
+      <button
+        type="button"
+        disabled={!ready}
+        onClick={() => onDone({ size, color })}
+        className="btn-primary mt-3 w-full py-2.5 text-xs disabled:opacity-40"
+      >
+        {ready ? 'Add to list' : 'Choose a size'}
+      </button>
+    </m.div>
+  )
+}
 
 export default function ProductCard({ product, className = '', eager = false }) {
   const addToList = useAddToList()
   const { has } = useEnquiry()
+  const [picking, setPicking] = useState(false)
   const inList = has(product.id)
   const [img1, img2] = product.images
   const to = `/product/${product.id}`
+  const withOptions = needsOptions(product)
+  const sizeCount = product.sizes?.length || 0
+
+  const onAdd = () => {
+    if (withOptions) return setPicking(true)
+    addToList(product, 1, { size: product.sizes?.[0] || '', color: product.colors?.[0]?.name || '' })
+  }
 
   return (
     <m.article
@@ -61,10 +122,10 @@ export default function ProductCard({ product, className = '', eager = false }) 
             {product.name}
           </Link>
         </h3>
-        <div className="mt-1 flex items-center gap-2 text-xs text-ink-muted">
-          {product.size && <span>{product.size}</span>}
-          {product.size && product.rating > 0 && <span aria-hidden="true">·</span>}
-          <RatingStars rating={product.rating} showValue={false} />
+        <div className="mt-1.5 flex flex-wrap items-center gap-x-2 gap-y-1 text-xs text-ink-muted">
+          <ColorDots colors={product.colors || []} />
+          {sizeCount > 1 ? <span>{sizeCount} sizes</span> : product.size && <span>{product.size}</span>}
+          {product.rating > 0 && <RatingStars rating={product.rating} showValue={false} />}
         </div>
         <div className="mt-auto flex items-end justify-between gap-2 pt-3">
           <PriceBlock mrp={product.mrp} price={product.price} />
@@ -72,8 +133,9 @@ export default function ProductCard({ product, className = '', eager = false }) 
             <m.button
               type="button"
               whileTap={{ scale: 0.88 }}
-              onClick={() => addToList(product)}
-              aria-label={inList ? `Add another ${product.name} to enquiry list` : `Add ${product.name} to enquiry list`}
+              onClick={onAdd}
+              aria-label={withOptions ? `Choose size and add ${product.name}` : inList ? `Add another ${product.name} to enquiry list` : `Add ${product.name} to enquiry list`}
+              aria-haspopup={withOptions ? 'dialog' : undefined}
               className={cn(
                 'relative z-10 flex h-10 w-10 shrink-0 items-center justify-center rounded-full shadow-soft transition-colors duration-200',
                 inList ? 'bg-save text-white' : 'bg-navy text-white hover:bg-gold-500 hover:text-navy',
@@ -84,6 +146,19 @@ export default function ProductCard({ product, className = '', eager = false }) 
           )}
         </div>
       </div>
+
+      <AnimatePresence>
+        {picking && (
+          <QuickPick
+            product={product}
+            onClose={() => setPicking(false)}
+            onDone={(opts) => {
+              addToList(product, 1, opts)
+              setPicking(false)
+            }}
+          />
+        )}
+      </AnimatePresence>
     </m.article>
   )
 }

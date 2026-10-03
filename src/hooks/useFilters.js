@@ -12,6 +12,23 @@ export const SORTS = [
 
 export const DISCOUNT_BANDS = [10, 25, 40, 50]
 
+// Display order for clothing sizes; UK shoe sizes and numbers sort numerically after these
+const LETTER_SIZES = ['XXS', 'XS', 'S', 'M', 'L', 'XL', 'XXL', '3XL', 'FREE SIZE']
+function sizeRank(s) {
+  const up = String(s).toUpperCase()
+  const i = LETTER_SIZES.indexOf(up)
+  if (i >= 0) return [0, i]
+  const n = parseFloat(up.replace(/[^\d.]/g, ''))
+  if (/^UK/.test(up)) return [1, n]
+  if (!Number.isNaN(n)) return [2, n]
+  return [3, 0]
+}
+const bySize = (a, b) => {
+  const [ga, va] = sizeRank(a)
+  const [gb, vb] = sizeRank(b)
+  return ga - gb || va - vb || String(a).localeCompare(String(b))
+}
+
 const SORTERS = {
   featured: byFeatured,
   discount: byDiscount,
@@ -24,7 +41,7 @@ const list = (v) => (v ? v.split(',').filter(Boolean) : [])
 
 /**
  * Filter + sort state that lives in the URL query string, e.g.
- *   ?cat=skincare&sub=Serums,Sun%20Care&brand=DermaPure&min=200&max=900&disc=25&stock=1&sort=discount
+ *   ?cat=sneakers&size=UK%209&color=Black&brand=Nike&min=200&max=900&disc=25&stock=1&sort=discount
  *
  * @param {object[]} baseProducts products in scope (a category, search results, or everything)
  * @param {{ defaultSort?: string, keepOrder?: boolean }} opts keepOrder=true keeps search relevance order when sort is default
@@ -36,6 +53,8 @@ export function useFilters(baseProducts, { defaultSort = 'featured', keepOrder =
     () => ({
       cat: list(params.get('cat')),
       sub: list(params.get('sub')),
+      size: list(params.get('size')),
+      color: list(params.get('color')),
       brand: list(params.get('brand')),
       min: params.get('min') ? Number(params.get('min')) : null,
       max: params.get('max') ? Number(params.get('max')) : null,
@@ -75,18 +94,22 @@ export function useFilters(baseProducts, { defaultSort = 'featured', keepOrder =
     [filters, update],
   )
 
-  const clearAll = useCallback(() => update({ cat: null, sub: null, brand: null, min: null, max: null, disc: null, stock: null, tag: null }), [update])
+  const clearAll = useCallback(() => update({ cat: null, sub: null, size: null, color: null, brand: null, min: null, max: null, disc: null, stock: null, tag: null }), [update])
 
   // Facets are computed from the products in scope, so options never lead to zero results by themselves.
   const facets = useMemo(() => {
     const cats = new Map()
     const subs = new Map()
     const brands = new Map()
+    const sizes = new Map()
+    const colors = new Map()
     let lo = Infinity
     let hi = 0
     baseProducts.forEach((p) => {
       if (p.category) cats.set(p.category, { name: p.categoryName, count: (cats.get(p.category)?.count || 0) + 1 })
       if (p.subcategory) subs.set(p.subcategory, (subs.get(p.subcategory) || 0) + 1)
+      ;(p.sizes || []).forEach((s) => sizes.set(s, (sizes.get(s) || 0) + 1))
+      ;(p.colors || []).forEach((c) => c?.name && colors.set(c.name, { hex: c.hex, count: (colors.get(c.name)?.count || 0) + 1 }))
       if (p.brand) brands.set(p.brand, (brands.get(p.brand) || 0) + 1)
       lo = Math.min(lo, p.price)
       hi = Math.max(hi, p.price)
@@ -96,6 +119,8 @@ export function useFilters(baseProducts, { defaultSort = 'featured', keepOrder =
       categories: [...cats.entries()].map(([id, c]) => [id, c.count, c.name]),
       subcategories: [...subs.entries()].sort(sortByName),
       brands: [...brands.entries()].sort(sortByName),
+      sizes: [...sizes.entries()].sort((a, b) => bySize(a[0], b[0])),
+      colors: [...colors.entries()].map(([name, c]) => [name, c.count, c.hex]).sort((a, b) => b[1] - a[1]),
       priceMin: lo === Infinity ? 0 : Math.floor(lo / 10) * 10,
       priceMax: hi === 0 ? 0 : Math.ceil(hi / 10) * 10,
     }
@@ -106,6 +131,8 @@ export function useFilters(baseProducts, { defaultSort = 'featured', keepOrder =
       if (filters.cat.length && !filters.cat.includes(p.category)) return false
       if (filters.sub.length && !filters.sub.includes(p.subcategory)) return false
       if (filters.brand.length && !filters.brand.includes(p.brand)) return false
+      if (filters.size.length && !(p.sizes || []).some((s) => filters.size.includes(s) && !(p.unavailableSizes || []).includes(s))) return false
+      if (filters.color.length && !(p.colors || []).some((c) => filters.color.includes(c.name))) return false
       if (filters.min !== null && p.price < filters.min) return false
       if (filters.max !== null && p.price > filters.max) return false
       if (filters.disc && p.discountPercent < filters.disc) return false
@@ -120,6 +147,8 @@ export function useFilters(baseProducts, { defaultSort = 'featured', keepOrder =
   const activeCount =
     filters.cat.length +
     filters.sub.length +
+    filters.size.length +
+    filters.color.length +
     filters.brand.length +
     (filters.min !== null || filters.max !== null ? 1 : 0) +
     (filters.disc ? 1 : 0) +

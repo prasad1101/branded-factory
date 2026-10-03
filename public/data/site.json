@@ -5,46 +5,46 @@
   "phoneDisplay": "+91 72181 50034",
   "currency": "₹",
   "announcementBar": [
-    "🎉 Bumper Discounts on 500+ brands",
-    "✅ Assured savings on every order",
-    "💬 Order instantly on WhatsApp"
+    "🎉 Bumper discounts on Nike, Adidas, Puma & more",
+    "✅ 100% original brands, assured savings",
+    "💬 Pick your size & order on WhatsApp"
   ],
   "heroBanners": [
     {
       "id": "b1",
-      "eyebrow": "Limited time",
-      "title": "Mega Skincare Sale",
-      "subtitle": "Up to 60% off serums, sunscreens and moisturisers from top brands.",
-      "image": "images/banners/skincare.svg",
-      "ctaText": "Shop Skincare",
-      "ctaLink": "/category/skincare"
+      "eyebrow": "Sneaker week",
+      "title": "Iconic Sneakers, Bumper Prices",
+      "subtitle": "Nike, Adidas, Puma and more. Up to 50% off MRP.",
+      "image": "images/banners/sneakers.svg",
+      "ctaText": "Shop Sneakers",
+      "ctaLink": "/category/sneakers"
     },
     {
       "id": "b2",
-      "eyebrow": "Stock up & save",
-      "title": "Pantry Staples, Bumper Prices",
-      "subtitle": "Premium basmati, ghee, oils and atta at prices you will love.",
-      "image": "images/banners/grocery.svg",
-      "ctaText": "Shop Grocery",
-      "ctaLink": "/category/grocery-staples"
+      "eyebrow": "New season",
+      "title": "Branded Clothing for Less",
+      "subtitle": "Tees, polos, denim and hoodies from the labels you love.",
+      "image": "images/banners/clothing.svg",
+      "ctaText": "Shop Men's Clothing",
+      "ctaLink": "/category/men-clothing"
     },
     {
       "id": "b3",
-      "eyebrow": "Signature scents",
-      "title": "Luxury Fragrances for Less",
-      "subtitle": "Eau de parfums and body sprays, up to 50% off.",
-      "image": "images/banners/fragrances.svg",
-      "ctaText": "Explore Fragrances",
-      "ctaLink": "/category/fragrances"
+      "eyebrow": "Carry it in style",
+      "title": "Bags, Backpacks & Luggage",
+      "subtitle": "Up to 50% off Wildcraft, American Tourister and more.",
+      "image": "images/banners/bags.svg",
+      "ctaText": "Shop Bags",
+      "ctaLink": "/category/bags"
     },
     {
       "id": "b4",
-      "eyebrow": "Home essentials",
-      "title": "A Sparkling Home, Smarter Savings",
-      "subtitle": "Detergents, cleaners and kitchen must-haves at assured savings.",
-      "image": "images/banners/household.svg",
-      "ctaText": "Shop Household",
-      "ctaLink": "/category/household"
+      "eyebrow": "Glow for less",
+      "title": "Skincare & Fragrances",
+      "subtitle": "Genuine favourites from Cetaphil, Davidoff, Calvin Klein and more.",
+      "image": "images/banners/skincare.svg",
+      "ctaText": "Shop Skincare",
+      "ctaLink": "/category/skincare"
     }
   ],
   "socialLinks": {
@@ -54,7 +54,7 @@
   "address": "Your shop address here (edit in public/data/site.json)",
   "email": "",
   "businessHours": "Mon–Sun, 9:00 AM – 9:00 PM",
-  "about": "Branded Factory is an online supermart that brings you genuine branded products at bumper discounts. From skincare and fragrances to groceries and household essentials, we source directly from authorised distributors and pass the savings straight to you.",
+  "about": "Branded Factory brings you 100% original branded fashion, footwear, bags, watches, skincare and fragrances at bumper discounts. We source from authorised distributors and pass the savings straight to you, from Nike and Adidas sneakers to everyday essentials from the brands you trust.",
   "footerNote": "Prices and availability are subject to change. All brand names and trademarks belong to their respective owners.",
   "faq": [
     {
@@ -66,12 +66,20 @@
       "a": "No. There is no online payment on this website. We confirm your order on WhatsApp first. [EDIT: describe your payment options, e.g. UPI, cash on delivery or bank transfer.]"
     },
     {
-      "q": "Are the products genuine?",
-      "a": "Yes. Every product is 100% genuine and sourced from authorised distributors. Products arrive sealed in their original packaging."
+      "q": "Are the products original?",
+      "a": "Yes. Every product is 100% original and sourced from authorised distributors. Clothing comes with brand tags and footwear in the original brand box."
+    },
+    {
+      "q": "How do I choose the right size?",
+      "a": "Pick your usual size on the product page. Footwear uses UK sizes. If you are unsure, mention it in your WhatsApp message and we will help you choose. [EDIT: add a link or note about your size guide, if you have one.]"
+    },
+    {
+      "q": "What if the size doesn’t fit?",
+      "a": "[EDIT: describe your size exchange policy, e.g. “Unworn items with tags and original box can be exchanged for another size within 7 days. Message us on WhatsApp to arrange it.”]"
     },
     {
       "q": "How are your prices so low?",
-      "a": "We buy in bulk directly from distributors and keep our costs low, so we can pass bumper discounts on to you. The discount shown on every product is calculated from the MRP printed on the pack."
+      "a": "We buy in bulk directly from distributors and keep our costs low, so we can pass bumper discounts on to you. The discount on every product is calculated from the brand’s MRP."
     },
     {
       "q": "Where do you deliver and how long does it take?",
@@ -97,7 +105,7 @@
   "aboutValues": [
     {
       "title": "Genuine, always",
-      "text": "Only original products from authorised distributors. No grey-market stock, ever."
+      "text": "Only original branded products from authorised distributors. Brand tags and boxes included."
     },
     {
       "title": "Savings you can see",

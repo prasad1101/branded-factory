@@ -49,21 +49,27 @@ export function buildWhatsAppUrl(number, message = '') {
   return `https://wa.me/${phone}${text}`
 }
 
-function productLine(product, qty, currency) {
-  const size = product.size ? ` (${product.size})` : ''
-  return `${product.name}${size} × ${qty} — ${formatINR(product.price * qty, currency)}`
+/** "Size UK 9, Black" from the options a customer picked (either may be empty). */
+export function variantLabel({ size, color } = {}) {
+  return [size && `Size ${size}`, color].filter(Boolean).join(', ')
+}
+
+/** "Name (Size UK 9, Black) × 2 — ₹898" */
+function productLine(product, qty, currency, options = {}) {
+  const details = [variantLabel(options), product.size].filter(Boolean).join(', ')
+  return `${product.name}${details ? ` (${details})` : ''} × ${qty} — ${formatINR(product.price * qty, currency)}`
 }
 
 /**
  * Build the enquiry-list WhatsApp message.
- * @param {{ items: {product: object, qty: number}[], customer?: {name?:string, location?:string, notes?:string}, storeName?: string, currency?: string }} opts
+ * @param {{ items: {product: object, qty: number, size?: string, color?: string}[], customer?: {name?:string, location?:string, notes?:string}, storeName?: string, currency?: string }} opts
  */
 export function buildEnquiryMessage({ items, customer = {}, storeName = 'Branded Factory', currency = '₹' }) {
   const lines = [`Hello ${storeName}! 👋`, "I'd like to order:", '']
   let total = 0
   let mrpTotal = 0
-  items.forEach(({ product, qty }, i) => {
-    lines.push(`${i + 1}. ${productLine(product, qty, currency)}`)
+  items.forEach(({ product, qty, size, color }, i) => {
+    lines.push(`${i + 1}. ${product.brand ? `${product.brand} ` : ''}${productLine(product, qty, currency, { size, color })}`)
     total += product.price * qty
     mrpTotal += (product.mrp || product.price) * qty
   })
@@ -78,29 +84,29 @@ export function buildEnquiryMessage({ items, customer = {}, storeName = 'Branded
 }
 
 /** WhatsApp message for a single product (product page "Order on WhatsApp"). */
-export function buildProductMessage({ product, qty = 1, storeName = 'Branded Factory', currency = '₹', pageUrl = '' }) {
+export function buildProductMessage({ product, qty = 1, size, color, storeName = 'Branded Factory', currency = '₹', pageUrl = '' }) {
+  const brand = product.brand ? `${product.brand} ` : ''
   if (!product.inStock) {
-    return [
-      `Hello ${storeName}! 👋`,
-      `Is this product available?`,
-      '',
-      `${product.name}${product.size ? ` (${product.size})` : ''} by ${product.brand}`,
-      pageUrl && `Link: ${pageUrl}`,
-    ].filter((l) => l !== false && l !== undefined).join('\n')
+    const details = [variantLabel({ size, color }), product.size].filter(Boolean).join(', ')
+    return [`Hello ${storeName}! 👋`, 'Is this product available?', '', `${brand}${product.name}${details ? ` (${details})` : ''}`, pageUrl ? `Link: ${pageUrl}` : null]
+      .filter((l) => l !== null)
+      .join('\n')
   }
   const { savings } = getDiscount(product.mrp, product.price)
   return [
     `Hello ${storeName}! 👋`,
     "I'd like to order:",
     '',
-    `1. ${productLine(product, qty, currency)}`,
+    `1. ${brand}${productLine(product, qty, currency, { size, color })}`,
     '',
     `Total: ${formatINR(product.price * qty, currency)}${savings > 0 ? ` (You save ${formatINR(savings * qty, currency)} 🎉)` : ''}`,
-    pageUrl && `Link: ${pageUrl}`,
+    pageUrl ? `Link: ${pageUrl}` : null,
     '',
     'Name: ___',
     'Location: ___',
-  ].filter((l) => l !== false && l !== undefined).join('\n')
+  ]
+    .filter((l) => l !== null)
+    .join('\n')
 }
 
 /** Public URL of a hash route, e.g. productUrl('bf-0001') → https://…/branded-factory/#/product/bf-0001 */

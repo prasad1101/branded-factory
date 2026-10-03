@@ -19,13 +19,13 @@ import { byDiscount, byFeatured, byNewest, withTag } from '../lib/data'
 const TRUST = [
   { icon: BadgePercent, title: 'Bumper Discounts', text: 'Up to 60% off MRP' },
   { icon: PiggyBank, title: 'Assured Savings', text: 'On every single order' },
-  { icon: BadgeCheck, title: '100% Genuine Brands', text: 'From authorised distributors' },
+  { icon: BadgeCheck, title: '100% Original Brands', text: 'Nike, Adidas, Puma & more' },
   { icon: WhatsAppIcon, title: 'Order on WhatsApp', text: 'Quick, easy, personal' },
 ]
 
 const STEPS = [
-  { icon: Search, title: 'Browse', text: 'Explore hundreds of branded products at bumper discounts.' },
-  { icon: ClipboardList, title: 'Add to list', text: 'Add what you need to your enquiry list. No sign-up needed.' },
+  { icon: Search, title: 'Browse', text: 'Explore original branded fashion, footwear and more at bumper discounts.' },
+  { icon: ClipboardList, title: 'Pick size & add', text: 'Choose your size and colour, then add to your enquiry list. No sign-up.' },
   { icon: Send, title: 'Send on WhatsApp', text: 'One tap sends your list to us as a neat WhatsApp message.' },
   { icon: PackageCheck, title: 'We confirm & deliver', text: 'We confirm availability and the final price, then deliver.' },
 ]

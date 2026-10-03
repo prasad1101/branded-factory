@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 700" width="1600" height="700" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Branded Clothing for Less">
+  <defs>
+    <linearGradient id="bgb" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1A1F2B"/><stop offset="1" stop-color="#2C3445"/></linearGradient>
+    <radialGradient id="glow" cx="72%" cy="45%" r="45%"><stop offset="0" stop-color="#D9A441" stop-opacity=".45"/><stop offset="1" stop-color="#D9A441" stop-opacity="0"/></radialGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#E8CF8D"/><stop offset="1" stop-color="#A9843A"/></linearGradient>
+    <linearGradient id="ink" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0F1B2D"/><stop offset="1" stop-color="#0F1B2D"/></linearGradient>
+    <radialGradient id="shadow"><stop offset="0" stop-color="#000" stop-opacity=".45"/><stop offset="1" stop-color="#000" stop-opacity="0"/></radialGradient>
+  </defs>
+  <rect width="1600" height="700" fill="url(#bgb)"/>
+  <rect width="1600" height="700" fill="url(#glow)"/>
+  <circle cx="1180" cy="360" r="300" fill="none" stroke="#D9A441" stroke-opacity=".25" stroke-width="1.5"/>
+  <circle cx="1180" cy="360" r="240" fill="none" stroke="#D9A441" stroke-opacity=".15" stroke-width="1"/>
+  <ellipse cx="1180" cy="620" rx="420" ry="40" fill="url(#shadow)"/>
+  <g transform="translate(930 420) scale(0.6)"><defs>
+      <linearGradient id="b1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#394460"/><stop offset="1" stop-color="#1a2541"/></linearGradient>
+      <linearGradient id="d1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#111729"/><stop offset="1" stop-color="#0c111e"/></linearGradient>
+    </defs><g>
+        <path d="M-70,-170 C-40,-150 40,-150 70,-170 L170,-120 L130,-30 L95,-50 L95,190 L-95,190 L-95,-50 L-130,-30 L-170,-120 Z" fill="url(#b1)"/>
+        <path d="M-70,-170 L-30,-120 L0,-150 L30,-120 L70,-170 C40,-155 -40,-155 -70,-170Z" fill="url(#d1)" opacity=".6"/><path d="M0,-150 L0,-60" stroke="url(#d1)" stroke-width="4" opacity=".5"/><circle cx="0" cy="-110" r="5" fill="#FFFDF8"/><circle cx="0" cy="-80" r="5" fill="#FFFDF8"/>
+        <path d="M-95,170 L95,170" stroke="url(#d1)" stroke-width="4" opacity=".3"/>
+        <rect x="27" y="-90" width="46" height="24" rx="4" fill="#FFFDF8" opacity=".92"/><text x="50" y="-73" text-anchor="middle" font-family="Georgia, serif" font-size="14" font-weight="700" fill="url(#ink)">US</text>
+      </g></g>
+<g transform="translate(1420 420) scale(0.6)"><defs>
+      <linearGradient id="b2" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#47547d"/><stop offset="1" stop-color="#28365e"/></linearGradient>
+      <linearGradient id="d2" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#19223b"/><stop offset="1" stop-color="#12182b"/></linearGradient>
+    </defs><g>
+        <path d="M-110,-190 L110,-190 L130,200 L30,200 L0,-60 L-30,200 L-130,200 Z" fill="url(#b2)"/>
+        <rect x="-110" y="-190" width="220" height="32" fill="url(#d2)" opacity=".5"/>
+        <rect x="-85" y="-192" width="10" height="36" rx="2" fill="url(#d2)" opacity=".7"/><rect x="-35" y="-192" width="10" height="36" rx="2" fill="url(#d2)" opacity=".7"/><rect x="25" y="-192" width="10" height="36" rx="2" fill="url(#d2)" opacity=".7"/><rect x="75" y="-192" width="10" height="36" rx="2" fill="url(#d2)" opacity=".7"/>
+        <path d="M-95,-150 C-80,-110 -50,-100 -30,-100 M95,-150 C80,-110 50,-100 30,-100" fill="none" stroke="#FFFDF8" stroke-width="3" opacity=".5"/>
+        <path d="M0,-158 L0,-90" stroke="url(#d2)" stroke-width="3" opacity=".5"/>
+        <rect x="-92" y="-150" width="44" height="24" rx="4" fill="#FFFDF8" opacity=".92"/><text x="-70" y="-133" text-anchor="middle" font-family="Georgia, serif" font-size="14" font-weight="700" fill="url(#ink)">LS</text>
+      </g></g>
+<g transform="translate(1180 360) scale(0.85)"><defs>
+      <linearGradient id="b0" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#3a3a3a"/><stop offset="1" stop-color="#1b1b1b"/></linearGradient>
+      <linearGradient id="d0" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#111111"/><stop offset="1" stop-color="#0c0c0c"/></linearGradient>
+    </defs><g>
+        <path d="M-70,-170 C-40,-150 40,-150 70,-170 L170,-120 L130,-30 L95,-50 L95,190 L-95,190 L-95,-50 L-130,-30 L-170,-120 Z" fill="url(#b0)"/>
+        <path d="M-70,-170 C-40,-140 40,-140 70,-170" fill="none" stroke="url(#d0)" stroke-width="10" opacity=".5"/>
+        <path d="M-95,170 L95,170" stroke="url(#d0)" stroke-width="4" opacity=".3"/>
+        <rect x="27" y="-90" width="46" height="24" rx="4" fill="#FFFDF8" opacity=".92"/><text x="50" y="-73" text-anchor="middle" font-family="Georgia, serif" font-size="14" font-weight="700" fill="url(#ink)">P</text>
+      </g></g>
+</svg>

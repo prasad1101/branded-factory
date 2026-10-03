@@ -1,24 +1,48 @@
 [
   {
     "id": "bf-0001",
-    "name": "Vitamin C Brightening Face Serum",
-    "brand": "Lumière Botanics",
-    "category": "skincare",
-    "subcategory": "Serums",
-    "mrp": 799,
-    "price": 449,
-    "size": "30 ml",
+    "name": "Men's Air Cushion Running Sneakers",
+    "brand": "Nike",
+    "category": "sneakers",
+    "subcategory": "Lifestyle",
+    "mrp": 9995,
+    "price": 6497,
+    "sizes": [
+      "UK 6",
+      "UK 7",
+      "UK 8",
+      "UK 9",
+      "UK 10",
+      "UK 11"
+    ],
+    "unavailableSizes": [
+      "UK 11"
+    ],
+    "colors": [
+      {
+        "name": "Black",
+        "hex": "#1F1F1F"
+      },
+      {
+        "name": "White",
+        "hex": "#F4F4F2"
+      },
+      {
+        "name": "Red",
+        "hex": "#C8333B"
+      }
+    ],
     "images": [
       "images/products/bf-0001-1.svg",
       "images/products/bf-0001-2.svg"
     ],
-    "shortDescription": "Brightens dull skin and evens out tone in 4 weeks.",
-    "description": "Brightens dull skin and evens out tone in 4 weeks. Vitamin C Brightening Face Serum by Lumière Botanics is crafted with care to deliver real, visible results, and at Branded Factory you get it at a bumper discount. Every pack is 100% genuine and sourced directly from authorised distributors, so you can shop with complete confidence. Add it to your enquiry list and order instantly on WhatsApp.",
+    "shortDescription": "Max-cushion comfort with a sleek everyday silhouette.",
+    "description": "Max-cushion comfort with a sleek everyday silhouette. This Nike men's air cushion running sneakers is 100% original, sourced from authorised distributors and offered at a bumper discount at Branded Factory.\n\nPick your size and colour, add it to your enquiry list and send it to us on WhatsApp. We confirm availability, final price and delivery before you pay.",
     "highlights": [
-      "Dermatologically tested",
-      "Suitable for all skin types",
-      "Paraben and sulphate free",
-      "100% genuine, sealed pack"
+      "100% original, brand-sealed box",
+      "Cushioned midsole for all-day comfort",
+      "Durable rubber outsole",
+      "Easy exchange for size (see FAQ)"
     ],
     "tags": [
       "bestseller",
@@ -26,284 +50,46 @@
     ],
     "inStock": true,
     "featured": true,
-    "rating": 4.6,
+    "rating": 4.7,
     "dateAdded": "2026-06-15"
   },
   {
     "id": "bf-0002",
-    "name": "Hyaluronic Acid Hydrating Gel Moisturiser",
-    "brand": "DermaPure",
-    "category": "skincare",
-    "subcategory": "Moisturisers",
-    "mrp": 599,
-    "price": 379,
-    "size": "50 g",
+    "name": "Classic Court Leather Sneakers",
+    "brand": "Adidas",
+    "category": "sneakers",
+    "subcategory": "Lifestyle",
+    "mrp": 7999,
+    "price": 4799,
+    "sizes": [
+      "UK 6",
+      "UK 7",
+      "UK 8",
+      "UK 9",
+      "UK 10",
+      "UK 11"
+    ],
+    "colors": [
+      {
+        "name": "White",
+        "hex": "#F4F4F2"
+      },
+      {
+        "name": "Navy",
+        "hex": "#1E2A4A"
+      }
+    ],
     "images": [
       "images/products/bf-0002-1.svg",
       "images/products/bf-0002-2.svg"
     ],
-    "shortDescription": "Oil-free, 72-hour hydration for every skin type.",
-    "description": "Oil-free, 72-hour hydration for every skin type. Hyaluronic Acid Hydrating Gel Moisturiser by DermaPure is crafted with care to deliver real, visible results, and at Branded Factory you get it at a bumper discount. Every pack is 100% genuine and sourced directly from authorised distributors, so you can shop with complete confidence. Add it to your enquiry list and order instantly on WhatsApp.",
+    "shortDescription": "Clean leather court style that goes with everything.",
+    "description": "Clean leather court style that goes with everything. This Adidas classic court leather sneakers is 100% original, sourced from authorised distributors and offered at a bumper discount at Branded Factory.\n\nPick your size and colour, add it to your enquiry list and send it to us on WhatsApp. We confirm availability, final price and delivery before you pay.",
     "highlights": [
-      "Dermatologically tested",
-      "Suitable for all skin types",
-      "Paraben and sulphate free",
-      "100% genuine, sealed pack"
-    ],
-    "tags": [
-      "bestseller"
-    ],
-    "inStock": true,
-    "featured": true,
-    "rating": 4.5,
-    "dateAdded": "2026-07-22"
-  },
-  {
-    "id": "bf-0003",
-    "name": "Niacinamide 10% Pore Refining Serum",
-    "brand": "The Skin Lab",
-    "category": "skincare",
-    "subcategory": "Serums",
-    "mrp": 650,
-    "price": 299,
-    "size": "30 ml",
-    "images": [
-      "images/products/bf-0003-1.svg",
-      "images/products/bf-0003-2.svg"
-    ],
-    "shortDescription": "Visibly minimises pores and controls excess oil.",
-    "description": "Visibly minimises pores and controls excess oil. Niacinamide 10% Pore Refining Serum by The Skin Lab is crafted with care to deliver real, visible results, and at Branded Factory you get it at a bumper discount. Every pack is 100% genuine and sourced directly from authorised distributors, so you can shop with complete confidence. Add it to your enquiry list and order instantly on WhatsApp.",
-    "highlights": [
-      "Dermatologically tested",
-      "Suitable for all skin types",
-      "Paraben and sulphate free",
-      "100% genuine, sealed pack"
-    ],
-    "tags": [
-      "deal-of-the-day"
-    ],
-    "inStock": true,
-    "featured": false,
-    "rating": 4.4,
-    "dateAdded": "2026-08-28"
-  },
-  {
-    "id": "bf-0004",
-    "name": "Ultra-Light Sunscreen SPF 50 PA++++",
-    "brand": "DermaPure",
-    "category": "skincare",
-    "subcategory": "Sun Care",
-    "mrp": 549,
-    "price": 349,
-    "size": "50 g",
-    "images": [
-      "images/products/bf-0004-1.svg",
-      "images/products/bf-0004-2.svg"
-    ],
-    "shortDescription": "No white cast, no greasiness, all-day protection.",
-    "description": "No white cast, no greasiness, all-day protection. Ultra-Light Sunscreen SPF 50 PA++++ by DermaPure is crafted with care to deliver real, visible results, and at Branded Factory you get it at a bumper discount. Every pack is 100% genuine and sourced directly from authorised distributors, so you can shop with complete confidence. Add it to your enquiry list and order instantly on WhatsApp.",
-    "highlights": [
-      "Dermatologically tested",
-      "Suitable for all skin types",
-      "Paraben and sulphate free",
-      "100% genuine, sealed pack"
-    ],
-    "tags": [
-      "new"
-    ],
-    "inStock": true,
-    "featured": true,
-    "rating": 4.7,
-    "dateAdded": "2026-09-29"
-  },
-  {
-    "id": "bf-0005",
-    "name": "Gentle Rice Water Foaming Cleanser",
-    "brand": "Kōmé Beauty",
-    "category": "skincare",
-    "subcategory": "Cleansers",
-    "mrp": 399,
-    "price": 239,
-    "size": "150 ml",
-    "images": [
-      "images/products/bf-0005-1.svg",
-      "images/products/bf-0005-2.svg"
-    ],
-    "shortDescription": "Low-pH cleanser that leaves skin soft, never tight.",
-    "description": "Low-pH cleanser that leaves skin soft, never tight. Gentle Rice Water Foaming Cleanser by Kōmé Beauty is crafted with care to deliver real, visible results, and at Branded Factory you get it at a bumper discount. Every pack is 100% genuine and sourced directly from authorised distributors, so you can shop with complete confidence. Add it to your enquiry list and order instantly on WhatsApp.",
-    "highlights": [
-      "Dermatologically tested",
-      "Suitable for all skin types",
-      "Paraben and sulphate free",
-      "100% genuine, sealed pack"
-    ],
-    "tags": [],
-    "inStock": true,
-    "featured": false,
-    "rating": 4.3,
-    "dateAdded": "2026-08-07"
-  },
-  {
-    "id": "bf-0006",
-    "name": "Argan Oil Repair Shampoo",
-    "brand": "Maison Verde",
-    "category": "hair-care",
-    "subcategory": "Shampoo",
-    "mrp": 699,
-    "price": 389,
-    "size": "340 ml",
-    "images": [
-      "images/products/bf-0006-1.svg",
-      "images/products/bf-0006-2.svg"
-    ],
-    "shortDescription": "Sulphate-free repair for dry, frizzy hair.",
-    "description": "Sulphate-free repair for dry, frizzy hair. Argan Oil Repair Shampoo by Maison Verde is crafted with care to deliver real, visible results, and at Branded Factory you get it at a bumper discount. Every pack is 100% genuine and sourced directly from authorised distributors, so you can shop with complete confidence. Add it to your enquiry list and order instantly on WhatsApp.",
-    "highlights": [
-      "Salon-grade formula",
-      "No harsh sulphates",
-      "Suitable for colour-treated hair",
-      "100% genuine, sealed pack"
-    ],
-    "tags": [
-      "bestseller"
-    ],
-    "inStock": true,
-    "featured": true,
-    "rating": 4.5,
-    "dateAdded": "2026-09-13"
-  },
-  {
-    "id": "bf-0007",
-    "name": "Onion & Black Seed Hair Oil",
-    "brand": "Root Ritual",
-    "category": "hair-care",
-    "subcategory": "Hair Oil",
-    "mrp": 449,
-    "price": 249,
-    "size": "200 ml",
-    "images": [
-      "images/products/bf-0007-1.svg",
-      "images/products/bf-0007-2.svg"
-    ],
-    "shortDescription": "Reduces hair fall with a cold-pressed onion blend.",
-    "description": "Reduces hair fall with a cold-pressed onion blend. Onion & Black Seed Hair Oil by Root Ritual is crafted with care to deliver real, visible results, and at Branded Factory you get it at a bumper discount. Every pack is 100% genuine and sourced directly from authorised distributors, so you can shop with complete confidence. Add it to your enquiry list and order instantly on WhatsApp.",
-    "highlights": [
-      "Salon-grade formula",
-      "No harsh sulphates",
-      "Suitable for colour-treated hair",
-      "100% genuine, sealed pack"
-    ],
-    "tags": [
-      "deal-of-the-day"
-    ],
-    "inStock": true,
-    "featured": false,
-    "rating": 4.2,
-    "dateAdded": "2026-07-17"
-  },
-  {
-    "id": "bf-0008",
-    "name": "Keratin Smooth Conditioner",
-    "brand": "Maison Verde",
-    "category": "hair-care",
-    "subcategory": "Conditioner",
-    "mrp": 599,
-    "price": 359,
-    "size": "250 ml",
-    "images": [
-      "images/products/bf-0008-1.svg",
-      "images/products/bf-0008-2.svg"
-    ],
-    "shortDescription": "Silky, detangled hair from the first wash.",
-    "description": "Silky, detangled hair from the first wash. Keratin Smooth Conditioner by Maison Verde is crafted with care to deliver real, visible results, and at Branded Factory you get it at a bumper discount. Every pack is 100% genuine and sourced directly from authorised distributors, so you can shop with complete confidence. Add it to your enquiry list and order instantly on WhatsApp.",
-    "highlights": [
-      "Salon-grade formula",
-      "No harsh sulphates",
-      "Suitable for colour-treated hair",
-      "100% genuine, sealed pack"
-    ],
-    "tags": [],
-    "inStock": true,
-    "featured": false,
-    "rating": 4.4,
-    "dateAdded": "2026-08-23"
-  },
-  {
-    "id": "bf-0009",
-    "name": "Rosemary Scalp Strengthening Serum",
-    "brand": "Root Ritual",
-    "category": "hair-care",
-    "subcategory": "Hair Serum",
-    "mrp": 799,
-    "price": 499,
-    "size": "50 ml",
-    "images": [
-      "images/products/bf-0009-1.svg",
-      "images/products/bf-0009-2.svg"
-    ],
-    "shortDescription": "Lightweight daily serum for a healthier scalp.",
-    "description": "Lightweight daily serum for a healthier scalp. Rosemary Scalp Strengthening Serum by Root Ritual is crafted with care to deliver real, visible results, and at Branded Factory you get it at a bumper discount. Every pack is 100% genuine and sourced directly from authorised distributors, so you can shop with complete confidence. Add it to your enquiry list and order instantly on WhatsApp.",
-    "highlights": [
-      "Salon-grade formula",
-      "No harsh sulphates",
-      "Suitable for colour-treated hair",
-      "100% genuine, sealed pack"
-    ],
-    "tags": [
-      "new"
-    ],
-    "inStock": true,
-    "featured": false,
-    "rating": 4.3,
-    "dateAdded": "2026-09-25"
-  },
-  {
-    "id": "bf-0010",
-    "name": "Charcoal Detox Body Wash",
-    "brand": "Aqua Fresh Co.",
-    "category": "personal-care",
-    "subcategory": "Bath & Body",
-    "mrp": 399,
-    "price": 229,
-    "size": "250 ml",
-    "images": [
-      "images/products/bf-0010-1.svg",
-      "images/products/bf-0010-2.svg"
-    ],
-    "shortDescription": "Deep-cleansing body wash with activated charcoal.",
-    "description": "Deep-cleansing body wash with activated charcoal. Charcoal Detox Body Wash by Aqua Fresh Co. is crafted with care to deliver real, visible results, and at Branded Factory you get it at a bumper discount. Every pack is 100% genuine and sourced directly from authorised distributors, so you can shop with complete confidence. Add it to your enquiry list and order instantly on WhatsApp.",
-    "highlights": [
-      "Gentle for daily use",
-      "Dermatologically tested",
-      "Long-lasting freshness",
-      "100% genuine, sealed pack"
-    ],
-    "tags": [],
-    "inStock": true,
-    "featured": false,
-    "rating": 4.2,
-    "dateAdded": "2026-08-02"
-  },
-  {
-    "id": "bf-0011",
-    "name": "Sandalwood & Saffron Bathing Bar (Pack of 4)",
-    "brand": "Heritage Mysore",
-    "category": "personal-care",
-    "subcategory": "Soaps",
-    "mrp": 280,
-    "price": 189,
-    "size": "4 × 125 g",
-    "images": [
-      "images/products/bf-0011-1.svg",
-      "images/products/bf-0011-2.svg"
-    ],
-    "shortDescription": "Classic sandalwood luxury for your daily bath.",
-    "description": "Classic sandalwood luxury for your daily bath. Sandalwood & Saffron Bathing Bar (Pack of 4) by Heritage Mysore is crafted with care to deliver real, visible results, and at Branded Factory you get it at a bumper discount. Every pack is 100% genuine and sourced directly from authorised distributors, so you can shop with complete confidence. Add it to your enquiry list and order instantly on WhatsApp.",
-    "highlights": [
-      "Gentle for daily use",
-      "Dermatologically tested",
-      "Long-lasting freshness",
-      "100% genuine, sealed pack"
+      "100% original, brand-sealed box",
+      "Cushioned midsole for all-day comfort",
+      "Durable rubber outsole",
+      "Easy exchange for size (see FAQ)"
     ],
     "tags": [
       "bestseller"
@@ -311,55 +97,49 @@
     "inStock": true,
     "featured": true,
     "rating": 4.6,
-    "dateAdded": "2026-09-08"
+    "dateAdded": "2026-07-22"
   },
   {
-    "id": "bf-0012",
-    "name": "Whitening Herbal Toothpaste",
-    "brand": "SmileVeda",
-    "category": "personal-care",
-    "subcategory": "Oral Care",
-    "mrp": 199,
-    "price": 129,
-    "size": "150 g",
+    "id": "bf-0003",
+    "name": "Suede Retro Low-Top Sneakers",
+    "brand": "Puma",
+    "category": "sneakers",
+    "subcategory": "Lifestyle",
+    "mrp": 6999,
+    "price": 3499,
+    "sizes": [
+      "UK 6",
+      "UK 7",
+      "UK 8",
+      "UK 9",
+      "UK 10",
+      "UK 11"
+    ],
+    "colors": [
+      {
+        "name": "Red",
+        "hex": "#C8333B"
+      },
+      {
+        "name": "Black",
+        "hex": "#1F1F1F"
+      },
+      {
+        "name": "Green",
+        "hex": "#2F7D58"
+      }
+    ],
     "images": [
-      "images/products/bf-0012-1.svg",
-      "images/products/bf-0012-2.svg"
+      "images/products/bf-0003-1.svg",
+      "images/products/bf-0003-2.svg"
     ],
-    "shortDescription": "Fluoride protection with clove and neem.",
-    "description": "Fluoride protection with clove and neem. Whitening Herbal Toothpaste by SmileVeda is crafted with care to deliver real, visible results, and at Branded Factory you get it at a bumper discount. Every pack is 100% genuine and sourced directly from authorised distributors, so you can shop with complete confidence. Add it to your enquiry list and order instantly on WhatsApp.",
+    "shortDescription": "Soft suede upper with the iconic retro side stripe.",
+    "description": "Soft suede upper with the iconic retro side stripe. This Puma suede retro low-top sneakers is 100% original, sourced from authorised distributors and offered at a bumper discount at Branded Factory.\n\nPick your size and colour, add it to your enquiry list and send it to us on WhatsApp. We confirm availability, final price and delivery before you pay.",
     "highlights": [
-      "Gentle for daily use",
-      "Dermatologically tested",
-      "Long-lasting freshness",
-      "100% genuine, sealed pack"
-    ],
-    "tags": [],
-    "inStock": true,
-    "featured": false,
-    "rating": 4.1,
-    "dateAdded": "2026-07-12"
-  },
-  {
-    "id": "bf-0013",
-    "name": "Cocoa Butter Intensive Body Lotion",
-    "brand": "Aqua Fresh Co.",
-    "category": "personal-care",
-    "subcategory": "Bath & Body",
-    "mrp": 499,
-    "price": 279,
-    "size": "400 ml",
-    "images": [
-      "images/products/bf-0013-1.svg",
-      "images/products/bf-0013-2.svg"
-    ],
-    "shortDescription": "48-hour nourishment for very dry skin.",
-    "description": "48-hour nourishment for very dry skin. Cocoa Butter Intensive Body Lotion by Aqua Fresh Co. is crafted with care to deliver real, visible results, and at Branded Factory you get it at a bumper discount. Every pack is 100% genuine and sourced directly from authorised distributors, so you can shop with complete confidence. Add it to your enquiry list and order instantly on WhatsApp.",
-    "highlights": [
-      "Gentle for daily use",
-      "Dermatologically tested",
-      "Long-lasting freshness",
-      "100% genuine, sealed pack"
+      "100% original, brand-sealed box",
+      "Cushioned midsole for all-day comfort",
+      "Durable rubber outsole",
+      "Easy exchange for size (see FAQ)"
     ],
     "tags": [
       "deal-of-the-day"
@@ -367,455 +147,1196 @@
     "inStock": true,
     "featured": false,
     "rating": 4.5,
-    "dateAdded": "2026-08-18"
+    "dateAdded": "2026-08-28"
   },
   {
-    "id": "bf-0014",
-    "name": "Velvet Matte Lipstick: Rosewood",
-    "brand": "Maison Rouge",
-    "category": "makeup",
-    "subcategory": "Lips",
-    "mrp": 699,
-    "price": 349,
-    "size": "4.2 g",
-    "images": [
-      "images/products/bf-0014-1.svg",
-      "images/products/bf-0014-2.svg"
+    "id": "bf-0004",
+    "name": "Classic Leather Everyday Sneakers",
+    "brand": "Reebok",
+    "category": "sneakers",
+    "subcategory": "Lifestyle",
+    "mrp": 5999,
+    "price": 3299,
+    "sizes": [
+      "UK 6",
+      "UK 7",
+      "UK 8",
+      "UK 9",
+      "UK 10",
+      "UK 11"
     ],
-    "shortDescription": "Long-wear, transfer-proof matte in a universal nude-rose.",
-    "description": "Long-wear, transfer-proof matte in a universal nude-rose. Velvet Matte Lipstick: Rosewood by Maison Rouge is crafted with care to deliver real, visible results, and at Branded Factory you get it at a bumper discount. Every pack is 100% genuine and sourced directly from authorised distributors, so you can shop with complete confidence. Add it to your enquiry list and order instantly on WhatsApp.",
+    "unavailableSizes": [
+      "UK 6"
+    ],
+    "colors": [
+      {
+        "name": "White",
+        "hex": "#F4F4F2"
+      },
+      {
+        "name": "Grey",
+        "hex": "#8A8F98"
+      }
+    ],
+    "images": [
+      "images/products/bf-0004-1.svg",
+      "images/products/bf-0004-2.svg"
+    ],
+    "shortDescription": "Heritage style with a cushioned EVA midsole.",
+    "description": "Heritage style with a cushioned EVA midsole. This Reebok classic leather everyday sneakers is 100% original, sourced from authorised distributors and offered at a bumper discount at Branded Factory.\n\nPick your size and colour, add it to your enquiry list and send it to us on WhatsApp. We confirm availability, final price and delivery before you pay.",
     "highlights": [
-      "Long-wear formula",
-      "Cruelty free",
-      "Highly pigmented",
-      "100% genuine, sealed pack"
+      "100% original, brand-sealed box",
+      "Cushioned midsole for all-day comfort",
+      "Durable rubber outsole",
+      "Easy exchange for size (see FAQ)"
+    ],
+    "tags": [],
+    "inStock": true,
+    "featured": false,
+    "rating": 4.4,
+    "dateAdded": "2026-07-01"
+  },
+  {
+    "id": "bf-0005",
+    "name": "574 Heritage Sneakers",
+    "brand": "New Balance",
+    "category": "sneakers",
+    "subcategory": "Lifestyle",
+    "mrp": 8999,
+    "price": 6299,
+    "sizes": [
+      "UK 6",
+      "UK 7",
+      "UK 8",
+      "UK 9",
+      "UK 10",
+      "UK 11"
+    ],
+    "colors": [
+      {
+        "name": "Grey",
+        "hex": "#8A8F98"
+      },
+      {
+        "name": "Navy",
+        "hex": "#1E2A4A"
+      }
+    ],
+    "images": [
+      "images/products/bf-0005-1.svg",
+      "images/products/bf-0005-2.svg"
+    ],
+    "shortDescription": "The everyday icon with ENCAP cushioning.",
+    "description": "The everyday icon with ENCAP cushioning. This New Balance 574 heritage sneakers is 100% original, sourced from authorised distributors and offered at a bumper discount at Branded Factory.\n\nPick your size and colour, add it to your enquiry list and send it to us on WhatsApp. We confirm availability, final price and delivery before you pay.",
+    "highlights": [
+      "100% original, brand-sealed box",
+      "Cushioned midsole for all-day comfort",
+      "Durable rubber outsole",
+      "Easy exchange for size (see FAQ)"
+    ],
+    "tags": [
+      "new"
+    ],
+    "inStock": false,
+    "featured": false,
+    "rating": 4.6,
+    "dateAdded": "2026-10-01"
+  },
+  {
+    "id": "bf-0006",
+    "name": "Women's Platform Sneakers",
+    "brand": "Puma",
+    "category": "sneakers",
+    "subcategory": "Women",
+    "mrp": 5999,
+    "price": 3299,
+    "sizes": [
+      "UK 3",
+      "UK 4",
+      "UK 5",
+      "UK 6",
+      "UK 7"
+    ],
+    "colors": [
+      {
+        "name": "White",
+        "hex": "#F4F4F2"
+      },
+      {
+        "name": "Pink",
+        "hex": "#E8A3B5"
+      }
+    ],
+    "images": [
+      "images/products/bf-0006-1.svg",
+      "images/products/bf-0006-2.svg"
+    ],
+    "shortDescription": "A chunky platform sole for an effortless lift.",
+    "description": "A chunky platform sole for an effortless lift. This Puma women's platform sneakers is 100% original, sourced from authorised distributors and offered at a bumper discount at Branded Factory.\n\nPick your size and colour, add it to your enquiry list and send it to us on WhatsApp. We confirm availability, final price and delivery before you pay.",
+    "highlights": [
+      "100% original, brand-sealed box",
+      "Cushioned midsole for all-day comfort",
+      "Durable rubber outsole",
+      "Easy exchange for size (see FAQ)"
+    ],
+    "tags": [
+      "new"
+    ],
+    "inStock": true,
+    "featured": false,
+    "rating": 4.4,
+    "dateAdded": "2026-10-03"
+  },
+  {
+    "id": "bf-0007",
+    "name": "Men's Road Running Shoes",
+    "brand": "Nike",
+    "category": "sports-shoes",
+    "subcategory": "Running",
+    "mrp": 8495,
+    "price": 5947,
+    "sizes": [
+      "UK 6",
+      "UK 7",
+      "UK 8",
+      "UK 9",
+      "UK 10",
+      "UK 11"
+    ],
+    "colors": [
+      {
+        "name": "Black",
+        "hex": "#1F1F1F"
+      },
+      {
+        "name": "Blue",
+        "hex": "#3E6FB0"
+      }
+    ],
+    "images": [
+      "images/products/bf-0007-1.svg",
+      "images/products/bf-0007-2.svg"
+    ],
+    "shortDescription": "Responsive foam and breathable mesh for daily miles.",
+    "description": "Responsive foam and breathable mesh for daily miles. This Nike men's road running shoes is 100% original, sourced from authorised distributors and offered at a bumper discount at Branded Factory.\n\nPick your size and colour, add it to your enquiry list and send it to us on WhatsApp. We confirm availability, final price and delivery before you pay.",
+    "highlights": [
+      "100% original, brand-sealed box",
+      "Breathable upper",
+      "Responsive cushioning",
+      "Easy exchange for size (see FAQ)"
+    ],
+    "tags": [
+      "bestseller"
+    ],
+    "inStock": true,
+    "featured": true,
+    "rating": 4.6,
+    "dateAdded": "2026-07-17"
+  },
+  {
+    "id": "bf-0008",
+    "name": "Men's Boost Performance Running Shoes",
+    "brand": "Adidas",
+    "category": "sports-shoes",
+    "subcategory": "Running",
+    "mrp": 12999,
+    "price": 7799,
+    "sizes": [
+      "UK 6",
+      "UK 7",
+      "UK 8",
+      "UK 9",
+      "UK 10",
+      "UK 11"
+    ],
+    "unavailableSizes": [
+      "UK 6",
+      "UK 7"
+    ],
+    "colors": [
+      {
+        "name": "Black",
+        "hex": "#1F1F1F"
+      },
+      {
+        "name": "White",
+        "hex": "#F4F4F2"
+      }
+    ],
+    "images": [
+      "images/products/bf-0008-1.svg",
+      "images/products/bf-0008-2.svg"
+    ],
+    "shortDescription": "Energy-returning cushioning for long runs.",
+    "description": "Energy-returning cushioning for long runs. This Adidas men's boost performance running shoes is 100% original, sourced from authorised distributors and offered at a bumper discount at Branded Factory.\n\nPick your size and colour, add it to your enquiry list and send it to us on WhatsApp. We confirm availability, final price and delivery before you pay.",
+    "highlights": [
+      "100% original, brand-sealed box",
+      "Breathable upper",
+      "Responsive cushioning",
+      "Easy exchange for size (see FAQ)"
+    ],
+    "tags": [
+      "deal-of-the-day"
+    ],
+    "inStock": true,
+    "featured": true,
+    "rating": 4.7,
+    "dateAdded": "2026-08-23"
+  },
+  {
+    "id": "bf-0009",
+    "name": "Max Cushioning Walking Shoes",
+    "brand": "Skechers",
+    "category": "sports-shoes",
+    "subcategory": "Walking",
+    "mrp": 5999,
+    "price": 3899,
+    "sizes": [
+      "UK 6",
+      "UK 7",
+      "UK 8",
+      "UK 9",
+      "UK 10",
+      "UK 11"
+    ],
+    "colors": [
+      {
+        "name": "Navy",
+        "hex": "#1E2A4A"
+      },
+      {
+        "name": "Grey",
+        "hex": "#8A8F98"
+      }
+    ],
+    "images": [
+      "images/products/bf-0009-1.svg",
+      "images/products/bf-0009-2.svg"
+    ],
+    "shortDescription": "Memory-foam comfort for all-day walking.",
+    "description": "Memory-foam comfort for all-day walking. This Skechers max cushioning walking shoes is 100% original, sourced from authorised distributors and offered at a bumper discount at Branded Factory.\n\nPick your size and colour, add it to your enquiry list and send it to us on WhatsApp. We confirm availability, final price and delivery before you pay.",
+    "highlights": [
+      "100% original, brand-sealed box",
+      "Breathable upper",
+      "Responsive cushioning",
+      "Easy exchange for size (see FAQ)"
+    ],
+    "tags": [],
+    "inStock": true,
+    "featured": false,
+    "rating": 4.5,
+    "dateAdded": "2026-06-26"
+  },
+  {
+    "id": "bf-0010",
+    "name": "Training Cross-Fit Shoes",
+    "brand": "Reebok",
+    "category": "sports-shoes",
+    "subcategory": "Training",
+    "mrp": 7499,
+    "price": 4499,
+    "sizes": [
+      "UK 6",
+      "UK 7",
+      "UK 8",
+      "UK 9",
+      "UK 10",
+      "UK 11"
+    ],
+    "colors": [
+      {
+        "name": "Black",
+        "hex": "#1F1F1F"
+      },
+      {
+        "name": "Red",
+        "hex": "#C8333B"
+      }
+    ],
+    "images": [
+      "images/products/bf-0010-1.svg",
+      "images/products/bf-0010-2.svg"
+    ],
+    "shortDescription": "Stable, grippy and built for the gym floor.",
+    "description": "Stable, grippy and built for the gym floor. This Reebok training cross-fit shoes is 100% original, sourced from authorised distributors and offered at a bumper discount at Branded Factory.\n\nPick your size and colour, add it to your enquiry list and send it to us on WhatsApp. We confirm availability, final price and delivery before you pay.",
+    "highlights": [
+      "100% original, brand-sealed box",
+      "Breathable upper",
+      "Responsive cushioning",
+      "Easy exchange for size (see FAQ)"
+    ],
+    "tags": [
+      "new"
+    ],
+    "inStock": true,
+    "featured": false,
+    "rating": 4.3,
+    "dateAdded": "2026-09-27"
+  },
+  {
+    "id": "bf-0011",
+    "name": "Comfort Logo Slides",
+    "brand": "Adidas",
+    "category": "slides-sandals",
+    "subcategory": "Slides",
+    "mrp": 2499,
+    "price": 1499,
+    "sizes": [
+      "UK 6",
+      "UK 7",
+      "UK 8",
+      "UK 9",
+      "UK 10",
+      "UK 11"
+    ],
+    "colors": [
+      {
+        "name": "Black",
+        "hex": "#1F1F1F"
+      },
+      {
+        "name": "Navy",
+        "hex": "#1E2A4A"
+      }
+    ],
+    "images": [
+      "images/products/bf-0011-1.svg",
+      "images/products/bf-0011-2.svg"
+    ],
+    "shortDescription": "Soft cloudfoam footbed for instant comfort.",
+    "description": "Soft cloudfoam footbed for instant comfort. This Adidas comfort logo slides is 100% original, sourced from authorised distributors and offered at a bumper discount at Branded Factory.\n\nPick your size and colour, add it to your enquiry list and send it to us on WhatsApp. We confirm availability, final price and delivery before you pay.",
+    "highlights": [
+      "100% original",
+      "Soft cushioned footbed",
+      "Water-friendly materials",
+      "Easy exchange for size (see FAQ)"
     ],
     "tags": [
       "bestseller"
     ],
     "inStock": true,
     "featured": false,
+    "rating": 4.5,
+    "dateAdded": "2026-09-08"
+  },
+  {
+    "id": "bf-0012",
+    "name": "Cushioned Pool Slides",
+    "brand": "Nike",
+    "category": "slides-sandals",
+    "subcategory": "Slides",
+    "mrp": 2795,
+    "price": 1817,
+    "sizes": [
+      "UK 6",
+      "UK 7",
+      "UK 8",
+      "UK 9",
+      "UK 10",
+      "UK 11"
+    ],
+    "colors": [
+      {
+        "name": "Black",
+        "hex": "#1F1F1F"
+      },
+      {
+        "name": "White",
+        "hex": "#F4F4F2"
+      }
+    ],
+    "images": [
+      "images/products/bf-0012-1.svg",
+      "images/products/bf-0012-2.svg"
+    ],
+    "shortDescription": "Plush foam strap and footbed for post-workout ease.",
+    "description": "Plush foam strap and footbed for post-workout ease. This Nike cushioned pool slides is 100% original, sourced from authorised distributors and offered at a bumper discount at Branded Factory.\n\nPick your size and colour, add it to your enquiry list and send it to us on WhatsApp. We confirm availability, final price and delivery before you pay.",
+    "highlights": [
+      "100% original",
+      "Soft cushioned footbed",
+      "Water-friendly materials",
+      "Easy exchange for size (see FAQ)"
+    ],
+    "tags": [],
+    "inStock": true,
+    "featured": false,
+    "rating": 4.4,
+    "dateAdded": "2026-07-12"
+  },
+  {
+    "id": "bf-0013",
+    "name": "Sport Strap Sandals",
+    "brand": "Puma",
+    "category": "slides-sandals",
+    "subcategory": "Sandals",
+    "mrp": 2999,
+    "price": 1499,
+    "sizes": [
+      "UK 6",
+      "UK 7",
+      "UK 8",
+      "UK 9",
+      "UK 10",
+      "UK 11"
+    ],
+    "colors": [
+      {
+        "name": "Olive",
+        "hex": "#5E6B3A"
+      },
+      {
+        "name": "Black",
+        "hex": "#1F1F1F"
+      }
+    ],
+    "images": [
+      "images/products/bf-0013-1.svg",
+      "images/products/bf-0013-2.svg"
+    ],
+    "shortDescription": "Adjustable straps and a cushioned sole.",
+    "description": "Adjustable straps and a cushioned sole. This Puma sport strap sandals is 100% original, sourced from authorised distributors and offered at a bumper discount at Branded Factory.\n\nPick your size and colour, add it to your enquiry list and send it to us on WhatsApp. We confirm availability, final price and delivery before you pay.",
+    "highlights": [
+      "100% original",
+      "Soft cushioned footbed",
+      "Water-friendly materials",
+      "Easy exchange for size (see FAQ)"
+    ],
+    "tags": [
+      "deal-of-the-day"
+    ],
+    "inStock": true,
+    "featured": false,
+    "rating": 4.2,
+    "dateAdded": "2026-08-18"
+  },
+  {
+    "id": "bf-0014",
+    "name": "Men's Classic Logo Crew T-Shirt",
+    "brand": "Puma",
+    "category": "men-clothing",
+    "subcategory": "T-Shirts",
+    "mrp": 1499,
+    "price": 749,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "colors": [
+      {
+        "name": "Black",
+        "hex": "#1F1F1F"
+      },
+      {
+        "name": "White",
+        "hex": "#F4F4F2"
+      },
+      {
+        "name": "Navy",
+        "hex": "#1E2A4A"
+      }
+    ],
+    "images": [
+      "images/products/bf-0014-1.svg",
+      "images/products/bf-0014-2.svg"
+    ],
+    "shortDescription": "Soft cotton tee with a regular fit and chest logo.",
+    "description": "Soft cotton tee with a regular fit and chest logo. This Puma men's classic logo crew t-shirt is 100% original, sourced from authorised distributors and offered at a bumper discount at Branded Factory.\n\nPick your size and colour, add it to your enquiry list and send it to us on WhatsApp. We confirm availability, final price and delivery before you pay.",
+    "highlights": [
+      "100% original with brand tags",
+      "Premium fabric",
+      "True to size, see size guide on brand label",
+      "Easy exchange for size (see FAQ)"
+    ],
+    "tags": [
+      "bestseller"
+    ],
+    "inStock": true,
+    "featured": true,
     "rating": 4.4,
     "dateAdded": "2026-06-21"
   },
   {
     "id": "bf-0015",
-    "name": "Skin-Tint Foundation SPF 20",
-    "brand": "Maison Rouge",
-    "category": "makeup",
-    "subcategory": "Face",
-    "mrp": 999,
-    "price": 599,
-    "size": "30 ml",
+    "name": "Men's Slim Fit Polo T-Shirt",
+    "brand": "U.S. Polo Assn.",
+    "category": "men-clothing",
+    "subcategory": "Polos",
+    "mrp": 1999,
+    "price": 1099,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "unavailableSizes": [
+      "XXL"
+    ],
+    "colors": [
+      {
+        "name": "Navy",
+        "hex": "#1E2A4A"
+      },
+      {
+        "name": "White",
+        "hex": "#F4F4F2"
+      },
+      {
+        "name": "Red",
+        "hex": "#C8333B"
+      }
+    ],
     "images": [
       "images/products/bf-0015-1.svg",
       "images/products/bf-0015-2.svg"
     ],
-    "shortDescription": "Breathable, buildable coverage with a natural finish.",
-    "description": "Breathable, buildable coverage with a natural finish. Skin-Tint Foundation SPF 20 by Maison Rouge is crafted with care to deliver real, visible results, and at Branded Factory you get it at a bumper discount. Every pack is 100% genuine and sourced directly from authorised distributors, so you can shop with complete confidence. Add it to your enquiry list and order instantly on WhatsApp.",
+    "shortDescription": "Breathable piqué cotton with a crisp collar.",
+    "description": "Breathable piqué cotton with a crisp collar. This U.S. Polo Assn. men's slim fit polo t-shirt is 100% original, sourced from authorised distributors and offered at a bumper discount at Branded Factory.\n\nPick your size and colour, add it to your enquiry list and send it to us on WhatsApp. We confirm availability, final price and delivery before you pay.",
     "highlights": [
-      "Long-wear formula",
-      "Cruelty free",
-      "Highly pigmented",
-      "100% genuine, sealed pack"
+      "100% original with brand tags",
+      "Premium fabric",
+      "True to size, see size guide on brand label",
+      "Easy exchange for size (see FAQ)"
     ],
-    "tags": [
-      "new"
-    ],
+    "tags": [],
     "inStock": true,
     "featured": false,
-    "rating": 4.3,
-    "dateAdded": "2026-09-23"
+    "rating": 4.5,
+    "dateAdded": "2026-07-28"
   },
   {
     "id": "bf-0016",
-    "name": "Volume Lift Waterproof Mascara",
-    "brand": "Lash Atelier",
-    "category": "makeup",
-    "subcategory": "Eyes",
-    "mrp": 599,
-    "price": 329,
-    "size": "9 ml",
+    "name": "Men's 511 Slim Fit Jeans",
+    "brand": "Levi's",
+    "category": "men-clothing",
+    "subcategory": "Jeans",
+    "mrp": 3999,
+    "price": 2399,
+    "sizes": [
+      "28",
+      "30",
+      "32",
+      "34",
+      "36"
+    ],
+    "colors": [
+      {
+        "name": "Indigo",
+        "hex": "#2E3D6B"
+      },
+      {
+        "name": "Black",
+        "hex": "#1F1F1F"
+      }
+    ],
     "images": [
       "images/products/bf-0016-1.svg",
       "images/products/bf-0016-2.svg"
     ],
-    "shortDescription": "Smudge-proof volume that lasts all day.",
-    "description": "Smudge-proof volume that lasts all day. Volume Lift Waterproof Mascara by Lash Atelier is crafted with care to deliver real, visible results, and at Branded Factory you get it at a bumper discount. Every pack is 100% genuine and sourced directly from authorised distributors, so you can shop with complete confidence. Add it to your enquiry list and order instantly on WhatsApp.",
+    "shortDescription": "The modern slim fit with a hint of stretch.",
+    "description": "The modern slim fit with a hint of stretch. This Levi's men's 511 slim fit jeans is 100% original, sourced from authorised distributors and offered at a bumper discount at Branded Factory.\n\nPick your size and colour, add it to your enquiry list and send it to us on WhatsApp. We confirm availability, final price and delivery before you pay.",
     "highlights": [
-      "Long-wear formula",
-      "Cruelty free",
-      "Highly pigmented",
-      "100% genuine, sealed pack"
+      "100% original with brand tags",
+      "Premium fabric",
+      "True to size, see size guide on brand label",
+      "Easy exchange for size (see FAQ)"
     ],
-    "tags": [],
-    "inStock": false,
-    "featured": false,
-    "rating": 4.2,
+    "tags": [
+      "bestseller",
+      "deal-of-the-day"
+    ],
+    "inStock": true,
+    "featured": true,
+    "rating": 4.6,
     "dateAdded": "2026-09-03"
   },
   {
     "id": "bf-0017",
-    "name": "Oud Royale Eau de Parfum",
-    "brand": "Maison d’Ambre",
-    "category": "fragrances",
-    "subcategory": "Unisex",
-    "mrp": 2999,
-    "price": 1499,
-    "size": "100 ml",
+    "name": "Men's Oxford Casual Shirt",
+    "brand": "Tommy Hilfiger",
+    "category": "men-clothing",
+    "subcategory": "Shirts",
+    "mrp": 5499,
+    "price": 3299,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "colors": [
+      {
+        "name": "Blue",
+        "hex": "#3E6FB0"
+      },
+      {
+        "name": "White",
+        "hex": "#F4F4F2"
+      }
+    ],
     "images": [
       "images/products/bf-0017-1.svg",
       "images/products/bf-0017-2.svg"
     ],
-    "shortDescription": "Rich oud, amber and rose. Long-lasting signature.",
-    "description": "Rich oud, amber and rose. Long-lasting signature. Oud Royale Eau de Parfum by Maison d’Ambre is crafted with care to deliver real, visible results, and at Branded Factory you get it at a bumper discount. Every pack is 100% genuine and sourced directly from authorised distributors, so you can shop with complete confidence. Add it to your enquiry list and order instantly on WhatsApp.",
+    "shortDescription": "Premium cotton oxford with a tailored fit.",
+    "description": "Premium cotton oxford with a tailored fit. This Tommy Hilfiger men's oxford casual shirt is 100% original, sourced from authorised distributors and offered at a bumper discount at Branded Factory.\n\nPick your size and colour, add it to your enquiry list and send it to us on WhatsApp. We confirm availability, final price and delivery before you pay.",
     "highlights": [
-      "Long-lasting fragrance",
-      "Premium gift-ready pack",
-      "Skin-friendly formula",
-      "100% genuine, sealed pack"
+      "100% original with brand tags",
+      "Premium fabric",
+      "True to size, see size guide on brand label",
+      "Easy exchange for size (see FAQ)"
     ],
     "tags": [
-      "bestseller",
-      "deal-of-the-day"
+      "new"
     ],
     "inStock": true,
-    "featured": true,
-    "rating": 4.7,
-    "dateAdded": "2026-07-07"
+    "featured": false,
+    "rating": 4.5,
+    "dateAdded": "2026-09-27"
   },
   {
     "id": "bf-0018",
-    "name": "Fresh Aqua Deodorant Body Spray",
-    "brand": "Nord Men",
-    "category": "fragrances",
-    "subcategory": "Men",
-    "mrp": 299,
-    "price": 179,
-    "size": "150 ml",
+    "name": "Men's Fleece Pullover Hoodie",
+    "brand": "Nike",
+    "category": "men-clothing",
+    "subcategory": "Hoodies & Sweatshirts",
+    "mrp": 4295,
+    "price": 2577,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "colors": [
+      {
+        "name": "Grey",
+        "hex": "#8A8F98"
+      },
+      {
+        "name": "Black",
+        "hex": "#1F1F1F"
+      },
+      {
+        "name": "Olive",
+        "hex": "#5E6B3A"
+      }
+    ],
     "images": [
       "images/products/bf-0018-1.svg",
       "images/products/bf-0018-2.svg"
     ],
-    "shortDescription": "Cool marine freshness that lasts 48 hours.",
-    "description": "Cool marine freshness that lasts 48 hours. Fresh Aqua Deodorant Body Spray by Nord Men is crafted with care to deliver real, visible results, and at Branded Factory you get it at a bumper discount. Every pack is 100% genuine and sourced directly from authorised distributors, so you can shop with complete confidence. Add it to your enquiry list and order instantly on WhatsApp.",
+    "shortDescription": "Brushed-back fleece for cosy, everyday warmth.",
+    "description": "Brushed-back fleece for cosy, everyday warmth. This Nike men's fleece pullover hoodie is 100% original, sourced from authorised distributors and offered at a bumper discount at Branded Factory.\n\nPick your size and colour, add it to your enquiry list and send it to us on WhatsApp. We confirm availability, final price and delivery before you pay.",
     "highlights": [
-      "Long-lasting fragrance",
-      "Premium gift-ready pack",
-      "Skin-friendly formula",
-      "100% genuine, sealed pack"
+      "100% original with brand tags",
+      "Premium fabric",
+      "True to size, see size guide on brand label",
+      "Easy exchange for size (see FAQ)"
     ],
     "tags": [],
     "inStock": true,
     "featured": false,
-    "rating": 4,
+    "rating": 4.6,
     "dateAdded": "2026-08-13"
   },
   {
     "id": "bf-0019",
-    "name": "Jasmine Noir Eau de Toilette",
-    "brand": "Maison d’Ambre",
-    "category": "fragrances",
-    "subcategory": "Women",
-    "mrp": 1899,
-    "price": 999,
-    "size": "50 ml",
+    "name": "Men's Relaxed Chino Trousers",
+    "brand": "Jack & Jones",
+    "category": "men-clothing",
+    "subcategory": "Trousers",
+    "mrp": 2999,
+    "price": 1499,
+    "sizes": [
+      "28",
+      "30",
+      "32",
+      "34",
+      "36"
+    ],
+    "colors": [
+      {
+        "name": "Beige",
+        "hex": "#D8C3A0"
+      },
+      {
+        "name": "Navy",
+        "hex": "#1E2A4A"
+      },
+      {
+        "name": "Olive",
+        "hex": "#5E6B3A"
+      }
+    ],
     "images": [
       "images/products/bf-0019-1.svg",
       "images/products/bf-0019-2.svg"
     ],
-    "shortDescription": "Night-blooming jasmine with a soft musky trail.",
-    "description": "Night-blooming jasmine with a soft musky trail. Jasmine Noir Eau de Toilette by Maison d’Ambre is crafted with care to deliver real, visible results, and at Branded Factory you get it at a bumper discount. Every pack is 100% genuine and sourced directly from authorised distributors, so you can shop with complete confidence. Add it to your enquiry list and order instantly on WhatsApp.",
+    "shortDescription": "Stretch cotton chinos for smart-casual days.",
+    "description": "Stretch cotton chinos for smart-casual days. This Jack & Jones men's relaxed chino trousers is 100% original, sourced from authorised distributors and offered at a bumper discount at Branded Factory.\n\nPick your size and colour, add it to your enquiry list and send it to us on WhatsApp. We confirm availability, final price and delivery before you pay.",
     "highlights": [
-      "Long-lasting fragrance",
-      "Premium gift-ready pack",
-      "Skin-friendly formula",
-      "100% genuine, sealed pack"
+      "100% original with brand tags",
+      "Premium fabric",
+      "True to size, see size guide on brand label",
+      "Easy exchange for size (see FAQ)"
     ],
-    "tags": [
-      "new"
-    ],
+    "tags": [],
     "inStock": true,
     "featured": false,
-    "rating": 4.5,
-    "dateAdded": "2026-10-01"
+    "rating": 4.3,
+    "dateAdded": "2026-06-16"
   },
   {
     "id": "bf-0020",
-    "name": "Lavender Floor Cleaner",
-    "brand": "SparkleHome",
-    "category": "household",
-    "subcategory": "Cleaners",
-    "mrp": 249,
-    "price": 149,
-    "size": "1 L",
+    "name": "Women's Relaxed Logo T-Shirt",
+    "brand": "Adidas",
+    "category": "women-clothing",
+    "subcategory": "Tops & T-Shirts",
+    "mrp": 1999,
+    "price": 1199,
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "colors": [
+      {
+        "name": "White",
+        "hex": "#F4F4F2"
+      },
+      {
+        "name": "Pink",
+        "hex": "#E8A3B5"
+      },
+      {
+        "name": "Black",
+        "hex": "#1F1F1F"
+      }
+    ],
     "images": [
       "images/products/bf-0020-1.svg",
       "images/products/bf-0020-2.svg"
     ],
-    "shortDescription": "Kills 99.9% germs and leaves a calming lavender scent.",
-    "description": "Kills 99.9% germs and leaves a calming lavender scent. Lavender Floor Cleaner by SparkleHome is crafted with care to deliver real, visible results, and at Branded Factory you get it at a bumper discount. Every pack is 100% genuine and sourced directly from authorised distributors, so you can shop with complete confidence. Add it to your enquiry list and order instantly on WhatsApp.",
+    "shortDescription": "A loose, soft cotton tee with a minimal logo.",
+    "description": "A loose, soft cotton tee with a minimal logo. This Adidas women's relaxed logo t-shirt is 100% original, sourced from authorised distributors and offered at a bumper discount at Branded Factory.\n\nPick your size and colour, add it to your enquiry list and send it to us on WhatsApp. We confirm availability, final price and delivery before you pay.",
     "highlights": [
-      "Tough on stains and germs",
-      "Safe for all surfaces",
-      "Pleasant lasting fragrance",
-      "Value pack"
+      "100% original with brand tags",
+      "Premium fabric",
+      "True to size, see size guide on brand label",
+      "Easy exchange for size (see FAQ)"
     ],
     "tags": [
       "bestseller"
     ],
     "inStock": true,
     "featured": true,
-    "rating": 4.4,
+    "rating": 4.5,
     "dateAdded": "2026-07-23"
   },
   {
     "id": "bf-0021",
-    "name": "Matic Front Load Liquid Detergent",
-    "brand": "PureWash",
-    "category": "household",
-    "subcategory": "Laundry",
-    "mrp": 599,
-    "price": 379,
-    "size": "2 L",
+    "name": "Women's High-Rise Skinny Jeans",
+    "brand": "Levi's",
+    "category": "women-clothing",
+    "subcategory": "Jeans",
+    "mrp": 3999,
+    "price": 2199,
+    "sizes": [
+      "26",
+      "28",
+      "30",
+      "32",
+      "34"
+    ],
+    "colors": [
+      {
+        "name": "Indigo",
+        "hex": "#2E3D6B"
+      },
+      {
+        "name": "Blue",
+        "hex": "#3E6FB0"
+      }
+    ],
     "images": [
       "images/products/bf-0021-1.svg",
       "images/products/bf-0021-2.svg"
     ],
-    "shortDescription": "Tough on stains, gentle on fabrics and machines.",
-    "description": "Tough on stains, gentle on fabrics and machines. Matic Front Load Liquid Detergent by PureWash is crafted with care to deliver real, visible results, and at Branded Factory you get it at a bumper discount. Every pack is 100% genuine and sourced directly from authorised distributors, so you can shop with complete confidence. Add it to your enquiry list and order instantly on WhatsApp.",
+    "shortDescription": "Sculpting high-rise fit with all-day stretch.",
+    "description": "Sculpting high-rise fit with all-day stretch. This Levi's women's high-rise skinny jeans is 100% original, sourced from authorised distributors and offered at a bumper discount at Branded Factory.\n\nPick your size and colour, add it to your enquiry list and send it to us on WhatsApp. We confirm availability, final price and delivery before you pay.",
     "highlights": [
-      "Tough on stains and germs",
-      "Safe for all surfaces",
-      "Pleasant lasting fragrance",
-      "Value pack"
+      "100% original with brand tags",
+      "Premium fabric",
+      "True to size, see size guide on brand label",
+      "Easy exchange for size (see FAQ)"
     ],
     "tags": [
       "deal-of-the-day"
     ],
     "inStock": true,
-    "featured": true,
-    "rating": 4.6,
+    "featured": false,
+    "rating": 4.5,
     "dateAdded": "2026-08-29"
   },
   {
     "id": "bf-0022",
-    "name": "Lemon Dishwash Gel",
-    "brand": "SparkleHome",
-    "category": "household",
-    "subcategory": "Dishwash",
-    "mrp": 199,
-    "price": 119,
-    "size": "750 ml",
+    "name": "Women's Fleece Crop Hoodie",
+    "brand": "Puma",
+    "category": "women-clothing",
+    "subcategory": "Hoodies & Sweatshirts",
+    "mrp": 3499,
+    "price": 1749,
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "colors": [
+      {
+        "name": "Lilac",
+        "hex": "#B7A2D6"
+      },
+      {
+        "name": "Grey",
+        "hex": "#8A8F98"
+      }
+    ],
     "images": [
       "images/products/bf-0022-1.svg",
       "images/products/bf-0022-2.svg"
     ],
-    "shortDescription": "Cuts grease fast with the power of 100 lemons.",
-    "description": "Cuts grease fast with the power of 100 lemons. Lemon Dishwash Gel by SparkleHome is crafted with care to deliver real, visible results, and at Branded Factory you get it at a bumper discount. Every pack is 100% genuine and sourced directly from authorised distributors, so you can shop with complete confidence. Add it to your enquiry list and order instantly on WhatsApp.",
+    "shortDescription": "Cropped fit in soft brushed fleece.",
+    "description": "Cropped fit in soft brushed fleece. This Puma women's fleece crop hoodie is 100% original, sourced from authorised distributors and offered at a bumper discount at Branded Factory.\n\nPick your size and colour, add it to your enquiry list and send it to us on WhatsApp. We confirm availability, final price and delivery before you pay.",
     "highlights": [
-      "Tough on stains and germs",
-      "Safe for all surfaces",
-      "Pleasant lasting fragrance",
-      "Value pack"
-    ],
-    "tags": [],
-    "inStock": true,
-    "featured": false,
-    "rating": 4.3,
-    "dateAdded": "2026-07-02"
-  },
-  {
-    "id": "bf-0023",
-    "name": "Bathroom Power Cleaner Spray",
-    "brand": "SparkleHome",
-    "category": "household",
-    "subcategory": "Cleaners",
-    "mrp": 229,
-    "price": 159,
-    "size": "500 ml",
-    "images": [
-      "images/products/bf-0023-1.svg",
-      "images/products/bf-0023-2.svg"
-    ],
-    "shortDescription": "Removes tough stains and limescale in seconds.",
-    "description": "Removes tough stains and limescale in seconds. Bathroom Power Cleaner Spray by SparkleHome is crafted with care to deliver real, visible results, and at Branded Factory you get it at a bumper discount. Every pack is 100% genuine and sourced directly from authorised distributors, so you can shop with complete confidence. Add it to your enquiry list and order instantly on WhatsApp.",
-    "highlights": [
-      "Tough on stains and germs",
-      "Safe for all surfaces",
-      "Pleasant lasting fragrance",
-      "Value pack"
-    ],
-    "tags": [],
-    "inStock": true,
-    "featured": false,
-    "rating": 4.1,
-    "dateAdded": "2026-08-08"
-  },
-  {
-    "id": "bf-0024",
-    "name": "Bamboo Kitchen Towels (Pack of 6)",
-    "brand": "EcoNest",
-    "category": "household",
-    "subcategory": "Tissues & Rolls",
-    "mrp": 399,
-    "price": 249,
-    "size": "6 rolls",
-    "images": [
-      "images/products/bf-0024-1.svg",
-      "images/products/bf-0024-2.svg"
-    ],
-    "shortDescription": "Super-absorbent, sustainable and reusable.",
-    "description": "Super-absorbent, sustainable and reusable. Bamboo Kitchen Towels (Pack of 6) by EcoNest is crafted with care to deliver real, visible results, and at Branded Factory you get it at a bumper discount. Every pack is 100% genuine and sourced directly from authorised distributors, so you can shop with complete confidence. Add it to your enquiry list and order instantly on WhatsApp.",
-    "highlights": [
-      "Tough on stains and germs",
-      "Safe for all surfaces",
-      "Pleasant lasting fragrance",
-      "Value pack"
+      "100% original with brand tags",
+      "Premium fabric",
+      "True to size, see size guide on brand label",
+      "Easy exchange for size (see FAQ)"
     ],
     "tags": [
       "new"
     ],
     "inStock": true,
     "featured": false,
-    "rating": 4.2,
-    "dateAdded": "2026-09-27"
+    "rating": 4.4,
+    "dateAdded": "2026-09-23"
   },
   {
-    "id": "bf-0025",
-    "name": "Premium Basmati Rice: Extra Long Grain",
-    "brand": "Royal Harvest",
-    "category": "grocery-staples",
-    "subcategory": "Rice",
-    "mrp": 1199,
-    "price": 749,
-    "size": "5 kg",
+    "id": "bf-0023",
+    "name": "Women's Floral Midi Dress",
+    "brand": "Tommy Hilfiger",
+    "category": "women-clothing",
+    "subcategory": "Dresses",
+    "mrp": 6999,
+    "price": 3849,
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "unavailableSizes": [
+      "XS"
+    ],
+    "colors": [
+      {
+        "name": "Navy",
+        "hex": "#1E2A4A"
+      },
+      {
+        "name": "Pink",
+        "hex": "#E8A3B5"
+      }
+    ],
     "images": [
-      "images/products/bf-0025-1.svg",
-      "images/products/bf-0025-2.svg"
+      "images/products/bf-0023-1.svg",
+      "images/products/bf-0023-2.svg"
     ],
-    "shortDescription": "Aged basmati with a delicate aroma and fluffy grains.",
-    "description": "Aged basmati with a delicate aroma and fluffy grains. Premium Basmati Rice: Extra Long Grain by Royal Harvest is crafted with care to deliver real, visible results, and at Branded Factory you get it at a bumper discount. Every pack is 100% genuine and sourced directly from authorised distributors, so you can shop with complete confidence. Add it to your enquiry list and order instantly on WhatsApp.",
+    "shortDescription": "A flowy, feminine midi for brunch to evening.",
+    "description": "A flowy, feminine midi for brunch to evening. This Tommy Hilfiger women's floral midi dress is 100% original, sourced from authorised distributors and offered at a bumper discount at Branded Factory.\n\nPick your size and colour, add it to your enquiry list and send it to us on WhatsApp. We confirm availability, final price and delivery before you pay.",
     "highlights": [
-      "Premium quality",
-      "Hygienically packed",
-      "No added preservatives",
-      "Best before: 9+ months"
-    ],
-    "tags": [
-      "bestseller",
-      "deal-of-the-day"
-    ],
-    "inStock": true,
-    "featured": true,
-    "rating": 4.6,
-    "dateAdded": "2026-07-18"
-  },
-  {
-    "id": "bf-0026",
-    "name": "Cold-Pressed Groundnut Oil",
-    "brand": "Ghani Gold",
-    "category": "grocery-staples",
-    "subcategory": "Oils & Ghee",
-    "mrp": 699,
-    "price": 479,
-    "size": "1 L",
-    "images": [
-      "images/products/bf-0026-1.svg",
-      "images/products/bf-0026-2.svg"
-    ],
-    "shortDescription": "Wood-pressed, unrefined and full of natural flavour.",
-    "description": "Wood-pressed, unrefined and full of natural flavour. Cold-Pressed Groundnut Oil by Ghani Gold is crafted with care to deliver real, visible results, and at Branded Factory you get it at a bumper discount. Every pack is 100% genuine and sourced directly from authorised distributors, so you can shop with complete confidence. Add it to your enquiry list and order instantly on WhatsApp.",
-    "highlights": [
-      "Premium quality",
-      "Hygienically packed",
-      "No added preservatives",
-      "Best before: 9+ months"
+      "100% original with brand tags",
+      "Premium fabric",
+      "True to size, see size guide on brand label",
+      "Easy exchange for size (see FAQ)"
     ],
     "tags": [],
-    "inStock": true,
-    "featured": true,
-    "rating": 4.5,
-    "dateAdded": "2026-08-24"
+    "inStock": false,
+    "featured": false,
+    "rating": 4.6,
+    "dateAdded": "2026-08-08"
   },
   {
-    "id": "bf-0027",
-    "name": "Pure Cow Ghee",
-    "brand": "Gokul Farms",
-    "category": "grocery-staples",
-    "subcategory": "Oils & Ghee",
-    "mrp": 799,
-    "price": 599,
-    "size": "1 L",
-    "images": [
-      "images/products/bf-0027-1.svg",
-      "images/products/bf-0027-2.svg"
+    "id": "bf-0024",
+    "name": "Women's High-Waist Training Leggings",
+    "brand": "Nike",
+    "category": "activewear",
+    "subcategory": "Leggings",
+    "mrp": 2995,
+    "price": 1797,
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
     ],
-    "shortDescription": "Traditional danedar ghee with rich aroma.",
-    "description": "Traditional danedar ghee with rich aroma. Pure Cow Ghee by Gokul Farms is crafted with care to deliver real, visible results, and at Branded Factory you get it at a bumper discount. Every pack is 100% genuine and sourced directly from authorised distributors, so you can shop with complete confidence. Add it to your enquiry list and order instantly on WhatsApp.",
+    "colors": [
+      {
+        "name": "Black",
+        "hex": "#1F1F1F"
+      },
+      {
+        "name": "Navy",
+        "hex": "#1E2A4A"
+      }
+    ],
+    "images": [
+      "images/products/bf-0024-1.svg",
+      "images/products/bf-0024-2.svg"
+    ],
+    "shortDescription": "Squat-proof, sweat-wicking and super stretchy.",
+    "description": "Squat-proof, sweat-wicking and super stretchy. This Nike women's high-waist training leggings is 100% original, sourced from authorised distributors and offered at a bumper discount at Branded Factory.\n\nPick your size and colour, add it to your enquiry list and send it to us on WhatsApp. We confirm availability, final price and delivery before you pay.",
     "highlights": [
-      "Premium quality",
-      "Hygienically packed",
-      "No added preservatives",
-      "Best before: 9+ months"
+      "100% original with brand tags",
+      "Sweat-wicking fabric",
+      "4-way stretch",
+      "Easy exchange for size (see FAQ)"
     ],
     "tags": [
       "bestseller"
     ],
     "inStock": true,
-    "featured": false,
+    "featured": true,
     "rating": 4.7,
-    "dateAdded": "2026-06-27"
+    "dateAdded": "2026-09-14"
+  },
+  {
+    "id": "bf-0025",
+    "name": "Men's Dri-Fit Training T-Shirt",
+    "brand": "Puma",
+    "category": "activewear",
+    "subcategory": "Training Tees",
+    "mrp": 1799,
+    "price": 899,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "colors": [
+      {
+        "name": "Black",
+        "hex": "#1F1F1F"
+      },
+      {
+        "name": "Blue",
+        "hex": "#3E6FB0"
+      },
+      {
+        "name": "Grey",
+        "hex": "#8A8F98"
+      }
+    ],
+    "images": [
+      "images/products/bf-0025-1.svg",
+      "images/products/bf-0025-2.svg"
+    ],
+    "shortDescription": "Quick-dry fabric keeps you cool during workouts.",
+    "description": "Quick-dry fabric keeps you cool during workouts. This Puma men's dri-fit training t-shirt is 100% original, sourced from authorised distributors and offered at a bumper discount at Branded Factory.\n\nPick your size and colour, add it to your enquiry list and send it to us on WhatsApp. We confirm availability, final price and delivery before you pay.",
+    "highlights": [
+      "100% original with brand tags",
+      "Sweat-wicking fabric",
+      "4-way stretch",
+      "Easy exchange for size (see FAQ)"
+    ],
+    "tags": [
+      "deal-of-the-day"
+    ],
+    "inStock": true,
+    "featured": false,
+    "rating": 4.4,
+    "dateAdded": "2026-07-18"
+  },
+  {
+    "id": "bf-0026",
+    "name": "Men's Three-Stripe Track Pants",
+    "brand": "Adidas",
+    "category": "activewear",
+    "subcategory": "Track Pants",
+    "mrp": 3299,
+    "price": 1979,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "colors": [
+      {
+        "name": "Black",
+        "hex": "#1F1F1F"
+      },
+      {
+        "name": "Navy",
+        "hex": "#1E2A4A"
+      }
+    ],
+    "images": [
+      "images/products/bf-0026-1.svg",
+      "images/products/bf-0026-2.svg"
+    ],
+    "shortDescription": "The classic track pant with a tapered fit.",
+    "description": "The classic track pant with a tapered fit. This Adidas men's three-stripe track pants is 100% original, sourced from authorised distributors and offered at a bumper discount at Branded Factory.\n\nPick your size and colour, add it to your enquiry list and send it to us on WhatsApp. We confirm availability, final price and delivery before you pay.",
+    "highlights": [
+      "100% original with brand tags",
+      "Sweat-wicking fabric",
+      "4-way stretch",
+      "Easy exchange for size (see FAQ)"
+    ],
+    "tags": [],
+    "inStock": true,
+    "featured": true,
+    "rating": 4.6,
+    "dateAdded": "2026-08-24"
+  },
+  {
+    "id": "bf-0027",
+    "name": "Women's Medium-Support Sports Bra",
+    "brand": "Reebok",
+    "category": "activewear",
+    "subcategory": "Sports Bras",
+    "mrp": 1999,
+    "price": 1199,
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "colors": [
+      {
+        "name": "Black",
+        "hex": "#1F1F1F"
+      },
+      {
+        "name": "Lilac",
+        "hex": "#B7A2D6"
+      }
+    ],
+    "images": [
+      "images/products/bf-0027-1.svg",
+      "images/products/bf-0027-2.svg"
+    ],
+    "shortDescription": "Supportive, breathable and comfortable all day.",
+    "description": "Supportive, breathable and comfortable all day. This Reebok women's medium-support sports bra is 100% original, sourced from authorised distributors and offered at a bumper discount at Branded Factory.\n\nPick your size and colour, add it to your enquiry list and send it to us on WhatsApp. We confirm availability, final price and delivery before you pay.",
+    "highlights": [
+      "100% original with brand tags",
+      "Sweat-wicking fabric",
+      "4-way stretch",
+      "Easy exchange for size (see FAQ)"
+    ],
+    "tags": [
+      "new"
+    ],
+    "inStock": true,
+    "featured": false,
+    "rating": 4.4,
+    "dateAdded": "2026-10-03"
   },
   {
     "id": "bf-0028",
-    "name": "Organic Toor Dal",
-    "brand": "Royal Harvest",
-    "category": "grocery-staples",
-    "subcategory": "Dals & Pulses",
-    "mrp": 249,
-    "price": 179,
-    "size": "1 kg",
+    "name": "Everyday 30L Laptop Backpack",
+    "brand": "Wildcraft",
+    "category": "bags",
+    "subcategory": "Backpacks",
+    "mrp": 2999,
+    "price": 1649,
+    "size": "30 L",
+    "colors": [
+      {
+        "name": "Black",
+        "hex": "#1F1F1F"
+      },
+      {
+        "name": "Navy",
+        "hex": "#1E2A4A"
+      },
+      {
+        "name": "Olive",
+        "hex": "#5E6B3A"
+      }
+    ],
     "images": [
       "images/products/bf-0028-1.svg",
       "images/products/bf-0028-2.svg"
     ],
-    "shortDescription": "Unpolished, protein-rich and quick to cook.",
-    "description": "Unpolished, protein-rich and quick to cook. Organic Toor Dal by Royal Harvest is crafted with care to deliver real, visible results, and at Branded Factory you get it at a bumper discount. Every pack is 100% genuine and sourced directly from authorised distributors, so you can shop with complete confidence. Add it to your enquiry list and order instantly on WhatsApp.",
+    "shortDescription": "Padded 15.6\" laptop sleeve and water-resistant fabric.",
+    "description": "Padded 15.6\" laptop sleeve and water-resistant fabric. This Wildcraft everyday 30l laptop backpack is 100% original, sourced from authorised distributors and offered at a bumper discount at Branded Factory.\n\nPick your colour, add it to your enquiry list and send it to us on WhatsApp. We confirm availability, final price and delivery before you pay.",
     "highlights": [
-      "Premium quality",
-      "Hygienically packed",
-      "No added preservatives",
-      "Best before: 9+ months"
+      "100% original with brand tags",
+      "Durable, premium materials",
+      "Multiple compartments",
+      "Brand warranty where applicable"
     ],
-    "tags": [],
+    "tags": [
+      "bestseller"
+    ],
     "inStock": true,
-    "featured": false,
-    "rating": 4.3,
+    "featured": true,
+    "rating": 4.5,
     "dateAdded": "2026-08-03"
   },
   {
     "id": "bf-0029",
-    "name": "Whole Wheat Chakki Atta",
-    "brand": "Annapurna Mills",
-    "category": "grocery-staples",
-    "subcategory": "Atta & Flours",
-    "mrp": 449,
-    "price": 329,
-    "size": "5 kg",
+    "name": "Sports Duffel Gym Bag",
+    "brand": "Puma",
+    "category": "bags",
+    "subcategory": "Duffel Bags",
+    "mrp": 2499,
+    "price": 1249,
+    "size": "35 L",
+    "colors": [
+      {
+        "name": "Black",
+        "hex": "#1F1F1F"
+      },
+      {
+        "name": "Red",
+        "hex": "#C8333B"
+      }
+    ],
     "images": [
       "images/products/bf-0029-1.svg",
       "images/products/bf-0029-2.svg"
     ],
-    "shortDescription": "100% whole wheat for soft, fluffy rotis.",
-    "description": "100% whole wheat for soft, fluffy rotis. Whole Wheat Chakki Atta by Annapurna Mills is crafted with care to deliver real, visible results, and at Branded Factory you get it at a bumper discount. Every pack is 100% genuine and sourced directly from authorised distributors, so you can shop with complete confidence. Add it to your enquiry list and order instantly on WhatsApp.",
+    "shortDescription": "Spacious main compartment with a shoe pocket.",
+    "description": "Spacious main compartment with a shoe pocket. This Puma sports duffel gym bag is 100% original, sourced from authorised distributors and offered at a bumper discount at Branded Factory.\n\nPick your colour, add it to your enquiry list and send it to us on WhatsApp. We confirm availability, final price and delivery before you pay.",
     "highlights": [
-      "Premium quality",
-      "Hygienically packed",
-      "No added preservatives",
-      "Best before: 9+ months"
+      "100% original with brand tags",
+      "Durable, premium materials",
+      "Multiple compartments",
+      "Brand warranty where applicable"
     ],
-    "tags": [],
+    "tags": [
+      "deal-of-the-day"
+    ],
     "inStock": true,
     "featured": false,
     "rating": 4.4,
@@ -823,109 +1344,272 @@
   },
   {
     "id": "bf-0030",
-    "name": "Assam Gold Premium Tea",
-    "brand": "Brahmaputra Estates",
-    "category": "beverages",
-    "subcategory": "Tea",
-    "mrp": 499,
-    "price": 299,
-    "size": "500 g",
+    "name": "Hard-Shell Cabin Trolley",
+    "brand": "American Tourister",
+    "category": "bags",
+    "subcategory": "Luggage",
+    "mrp": 8500,
+    "price": 4250,
+    "size": "55 cm",
+    "colors": [
+      {
+        "name": "Navy",
+        "hex": "#1E2A4A"
+      },
+      {
+        "name": "Grey",
+        "hex": "#8A8F98"
+      }
+    ],
     "images": [
       "images/products/bf-0030-1.svg",
       "images/products/bf-0030-2.svg"
     ],
-    "shortDescription": "Strong, malty Assam leaf for the perfect cup of chai.",
-    "description": "Strong, malty Assam leaf for the perfect cup of chai. Assam Gold Premium Tea by Brahmaputra Estates is crafted with care to deliver real, visible results, and at Branded Factory you get it at a bumper discount. Every pack is 100% genuine and sourced directly from authorised distributors, so you can shop with complete confidence. Add it to your enquiry list and order instantly on WhatsApp.",
+    "shortDescription": "Lightweight polycarbonate with 360° spinner wheels.",
+    "description": "Lightweight polycarbonate with 360° spinner wheels. This American Tourister hard-shell cabin trolley is 100% original, sourced from authorised distributors and offered at a bumper discount at Branded Factory.\n\nPick your colour, add it to your enquiry list and send it to us on WhatsApp. We confirm availability, final price and delivery before you pay.",
     "highlights": [
-      "Rich aroma and taste",
-      "Freshly packed",
-      "Sourced from the finest estates",
-      "Best before: 12+ months"
+      "100% original with brand tags",
+      "Durable, premium materials",
+      "Multiple compartments",
+      "Brand warranty where applicable"
     ],
     "tags": [
       "bestseller"
     ],
     "inStock": true,
-    "featured": false,
+    "featured": true,
     "rating": 4.6,
     "dateAdded": "2026-07-13"
   },
   {
     "id": "bf-0031",
-    "name": "Arabica Instant Coffee",
-    "brand": "Kaapi House",
-    "category": "beverages",
-    "subcategory": "Coffee",
-    "mrp": 599,
-    "price": 399,
-    "size": "100 g",
+    "name": "Women's Structured Tote Bag",
+    "brand": "Tommy Hilfiger",
+    "category": "bags",
+    "subcategory": "Handbags",
+    "mrp": 7999,
+    "price": 4399,
+    "size": "One size",
+    "colors": [
+      {
+        "name": "Beige",
+        "hex": "#D8C3A0"
+      },
+      {
+        "name": "Black",
+        "hex": "#1F1F1F"
+      }
+    ],
     "images": [
       "images/products/bf-0031-1.svg",
       "images/products/bf-0031-2.svg"
     ],
-    "shortDescription": "Smooth, aromatic 100% Arabica in seconds.",
-    "description": "Smooth, aromatic 100% Arabica in seconds. Arabica Instant Coffee by Kaapi House is crafted with care to deliver real, visible results, and at Branded Factory you get it at a bumper discount. Every pack is 100% genuine and sourced directly from authorised distributors, so you can shop with complete confidence. Add it to your enquiry list and order instantly on WhatsApp.",
+    "shortDescription": "Roomy tote in textured faux leather.",
+    "description": "Roomy tote in textured faux leather. This Tommy Hilfiger women's structured tote bag is 100% original, sourced from authorised distributors and offered at a bumper discount at Branded Factory.\n\nPick your colour, add it to your enquiry list and send it to us on WhatsApp. We confirm availability, final price and delivery before you pay.",
     "highlights": [
-      "Rich aroma and taste",
-      "Freshly packed",
-      "Sourced from the finest estates",
-      "Best before: 12+ months"
+      "100% original with brand tags",
+      "Durable, premium materials",
+      "Multiple compartments",
+      "Brand warranty where applicable"
+    ],
+    "tags": [
+      "new"
+    ],
+    "inStock": true,
+    "featured": false,
+    "rating": 4.5,
+    "dateAdded": "2026-09-27"
+  },
+  {
+    "id": "bf-0032",
+    "name": "Men's Chronograph Analog Watch",
+    "brand": "Fossil",
+    "category": "watches",
+    "subcategory": "Men's Watches",
+    "mrp": 12995,
+    "price": 7797,
+    "size": "44 mm",
+    "colors": [
+      {
+        "name": "Brown",
+        "hex": "#7A4E2D"
+      },
+      {
+        "name": "Black",
+        "hex": "#1F1F1F"
+      }
+    ],
+    "images": [
+      "images/products/bf-0032-1.svg",
+      "images/products/bf-0032-2.svg"
+    ],
+    "shortDescription": "Stainless steel chronograph with a leather strap.",
+    "description": "Stainless steel chronograph with a leather strap. This Fossil men's chronograph analog watch is 100% original, sourced from authorised distributors and offered at a bumper discount at Branded Factory.\n\nPick your colour, add it to your enquiry list and send it to us on WhatsApp. We confirm availability, final price and delivery before you pay.",
+    "highlights": [
+      "100% original with brand box",
+      "Brand warranty card included",
+      "Water resistant",
+      "Gift-ready packaging"
+    ],
+    "tags": [
+      "bestseller"
+    ],
+    "inStock": true,
+    "featured": true,
+    "rating": 4.6,
+    "dateAdded": "2026-06-22"
+  },
+  {
+    "id": "bf-0033",
+    "name": "Classic Digital Sports Watch",
+    "brand": "Casio",
+    "category": "watches",
+    "subcategory": "Digital",
+    "mrp": 3995,
+    "price": 2797,
+    "size": "43 mm",
+    "colors": [
+      {
+        "name": "Black",
+        "hex": "#1F1F1F"
+      },
+      {
+        "name": "Silver",
+        "hex": "#B9BCC2"
+      }
+    ],
+    "images": [
+      "images/products/bf-0033-1.svg",
+      "images/products/bf-0033-2.svg"
+    ],
+    "shortDescription": "Water resistant with stopwatch and backlight.",
+    "description": "Water resistant with stopwatch and backlight. This Casio classic digital sports watch is 100% original, sourced from authorised distributors and offered at a bumper discount at Branded Factory.\n\nPick your colour, add it to your enquiry list and send it to us on WhatsApp. We confirm availability, final price and delivery before you pay.",
+    "highlights": [
+      "100% original with brand box",
+      "Brand warranty card included",
+      "Water resistant",
+      "Gift-ready packaging"
+    ],
+    "tags": [],
+    "inStock": true,
+    "featured": false,
+    "rating": 4.5,
+    "dateAdded": "2026-07-29"
+  },
+  {
+    "id": "bf-0034",
+    "name": "Women's Rose-Tone Analog Watch",
+    "brand": "Fossil",
+    "category": "watches",
+    "subcategory": "Women's Watches",
+    "mrp": 10995,
+    "price": 6597,
+    "size": "36 mm",
+    "colors": [
+      {
+        "name": "Gold",
+        "hex": "#C9A24B"
+      },
+      {
+        "name": "Silver",
+        "hex": "#B9BCC2"
+      }
+    ],
+    "images": [
+      "images/products/bf-0034-1.svg",
+      "images/products/bf-0034-2.svg"
+    ],
+    "shortDescription": "Minimal dial with a stainless steel mesh strap.",
+    "description": "Minimal dial with a stainless steel mesh strap. This Fossil women's rose-tone analog watch is 100% original, sourced from authorised distributors and offered at a bumper discount at Branded Factory.\n\nPick your colour, add it to your enquiry list and send it to us on WhatsApp. We confirm availability, final price and delivery before you pay.",
+    "highlights": [
+      "100% original with brand box",
+      "Brand warranty card included",
+      "Water resistant",
+      "Gift-ready packaging"
+    ],
+    "tags": [
+      "new"
+    ],
+    "inStock": true,
+    "featured": false,
+    "rating": 4.6,
+    "dateAdded": "2026-10-03"
+  },
+  {
+    "id": "bf-0035",
+    "name": "Essential Logo Baseball Cap",
+    "brand": "Nike",
+    "category": "accessories",
+    "subcategory": "Caps",
+    "mrp": 1495,
+    "price": 897,
+    "size": "Free size",
+    "colors": [
+      {
+        "name": "Black",
+        "hex": "#1F1F1F"
+      },
+      {
+        "name": "White",
+        "hex": "#F4F4F2"
+      },
+      {
+        "name": "Navy",
+        "hex": "#1E2A4A"
+      }
+    ],
+    "images": [
+      "images/products/bf-0035-1.svg",
+      "images/products/bf-0035-2.svg"
+    ],
+    "shortDescription": "Adjustable strap and breathable cotton twill.",
+    "description": "Adjustable strap and breathable cotton twill. This Nike essential logo baseball cap is 100% original, sourced from authorised distributors and offered at a bumper discount at Branded Factory.\n\nPick your colour, add it to your enquiry list and send it to us on WhatsApp. We confirm availability, final price and delivery before you pay.",
+    "highlights": [
+      "100% original with brand tags",
+      "Premium materials",
+      "Great for gifting",
+      "Easy exchange (see FAQ)"
     ],
     "tags": [],
     "inStock": true,
     "featured": false,
     "rating": 4.4,
-    "dateAdded": "2026-08-19"
+    "dateAdded": "2026-07-08"
   },
   {
-    "id": "bf-0032",
-    "name": "Green Tea: Tulsi & Honey (25 bags)",
-    "brand": "Leaf & Co.",
-    "category": "beverages",
-    "subcategory": "Tea",
-    "mrp": 299,
-    "price": 169,
-    "size": "25 bags",
+    "id": "bf-0036",
+    "name": "Cushioned Ankle Socks (Pack of 3)",
+    "brand": "Puma",
+    "category": "accessories",
+    "subcategory": "Socks",
+    "mrp": 899,
+    "price": 449,
+    "size": "Pack of 3",
+    "sizes": [
+      "UK 6–8",
+      "UK 9–11"
+    ],
+    "colors": [
+      {
+        "name": "White",
+        "hex": "#F4F4F2"
+      },
+      {
+        "name": "Black",
+        "hex": "#1F1F1F"
+      }
+    ],
     "images": [
-      "images/products/bf-0032-1.svg",
-      "images/products/bf-0032-2.svg"
+      "images/products/bf-0036-1.svg",
+      "images/products/bf-0036-2.svg"
     ],
-    "shortDescription": "Calming tulsi green tea with a hint of honey.",
-    "description": "Calming tulsi green tea with a hint of honey. Green Tea: Tulsi & Honey (25 bags) by Leaf & Co. is crafted with care to deliver real, visible results, and at Branded Factory you get it at a bumper discount. Every pack is 100% genuine and sourced directly from authorised distributors, so you can shop with complete confidence. Add it to your enquiry list and order instantly on WhatsApp.",
+    "shortDescription": "Cushioned sole and breathable knit.",
+    "description": "Cushioned sole and breathable knit. This Puma cushioned ankle socks (pack of 3) is 100% original, sourced from authorised distributors and offered at a bumper discount at Branded Factory.\n\nPick your size and colour, add it to your enquiry list and send it to us on WhatsApp. We confirm availability, final price and delivery before you pay.",
     "highlights": [
-      "Rich aroma and taste",
-      "Freshly packed",
-      "Sourced from the finest estates",
-      "Best before: 12+ months"
-    ],
-    "tags": [
-      "new"
-    ],
-    "inStock": false,
-    "featured": false,
-    "rating": 4.2,
-    "dateAdded": "2026-09-29"
-  },
-  {
-    "id": "bf-0033",
-    "name": "Roasted Makhana: Peri Peri",
-    "brand": "Crunch Theory",
-    "category": "snacks",
-    "subcategory": "Healthy Snacks",
-    "mrp": 199,
-    "price": 119,
-    "size": "100 g",
-    "images": [
-      "images/products/bf-0033-1.svg",
-      "images/products/bf-0033-2.svg"
-    ],
-    "shortDescription": "Crunchy fox nuts, roasted not fried.",
-    "description": "Crunchy fox nuts, roasted not fried. Roasted Makhana: Peri Peri by Crunch Theory is crafted with care to deliver real, visible results, and at Branded Factory you get it at a bumper discount. Every pack is 100% genuine and sourced directly from authorised distributors, so you can shop with complete confidence. Add it to your enquiry list and order instantly on WhatsApp.",
-    "highlights": [
-      "Freshly packed",
+      "100% original with brand tags",
+      "Premium materials",
       "Great for gifting",
-      "No trans fats",
-      "Best before: 6+ months"
+      "Easy exchange (see FAQ)"
     ],
     "tags": [
       "deal-of-the-day"
@@ -933,114 +1617,39 @@
     "inStock": true,
     "featured": false,
     "rating": 4.3,
-    "dateAdded": "2026-07-29"
-  },
-  {
-    "id": "bf-0034",
-    "name": "Premium California Almonds",
-    "brand": "Nutri Orchard",
-    "category": "snacks",
-    "subcategory": "Dry Fruits",
-    "mrp": 999,
-    "price": 649,
-    "size": "500 g",
-    "images": [
-      "images/products/bf-0034-1.svg",
-      "images/products/bf-0034-2.svg"
-    ],
-    "shortDescription": "Handpicked, crunchy and naturally sweet.",
-    "description": "Handpicked, crunchy and naturally sweet. Premium California Almonds by Nutri Orchard is crafted with care to deliver real, visible results, and at Branded Factory you get it at a bumper discount. Every pack is 100% genuine and sourced directly from authorised distributors, so you can shop with complete confidence. Add it to your enquiry list and order instantly on WhatsApp.",
-    "highlights": [
-      "Freshly packed",
-      "Great for gifting",
-      "No trans fats",
-      "Best before: 6+ months"
-    ],
-    "tags": [
-      "bestseller"
-    ],
-    "inStock": true,
-    "featured": true,
-    "rating": 4.7,
-    "dateAdded": "2026-09-04"
-  },
-  {
-    "id": "bf-0035",
-    "name": "Dark Chocolate 70% Cocoa",
-    "brand": "Cacao Republic",
-    "category": "snacks",
-    "subcategory": "Chocolates",
-    "mrp": 249,
-    "price": 179,
-    "size": "100 g",
-    "images": [
-      "images/products/bf-0035-1.svg",
-      "images/products/bf-0035-2.svg"
-    ],
-    "shortDescription": "Single-origin cocoa with a velvety finish.",
-    "description": "Single-origin cocoa with a velvety finish. Dark Chocolate 70% Cocoa by Cacao Republic is crafted with care to deliver real, visible results, and at Branded Factory you get it at a bumper discount. Every pack is 100% genuine and sourced directly from authorised distributors, so you can shop with complete confidence. Add it to your enquiry list and order instantly on WhatsApp.",
-    "highlights": [
-      "Freshly packed",
-      "Great for gifting",
-      "No trans fats",
-      "Best before: 6+ months"
-    ],
-    "tags": [],
-    "inStock": true,
-    "featured": false,
-    "rating": 4.5,
-    "dateAdded": "2026-07-08"
-  },
-  {
-    "id": "bf-0036",
-    "name": "Ultra-Soft Baby Diaper Pants: M",
-    "brand": "Little Cloud",
-    "category": "baby-care",
-    "subcategory": "Diapers",
-    "mrp": 1299,
-    "price": 749,
-    "size": "64 pcs",
-    "images": [
-      "images/products/bf-0036-1.svg",
-      "images/products/bf-0036-2.svg"
-    ],
-    "shortDescription": "12-hour dryness with a cotton-soft feel.",
-    "description": "12-hour dryness with a cotton-soft feel. Ultra-Soft Baby Diaper Pants: M by Little Cloud is crafted with care to deliver real, visible results, and at Branded Factory you get it at a bumper discount. Every pack is 100% genuine and sourced directly from authorised distributors, so you can shop with complete confidence. Add it to your enquiry list and order instantly on WhatsApp.",
-    "highlights": [
-      "Paediatrician tested",
-      "Hypoallergenic",
-      "Free from harsh chemicals",
-      "100% genuine, sealed pack"
-    ],
-    "tags": [
-      "bestseller",
-      "deal-of-the-day"
-    ],
-    "inStock": true,
-    "featured": true,
-    "rating": 4.6,
     "dateAdded": "2026-08-14"
   },
   {
     "id": "bf-0037",
-    "name": "Gentle Baby Wipes (Pack of 3)",
-    "brand": "Little Cloud",
-    "category": "baby-care",
-    "subcategory": "Wipes",
-    "mrp": 447,
-    "price": 249,
-    "size": "3 × 72 wipes",
+    "name": "Reversible Leather Belt",
+    "brand": "Tommy Hilfiger",
+    "category": "accessories",
+    "subcategory": "Belts",
+    "mrp": 3499,
+    "price": 1999,
+    "sizes": [
+      "32",
+      "34",
+      "36",
+      "38"
+    ],
+    "colors": [
+      {
+        "name": "Black",
+        "hex": "#1F1F1F"
+      }
+    ],
     "images": [
       "images/products/bf-0037-1.svg",
       "images/products/bf-0037-2.svg"
     ],
-    "shortDescription": "99% water, fragrance-free and pH balanced.",
-    "description": "99% water, fragrance-free and pH balanced. Gentle Baby Wipes (Pack of 3) by Little Cloud is crafted with care to deliver real, visible results, and at Branded Factory you get it at a bumper discount. Every pack is 100% genuine and sourced directly from authorised distributors, so you can shop with complete confidence. Add it to your enquiry list and order instantly on WhatsApp.",
+    "shortDescription": "Two looks in one: black and brown genuine leather.",
+    "description": "Two looks in one: black and brown genuine leather. This Tommy Hilfiger reversible leather belt is 100% original, sourced from authorised distributors and offered at a bumper discount at Branded Factory.\n\nPick your size and colour, add it to your enquiry list and send it to us on WhatsApp. We confirm availability, final price and delivery before you pay.",
     "highlights": [
-      "Paediatrician tested",
-      "Hypoallergenic",
-      "Free from harsh chemicals",
-      "100% genuine, sealed pack"
+      "100% original with brand tags",
+      "Premium materials",
+      "Great for gifting",
+      "Easy exchange (see FAQ)"
     ],
     "tags": [],
     "inStock": true,
@@ -1050,228 +1659,241 @@
   },
   {
     "id": "bf-0038",
-    "name": "Baby Massage Oil with Almond",
-    "brand": "Tender Touch",
-    "category": "baby-care",
-    "subcategory": "Bath & Skin",
-    "mrp": 349,
-    "price": 229,
-    "size": "200 ml",
+    "name": "Polarised Aviator Sunglasses",
+    "brand": "Fastrack",
+    "category": "accessories",
+    "subcategory": "Sunglasses",
+    "mrp": 1999,
+    "price": 1199,
+    "size": "UV400",
+    "colors": [
+      {
+        "name": "Gold",
+        "hex": "#C9A24B"
+      },
+      {
+        "name": "Black",
+        "hex": "#1F1F1F"
+      }
+    ],
     "images": [
       "images/products/bf-0038-1.svg",
       "images/products/bf-0038-2.svg"
     ],
-    "shortDescription": "Nourishing, lightweight and paediatrician tested.",
-    "description": "Nourishing, lightweight and paediatrician tested. Baby Massage Oil with Almond by Tender Touch is crafted with care to deliver real, visible results, and at Branded Factory you get it at a bumper discount. Every pack is 100% genuine and sourced directly from authorised distributors, so you can shop with complete confidence. Add it to your enquiry list and order instantly on WhatsApp.",
+    "shortDescription": "Lightweight metal frame with polarised lenses.",
+    "description": "Lightweight metal frame with polarised lenses. This Fastrack polarised aviator sunglasses is 100% original, sourced from authorised distributors and offered at a bumper discount at Branded Factory.\n\nPick your colour, add it to your enquiry list and send it to us on WhatsApp. We confirm availability, final price and delivery before you pay.",
     "highlights": [
-      "Paediatrician tested",
-      "Hypoallergenic",
-      "Free from harsh chemicals",
-      "100% genuine, sealed pack"
+      "100% original with brand tags",
+      "Premium materials",
+      "Great for gifting",
+      "Easy exchange (see FAQ)"
     ],
     "tags": [
       "new"
     ],
     "inStock": true,
     "featured": false,
-    "rating": 4.4,
+    "rating": 4.3,
     "dateAdded": "2026-09-27"
   },
   {
     "id": "bf-0039",
-    "name": "Non-Stick Granite Kadai with Lid",
-    "brand": "Kitchenary",
-    "category": "home-kitchen",
-    "subcategory": "Cookware",
-    "mrp": 2499,
-    "price": 1199,
-    "size": "24 cm",
+    "name": "Gentle Skin Cleanser",
+    "brand": "Cetaphil",
+    "category": "skincare",
+    "subcategory": "Cleansers",
+    "mrp": 899,
+    "price": 629,
+    "size": "250 ml",
     "images": [
       "images/products/bf-0039-1.svg",
       "images/products/bf-0039-2.svg"
     ],
-    "shortDescription": "PFOA-free granite coating, induction friendly.",
-    "description": "PFOA-free granite coating, induction friendly. Non-Stick Granite Kadai with Lid by Kitchenary is crafted with care to deliver real, visible results, and at Branded Factory you get it at a bumper discount. Every pack is 100% genuine and sourced directly from authorised distributors, so you can shop with complete confidence. Add it to your enquiry list and order instantly on WhatsApp.",
+    "shortDescription": "Soap-free, gentle cleanser for sensitive skin.",
+    "description": "Soap-free, gentle cleanser for sensitive skin. This Cetaphil gentle skin cleanser is 100% original, sourced from authorised distributors and offered at a bumper discount at Branded Factory.\n\nPick your add it to your enquiry list and send it to us on WhatsApp. We confirm availability, final price and delivery before you pay.",
     "highlights": [
-      "Premium build quality",
-      "Easy to clean",
-      "Long-lasting durability",
-      "Brand warranty included"
+      "100% genuine, sealed pack",
+      "Dermatologically tested",
+      "Suitable for daily use",
+      "Long expiry date"
+    ],
+    "tags": [
+      "bestseller"
+    ],
+    "inStock": true,
+    "featured": true,
+    "rating": 4.7,
+    "dateAdded": "2026-08-30"
+  },
+  {
+    "id": "bf-0040",
+    "name": "10% Niacinamide Face Serum",
+    "brand": "Minimalist",
+    "category": "skincare",
+    "subcategory": "Serums",
+    "mrp": 599,
+    "price": 479,
+    "size": "30 ml",
+    "images": [
+      "images/products/bf-0040-1.svg",
+      "images/products/bf-0040-2.svg"
+    ],
+    "shortDescription": "Reduces blemishes and refines pores.",
+    "description": "Reduces blemishes and refines pores. This Minimalist 10% niacinamide face serum is 100% original, sourced from authorised distributors and offered at a bumper discount at Branded Factory.\n\nPick your add it to your enquiry list and send it to us on WhatsApp. We confirm availability, final price and delivery before you pay.",
+    "highlights": [
+      "100% genuine, sealed pack",
+      "Dermatologically tested",
+      "Suitable for daily use",
+      "Long expiry date"
+    ],
+    "tags": [],
+    "inStock": true,
+    "featured": false,
+    "rating": 4.5,
+    "dateAdded": "2026-07-03"
+  },
+  {
+    "id": "bf-0041",
+    "name": "Hydro Boost Water Gel Moisturiser",
+    "brand": "Neutrogena",
+    "category": "skincare",
+    "subcategory": "Moisturisers",
+    "mrp": 999,
+    "price": 699,
+    "size": "50 g",
+    "images": [
+      "images/products/bf-0041-1.svg",
+      "images/products/bf-0041-2.svg"
+    ],
+    "shortDescription": "Hyaluronic acid hydration that feels like water.",
+    "description": "Hyaluronic acid hydration that feels like water. This Neutrogena hydro boost water gel moisturiser is 100% original, sourced from authorised distributors and offered at a bumper discount at Branded Factory.\n\nPick your add it to your enquiry list and send it to us on WhatsApp. We confirm availability, final price and delivery before you pay.",
+    "highlights": [
+      "100% genuine, sealed pack",
+      "Dermatologically tested",
+      "Suitable for daily use",
+      "Long expiry date"
     ],
     "tags": [
       "deal-of-the-day"
     ],
     "inStock": true,
-    "featured": true,
-    "rating": 4.4,
-    "dateAdded": "2026-08-30"
-  },
-  {
-    "id": "bf-0040",
-    "name": "Stainless Steel Vacuum Flask",
-    "brand": "ThermoLux",
-    "category": "home-kitchen",
-    "subcategory": "Bottles & Flasks",
-    "mrp": 1299,
-    "price": 649,
-    "size": "1 L",
-    "images": [
-      "images/products/bf-0040-1.svg",
-      "images/products/bf-0040-2.svg"
-    ],
-    "shortDescription": "Hot for 24 hours, cold for 36 hours.",
-    "description": "Hot for 24 hours, cold for 36 hours. Stainless Steel Vacuum Flask by ThermoLux is crafted with care to deliver real, visible results, and at Branded Factory you get it at a bumper discount. Every pack is 100% genuine and sourced directly from authorised distributors, so you can shop with complete confidence. Add it to your enquiry list and order instantly on WhatsApp.",
-    "highlights": [
-      "Premium build quality",
-      "Easy to clean",
-      "Long-lasting durability",
-      "Brand warranty included"
-    ],
-    "tags": [
-      "bestseller"
-    ],
-    "inStock": true,
     "featured": false,
     "rating": 4.6,
-    "dateAdded": "2026-07-03"
-  },
-  {
-    "id": "bf-0041",
-    "name": "Airtight Glass Storage Jars (Set of 3)",
-    "brand": "Kitchenary",
-    "category": "home-kitchen",
-    "subcategory": "Storage",
-    "mrp": 899,
-    "price": 499,
-    "size": "3 × 1 L",
-    "images": [
-      "images/products/bf-0041-1.svg",
-      "images/products/bf-0041-2.svg"
-    ],
-    "shortDescription": "Borosilicate glass with leak-proof bamboo lids.",
-    "description": "Borosilicate glass with leak-proof bamboo lids. Airtight Glass Storage Jars (Set of 3) by Kitchenary is crafted with care to deliver real, visible results, and at Branded Factory you get it at a bumper discount. Every pack is 100% genuine and sourced directly from authorised distributors, so you can shop with complete confidence. Add it to your enquiry list and order instantly on WhatsApp.",
-    "highlights": [
-      "Premium build quality",
-      "Easy to clean",
-      "Long-lasting durability",
-      "Brand warranty included"
-    ],
-    "tags": [],
-    "inStock": true,
-    "featured": false,
-    "rating": 4.3,
     "dateAdded": "2026-08-09"
   },
   {
     "id": "bf-0042",
-    "name": "Daily Multivitamin for Men & Women",
-    "brand": "VitaCore",
-    "category": "health-wellness",
-    "subcategory": "Vitamins",
-    "mrp": 899,
-    "price": 499,
-    "size": "60 tablets",
+    "name": "Ultra Matte Sunscreen SPF 50",
+    "brand": "The Derma Co",
+    "category": "skincare",
+    "subcategory": "Sun Care",
+    "mrp": 599,
+    "price": 449,
+    "size": "50 g",
     "images": [
       "images/products/bf-0042-1.svg",
       "images/products/bf-0042-2.svg"
     ],
-    "shortDescription": "24 essential nutrients for energy and immunity.",
-    "description": "24 essential nutrients for energy and immunity. Daily Multivitamin for Men & Women by VitaCore is crafted with care to deliver real, visible results, and at Branded Factory you get it at a bumper discount. Every pack is 100% genuine and sourced directly from authorised distributors, so you can shop with complete confidence. Add it to your enquiry list and order instantly on WhatsApp.",
+    "shortDescription": "No white cast, matte finish, broad spectrum.",
+    "description": "No white cast, matte finish, broad spectrum. This The Derma Co ultra matte sunscreen spf 50 is 100% original, sourced from authorised distributors and offered at a bumper discount at Branded Factory.\n\nPick your add it to your enquiry list and send it to us on WhatsApp. We confirm availability, final price and delivery before you pay.",
     "highlights": [
-      "Quality tested",
-      "Doctor recommended",
-      "Easy daily use",
-      "100% genuine, sealed pack"
-    ],
-    "tags": [
-      "bestseller"
-    ],
-    "inStock": true,
-    "featured": true,
-    "rating": 4.5,
-    "dateAdded": "2026-09-15"
-  },
-  {
-    "id": "bf-0043",
-    "name": "Plant Protein Powder: Chocolate",
-    "brand": "FitRoots",
-    "category": "health-wellness",
-    "subcategory": "Nutrition",
-    "mrp": 2199,
-    "price": 1399,
-    "size": "1 kg",
-    "images": [
-      "images/products/bf-0043-1.svg",
-      "images/products/bf-0043-2.svg"
-    ],
-    "shortDescription": "25 g clean pea and brown-rice protein per serving.",
-    "description": "25 g clean pea and brown-rice protein per serving. Plant Protein Powder: Chocolate by FitRoots is crafted with care to deliver real, visible results, and at Branded Factory you get it at a bumper discount. Every pack is 100% genuine and sourced directly from authorised distributors, so you can shop with complete confidence. Add it to your enquiry list and order instantly on WhatsApp.",
-    "highlights": [
-      "Quality tested",
-      "Doctor recommended",
-      "Easy daily use",
-      "100% genuine, sealed pack"
+      "100% genuine, sealed pack",
+      "Dermatologically tested",
+      "Suitable for daily use",
+      "Long expiry date"
     ],
     "tags": [
       "new"
     ],
     "inStock": true,
     "featured": false,
-    "rating": 4.4,
-    "dateAdded": "2026-09-23"
+    "rating": 4.5,
+    "dateAdded": "2026-10-05"
+  },
+  {
+    "id": "bf-0043",
+    "name": "Cool Water Eau de Toilette",
+    "brand": "Davidoff",
+    "category": "fragrances",
+    "subcategory": "Men",
+    "mrp": 5600,
+    "price": 2799,
+    "size": "125 ml",
+    "images": [
+      "images/products/bf-0043-1.svg",
+      "images/products/bf-0043-2.svg"
+    ],
+    "shortDescription": "A fresh aquatic classic with lasting appeal.",
+    "description": "A fresh aquatic classic with lasting appeal. This Davidoff cool water eau de toilette is 100% original, sourced from authorised distributors and offered at a bumper discount at Branded Factory.\n\nPick your add it to your enquiry list and send it to us on WhatsApp. We confirm availability, final price and delivery before you pay.",
+    "highlights": [
+      "100% original, sealed box",
+      "Long-lasting fragrance",
+      "Gift-ready packaging",
+      "Authenticity guaranteed"
+    ],
+    "tags": [
+      "bestseller",
+      "deal-of-the-day"
+    ],
+    "inStock": true,
+    "featured": true,
+    "rating": 4.6,
+    "dateAdded": "2026-07-19"
   },
   {
     "id": "bf-0044",
-    "name": "Ashwagandha Stress Relief Capsules",
-    "brand": "Ayurveda Pure",
-    "category": "health-wellness",
-    "subcategory": "Ayurveda",
-    "mrp": 599,
-    "price": 349,
-    "size": "60 capsules",
+    "name": "CK One Eau de Toilette",
+    "brand": "Calvin Klein",
+    "category": "fragrances",
+    "subcategory": "Unisex",
+    "mrp": 5200,
+    "price": 3119,
+    "size": "100 ml",
     "images": [
       "images/products/bf-0044-1.svg",
       "images/products/bf-0044-2.svg"
     ],
-    "shortDescription": "KSM-66 ashwagandha for calm and better sleep.",
-    "description": "KSM-66 ashwagandha for calm and better sleep. Ashwagandha Stress Relief Capsules by Ayurveda Pure is crafted with care to deliver real, visible results, and at Branded Factory you get it at a bumper discount. Every pack is 100% genuine and sourced directly from authorised distributors, so you can shop with complete confidence. Add it to your enquiry list and order instantly on WhatsApp.",
+    "shortDescription": "Clean, citrusy and made to share.",
+    "description": "Clean, citrusy and made to share. This Calvin Klein ck one eau de toilette is 100% original, sourced from authorised distributors and offered at a bumper discount at Branded Factory.\n\nPick your add it to your enquiry list and send it to us on WhatsApp. We confirm availability, final price and delivery before you pay.",
     "highlights": [
-      "Quality tested",
-      "Doctor recommended",
-      "Easy daily use",
-      "100% genuine, sealed pack"
+      "100% original, sealed box",
+      "Long-lasting fragrance",
+      "Gift-ready packaging",
+      "Authenticity guaranteed"
     ],
     "tags": [],
     "inStock": true,
     "featured": false,
-    "rating": 4.3,
+    "rating": 4.5,
     "dateAdded": "2026-08-25"
   },
   {
     "id": "bf-0045",
-    "name": "Digital Thermometer",
-    "brand": "CareWell",
-    "category": "health-wellness",
-    "subcategory": "Devices",
-    "mrp": 399,
-    "price": 249,
-    "size": "1 unit",
+    "name": "Boss Bottled Eau de Parfum",
+    "brand": "Hugo Boss",
+    "category": "fragrances",
+    "subcategory": "Men",
+    "mrp": 9500,
+    "price": 6175,
+    "size": "100 ml",
     "images": [
       "images/products/bf-0045-1.svg",
       "images/products/bf-0045-2.svg"
     ],
-    "shortDescription": "Fast, accurate 10-second readings.",
-    "description": "Fast, accurate 10-second readings. Digital Thermometer by CareWell is crafted with care to deliver real, visible results, and at Branded Factory you get it at a bumper discount. Every pack is 100% genuine and sourced directly from authorised distributors, so you can shop with complete confidence. Add it to your enquiry list and order instantly on WhatsApp.",
+    "shortDescription": "Warm woods and spice for a confident signature.",
+    "description": "Warm woods and spice for a confident signature. This Hugo Boss boss bottled eau de parfum is 100% original, sourced from authorised distributors and offered at a bumper discount at Branded Factory.\n\nPick your add it to your enquiry list and send it to us on WhatsApp. We confirm availability, final price and delivery before you pay.",
     "highlights": [
-      "Quality tested",
-      "Doctor recommended",
-      "Easy daily use",
-      "100% genuine, sealed pack"
+      "100% original, sealed box",
+      "Long-lasting fragrance",
+      "Gift-ready packaging",
+      "Authenticity guaranteed"
     ],
-    "tags": [],
+    "tags": [
+      "new"
+    ],
     "inStock": true,
     "featured": false,
-    "rating": 4.1,
-    "dateAdded": "2026-06-28"
+    "rating": 4.7,
+    "dateAdded": "2026-09-27"
   }
 ]

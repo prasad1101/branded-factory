@@ -96,7 +96,7 @@ export default function SearchBar({ className = '', autoFocus = false, initialQu
           }}
           onPointerEnter={() => setEngaged(true)}
           onKeyDown={onKeyDown}
-          placeholder="Search serums, basmati, perfumes…"
+          placeholder="Search sneakers, hoodies, perfumes…"
           role="combobox"
           aria-expanded={showPanel}
           aria-controls={listId}

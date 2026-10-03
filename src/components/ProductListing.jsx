@@ -107,6 +107,8 @@ export default function ProductListing({ products, loading, showSubcategories = 
     if (filters.disc) c.push({ key: 'disc', label: `${filters.disc}%+ off`, clear: () => update({ disc: null }) })
     filters.cat.forEach((id) => c.push({ key: `cat-${id}`, label: facets.categories.find(([cid]) => cid === id)?.[2] || id, clear: () => toggle('cat', id) }))
     filters.sub.forEach((s) => c.push({ key: `sub-${s}`, label: s, clear: () => toggle('sub', s) }))
+    filters.size.forEach((s) => c.push({ key: `size-${s}`, label: `Size ${s}`, clear: () => toggle('size', s) }))
+    filters.color.forEach((col) => c.push({ key: `color-${col}`, label: col, clear: () => toggle('color', col) }))
     filters.brand.forEach((b) => c.push({ key: `brand-${b}`, label: b, clear: () => toggle('brand', b) }))
     if (filters.min !== null || filters.max !== null)
       c.push({

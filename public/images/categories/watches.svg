@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" width="600" height="600" role="img" aria-label="Watches">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="38%" r="75%">
+      <stop offset="0" stop-color="#FFFFFF"/>
+      <stop offset=".6" stop-color="#F1F1EF"/>
+      <stop offset="1" stop-color="#DEDDD8"/>
+    </radialGradient>
+    <linearGradient id="b" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#8a6346"/><stop offset="1" stop-color="#6b4528"/></linearGradient>
+    <linearGradient id="d" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#432b19"/><stop offset="1" stop-color="#311f12"/></linearGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#E8CF8D"/><stop offset="1" stop-color="#A9843A"/></linearGradient>
+    <linearGradient id="ink" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2A2622"/><stop offset="1" stop-color="#2A2622"/></linearGradient>
+    <radialGradient id="shadow"><stop offset="0" stop-color="#2A2622" stop-opacity=".3"/><stop offset="1" stop-color="#2A2622" stop-opacity="0"/></radialGradient>
+  </defs>
+  <rect width="600" height="600" fill="url(#bg)"/>
+  <circle cx="300" cy="290" r="215" fill="#fff" opacity=".45"/>
+  <ellipse cx="300" cy="490" rx="200" ry="26" fill="url(#shadow)"/>
+  <g transform="translate(300 290) scale(.66)"><g>
+        <rect x="-62" y="-240" width="124" height="160" rx="24" fill="url(#d)"/>
+        <rect x="-62" y="80" width="124" height="160" rx="24" fill="url(#d)"/>
+        <circle cx="0" cy="0" r="130" fill="url(#b)"/>
+        <circle cx="0" cy="0" r="108" fill="#FFFDF8"/>
+        <line x1="0.0" y1="-88.0" x2="0.0" y2="-100.0" stroke="#2A2622" stroke-width="5"/><line x1="44.0" y1="-76.2" x2="50.0" y2="-86.6" stroke="#2A2622" stroke-width="2"/><line x1="76.2" y1="-44.0" x2="86.6" y2="-50.0" stroke="#2A2622" stroke-width="2"/><line x1="88.0" y1="-0.0" x2="100.0" y2="-0.0" stroke="#2A2622" stroke-width="5"/><line x1="76.2" y1="44.0" x2="86.6" y2="50.0" stroke="#2A2622" stroke-width="2"/><line x1="44.0" y1="76.2" x2="50.0" y2="86.6" stroke="#2A2622" stroke-width="2"/><line x1="0.0" y1="88.0" x2="0.0" y2="100.0" stroke="#2A2622" stroke-width="5"/><line x1="-44.0" y1="76.2" x2="-50.0" y2="86.6" stroke="#2A2622" stroke-width="2"/><line x1="-76.2" y1="44.0" x2="-86.6" y2="50.0" stroke="#2A2622" stroke-width="2"/><line x1="-88.0" y1="0.0" x2="-100.0" y2="0.0" stroke="#2A2622" stroke-width="5"/><line x1="-76.2" y1="-44.0" x2="-86.6" y2="-50.0" stroke="#2A2622" stroke-width="2"/><line x1="-44.0" y1="-76.2" x2="-50.0" y2="-86.6" stroke="#2A2622" stroke-width="2"/>
+        <line x1="0" y1="0" x2="0" y2="-70" stroke="#2A2622" stroke-width="6" stroke-linecap="round"/>
+        <line x1="0" y1="0" x2="52" y2="22" stroke="#2A2622" stroke-width="4" stroke-linecap="round"/>
+        <circle cx="0" cy="0" r="7" fill="#C9A24B"/>
+        <rect x="128" y="-14" width="22" height="28" rx="5" fill="url(#b)"/>
+        <text x="0" y="50" text-anchor="middle" font-family="Georgia, serif" font-size="16" font-weight="700" fill="#2A2622">F</text>
+      </g></g>
+</svg>

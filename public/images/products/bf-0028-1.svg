@@ -1,23 +1,25 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" width="800" height="800" role="img" aria-label="Organic Toor Dal">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" width="800" height="800" role="img" aria-label="Everyday 30L Laptop Backpack">
   <defs>
     <radialGradient id="bg" cx="50%" cy="38%" r="75%">
       <stop offset="0" stop-color="#FFFFFF"/>
-      <stop offset=".55" stop-color="#FAF3E3"/>
-      <stop offset="1" stop-color="#EFDFB8" stop-opacity="1"/>
+      <stop offset=".6" stop-color="#F3EFE9"/>
+      <stop offset="1" stop-color="#E3D9CB"/>
     </radialGradient>
-    <linearGradient id="body" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#D9A441"/><stop offset="1" stop-color="#B07D22"/></linearGradient>
+    <linearGradient id="b" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#3a3a3a"/><stop offset="1" stop-color="#1b1b1b"/></linearGradient>
+    <linearGradient id="d" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#111111"/><stop offset="1" stop-color="#0c0c0c"/></linearGradient>
     <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#E8CF8D"/><stop offset="1" stop-color="#A9843A"/></linearGradient>
-    <linearGradient id="ink" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#6A4A10"/><stop offset="1" stop-color="#6A4A10"/></linearGradient>
-    <radialGradient id="shadow"><stop offset="0" stop-color="#6A4A10" stop-opacity=".35"/><stop offset="1" stop-color="#6A4A10" stop-opacity="0"/></radialGradient>
+    <linearGradient id="ink" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3E2E1A"/><stop offset="1" stop-color="#3E2E1A"/></linearGradient>
+    <radialGradient id="shadow"><stop offset="0" stop-color="#3E2E1A" stop-opacity=".3"/><stop offset="1" stop-color="#3E2E1A" stop-opacity="0"/></radialGradient>
   </defs>
   <rect width="800" height="800" fill="url(#bg)"/>
-  <circle cx="140" cy="150" r="5" fill="#6A4A10" opacity=".25"/><circle cx="670" cy="620" r="7" fill="#6A4A10" opacity=".18"/>
-  <ellipse cx="400" cy="650" rx="240" ry="34" fill="url(#shadow)"/>
-  <g transform="translate(400 410)"><path d="M-150,-190 L150,-190 L165,190 Q165,215 140,215 L-140,215 Q-165,215 -165,190 Z" fill="url(#body)"/>
-        <rect x="-150" y="-205" width="300" height="30" rx="4" fill="url(#body)" opacity=".8"/>
-        <line x1="-150" x2="150" y1="-160" y2="-160" stroke="#fff" stroke-opacity=".35" stroke-dasharray="4 6"/>
-    <rect x="-110" y="-60" width="220" height="150" rx="10" fill="#FFFDF8" opacity=".95"/>
-    <text x="0" y="19" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="46" font-weight="700" fill="url(#ink)">RH</text>
-    <text x="0" y="45" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="11" letter-spacing="1.5" fill="url(#ink)" opacity=".75">ROYAL HARVEST</text>
-    <line x1="-88" x2="88" y1="-42" y2="-42" stroke="url(#ink)" stroke-width="1" opacity=".3"/></g>
+  <circle cx="140" cy="150" r="5" fill="#3E2E1A" opacity=".2"/><circle cx="670" cy="620" r="7" fill="#3E2E1A" opacity=".15"/>
+  <ellipse cx="400" cy="640" rx="260" ry="34" fill="url(#shadow)"/>
+  <g transform="translate(400 395) scale(.95)"><g>
+        <path d="M-60,-200 C-60,-240 60,-240 60,-200" fill="none" stroke="url(#d)" stroke-width="16"/>
+        <rect x="-140" y="-200" width="280" height="390" rx="70" fill="url(#b)"/>
+        <rect x="-100" y="40" width="200" height="120" rx="28" fill="url(#d)" opacity=".45"/>
+        <path d="M-100,70 L100,70" stroke="#FFFDF8" stroke-width="4" stroke-dasharray="10 8" opacity=".7"/>
+        <path d="M-120,-80 C-60,-110 60,-110 120,-80" fill="none" stroke="url(#d)" stroke-width="6" opacity=".5"/>
+        <rect x="-28" y="-40" width="56" height="24" rx="4" fill="#FFFDF8" opacity=".92"/><text x="0" y="-23" text-anchor="middle" font-family="Georgia, serif" font-size="14" font-weight="700" fill="url(#ink)">W</text>
+      </g></g>
 </svg>

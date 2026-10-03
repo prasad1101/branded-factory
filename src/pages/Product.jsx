@@ -15,6 +15,7 @@ import SectionHeader from '../components/SectionHeader'
 import EmptyState from '../components/EmptyState'
 import Skeleton from '../components/Skeleton'
 import Deferred from '../components/Deferred'
+import { ColorSwatches, SizeSelector } from '../components/VariantPicker'
 import { useCatalog } from '../hooks/useData'
 import { useAddToList, useEnquiry } from '../hooks/useEnquiry'
 import { useRecentlyViewed } from '../hooks/useRecentlyViewed'
@@ -38,7 +39,7 @@ function ProductSkeleton() {
 }
 
 const ASSURANCES = [
-  { icon: BadgeCheck, text: '100% genuine, sealed products' },
+  { icon: BadgeCheck, text: '100% original, with brand tags or box' },
   { icon: PiggyBank, text: 'Assured savings on MRP' },
   { icon: Truck, text: 'Delivery confirmed on WhatsApp' },
 ]
@@ -48,13 +49,22 @@ export default function Product() {
   const { productsById, products, site, status } = useCatalog()
   const product = productsById[id]
   const [qty, setQty] = useState(1)
+  const [size, setSize] = useState('')
+  const [color, setColor] = useState('')
+  const [sizeError, setSizeError] = useState('')
+  const sizeRef = useRef(null)
   const addToList = useAddToList()
   const { qtyOf } = useEnquiry()
   const { ids: recentIds, track } = useRecentlyViewed()
   const actionsRef = useRef(null)
   const [showSticky, setShowSticky] = useState(false)
 
-  useEffect(() => setQty(1), [id])
+  useEffect(() => {
+    setQty(1)
+    setSizeError('')
+    setSize(product?.sizes?.length === 1 ? product.sizes[0] : '')
+    setColor(product?.colors?.[0]?.name || '')
+  }, [id, product])
   useEffect(() => {
     if (product) track(product.id)
   }, [product, track])
@@ -94,7 +104,25 @@ export default function Product() {
 
   const storeName = site.storeName || 'Branded Factory'
   const currency = site.currency || '₹'
-  const message = buildProductMessage({ product, qty, storeName, currency, pageUrl: pageUrl(`/product/${product.id}`) })
+  const needsSize = (product.sizes?.length || 0) > 0
+  const options = { size, color }
+  const message = buildProductMessage({ product, qty, size, color, storeName, currency, pageUrl: pageUrl(`/product/${product.id}`) })
+  const selectedColor = product.colors?.find((c) => c.name === color)
+  const galleryImages = selectedColor?.images?.length ? selectedColor.images : product.images
+  const isShoe = (product.sizes || []).some((s) => /^UK/i.test(s))
+
+  /** Returns false (and prompts) if a size still has to be chosen. */
+  const ensureSize = () => {
+    if (!needsSize || size || !product.inStock) return true
+    setSizeError('Please select a size')
+    sizeRef.current?.scrollIntoView({ behavior: 'smooth', block: 'center' })
+    sizeRef.current?.querySelector('button:not(:disabled)')?.focus({ preventScroll: true })
+    return false
+  }
+  const handleAdd = () => ensureSize() && addToList(product, qty, options)
+  const guardWhatsApp = (e) => {
+    if (!ensureSize()) e.preventDefault()
+  }
   const inList = qtyOf(product.id)
   const jsonLd = {
     '@context': 'https://schema.org',
@@ -134,7 +162,7 @@ export default function Product() {
         />
         <div className="mt-4 grid gap-8 md:grid-cols-2 lg:gap-14">
           <div className="md:sticky md:top-24 md:self-start">
-            <ProductGallery images={product.images} name={product.name} discount={product.discountPercent} />
+            <ProductGallery images={galleryImages} name={product.name} discount={product.discountPercent} />
           </div>
 
           <div>
@@ -164,16 +192,35 @@ export default function Product() {
 
             {product.shortDescription && <p className="mt-6 text-base leading-relaxed text-ink">{product.shortDescription}</p>}
 
+            {(product.colors?.length > 0 || needsSize) && (
+              <div className="mt-6 space-y-5">
+                <ColorSwatches colors={product.colors || []} value={color} onChange={setColor} />
+                <div ref={sizeRef}>
+                  <SizeSelector
+                    sizes={product.sizes || []}
+                    unavailable={product.unavailableSizes || []}
+                    value={size}
+                    onChange={(s) => {
+                      setSize(s)
+                      setSizeError('')
+                    }}
+                    error={sizeError}
+                    hint={isShoe ? 'UK sizes' : undefined}
+                  />
+                </div>
+              </div>
+            )}
+
             <div ref={actionsRef} className="mt-6 space-y-3">
               {product.inStock ? (
                 <>
                   <div className="flex gap-3">
                     <QuantitySelector value={qty} onChange={setQty} />
-                    <m.button whileTap={{ scale: 0.97 }} type="button" onClick={() => addToList(product, qty)} className="btn-primary flex-1 py-3.5 text-base">
+                    <m.button whileTap={{ scale: 0.97 }} type="button" onClick={handleAdd} className="btn-primary flex-1 py-3.5 text-base">
                       <ShoppingBag className="h-5 w-5" aria-hidden="true" /> Add to <span className="hidden sm:inline">Enquiry</span> List
                     </m.button>
                   </div>
-                  <WhatsAppButton size="lg" className="w-full" message={message}>
+                  <WhatsAppButton size="lg" className="w-full" message={message} onClick={guardWhatsApp}>
                     Order on WhatsApp
                   </WhatsAppButton>
                   {inList > 0 && (
@@ -255,18 +302,18 @@ export default function Product() {
           >
             <div className="flex items-center gap-3">
               <div className="min-w-0 flex-1">
-                <p className="truncate text-xs text-ink-muted">{product.name}</p>
+                <p className="truncate text-xs text-ink-muted">{[size && `Size ${size}`, color].filter(Boolean).join(' · ') || product.name}</p>
                 <p className="font-bold text-navy">
                   {formatINR(product.price * qty, currency)}{' '}
                   {product.discountPercent > 0 && <span className="text-xs font-bold text-coral-600">{product.discountPercent}% off</span>}
                 </p>
               </div>
               {product.inStock && (
-                <button type="button" onClick={() => addToList(product, qty)} className="flex h-11 w-11 items-center justify-center rounded-full bg-navy text-white" aria-label="Add to enquiry list">
+                <button type="button" onClick={handleAdd} className="flex h-11 w-11 items-center justify-center rounded-full bg-navy text-white" aria-label="Add to enquiry list">
                   <ShoppingBag className="h-5 w-5" />
                 </button>
               )}
-              <WhatsAppButton message={message} className="px-4 py-2.5">
+              <WhatsAppButton message={message} onClick={guardWhatsApp} className="px-4 py-2.5">
                 {product.inStock ? 'Order' : 'Ask'}
               </WhatsAppButton>
             </div>

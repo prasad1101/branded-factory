@@ -21,7 +21,7 @@ export default function Categories() {
 
   return (
     <>
-      <Seo title="All Categories" description="Browse every category at Branded Factory: skincare, grocery, household, fragrances and more, all at bumper discounts." path="/categories" />
+      <Seo title="All Categories" description="Browse every category at Branded Factory: sneakers, clothing, bags, watches, skincare, fragrances and more, all at bumper discounts." path="/categories" />
       <section className="container-px pt-6 sm:pt-10">
         <Breadcrumbs items={[{ label: 'Home', to: '/' }, { label: 'Categories' }]} />
         <p className="eyebrow mt-4">Shop by category</p>

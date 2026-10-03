@@ -14,7 +14,7 @@ import { useEnquiry, useToast } from '../hooks/useEnquiry'
 import { buildEnquiryMessage, formatINR, getDiscount, pluralize } from '../lib/utils'
 import { byFeatured, withTag } from '../lib/data'
 
-function LineItem({ product, qty, onQty, onRemove, currency }) {
+function LineItem({ product, qty, size, color, onQty, onRemove, currency }) {
   const { savings } = getDiscount(product.mrp, product.price)
   return (
     <m.li
@@ -34,7 +34,18 @@ function LineItem({ product, qty, onQty, onRemove, currency }) {
             <Link to={`/product/${product.id}`} className="mt-0.5 line-clamp-2 text-sm font-semibold leading-snug text-navy hover:underline sm:text-base">
               {product.name}
             </Link>
-            <p className="mt-0.5 text-xs text-ink-muted">
+            {(size || color) && (
+              <p className="mt-1 flex flex-wrap gap-1.5">
+                {size && <span className="rounded-md bg-navy px-2 py-0.5 text-[11px] font-semibold text-white">Size {size}</span>}
+                {color && (
+                  <span className="inline-flex items-center gap-1 rounded-md bg-cream-100 px-2 py-0.5 text-[11px] font-semibold text-navy">
+                    <span className="h-2.5 w-2.5 rounded-full border border-black/15" style={{ backgroundColor: product.colors?.find((c) => c.name === color)?.hex }} aria-hidden="true" />
+                    {color}
+                  </span>
+                )}
+              </p>
+            )}
+            <p className="mt-1 text-xs text-ink-muted">
               {product.size && <>{product.size} · </>}
               {formatINR(product.price, currency)} each
               {product.discountPercent > 0 && <span className="ml-1 font-semibold text-coral-600">({product.discountPercent}% off)</span>}
@@ -49,7 +60,7 @@ function LineItem({ product, qty, onQty, onRemove, currency }) {
             type="button"
             onClick={onRemove}
             className="-mr-1 -mt-1 rounded-full p-2 text-ink-muted transition hover:bg-coral-50 hover:text-coral-600"
-            aria-label={`Remove ${product.name}`}
+            aria-label={`Remove ${product.name}${size ? `, size ${size}` : ""}${color ? `, ${color}` : ""}`}
           >
             <Trash2 className="h-4 w-4" />
           </button>
@@ -105,14 +116,14 @@ export default function Enquiry() {
   )
 
   const handleRemove = (line) => {
-    remove(line.id)
-    toast(`Removed ${line.product.name}`, { type: 'info', action: { label: 'Undo', onClick: () => add(line.id, line.qty) } })
+    remove(line.key)
+    toast(`Removed ${line.product.name}`, { type: 'info', action: { label: 'Undo', onClick: () => add(line.id, line.qty, { size: line.size, color: line.color }) } })
   }
 
   const handleClear = () => {
     const snapshot = items
     clear()
-    toast('Enquiry list cleared', { type: 'info', action: { label: 'Undo', onClick: () => snapshot.forEach((i) => add(i.id, i.qty)) } })
+    toast('Enquiry list cleared', { type: 'info', action: { label: 'Undo', onClick: () => snapshot.forEach((i) => add(i.id, i.qty, { size: i.size, color: i.color })) } })
   }
 
   if (status === 'loading') {
@@ -190,7 +201,7 @@ export default function Enquiry() {
             <ul className="space-y-3" aria-label="Products in your enquiry list">
               <AnimatePresence initial={false}>
                 {lines.map((l) => (
-                  <LineItem key={l.id} product={l.product} qty={l.qty} currency={currency} onQty={(q) => setQty(l.id, q)} onRemove={() => handleRemove(l)} />
+                  <LineItem key={l.key} product={l.product} qty={l.qty} size={l.size} color={l.color} currency={currency} onQty={(q) => setQty(l.key, q)} onRemove={() => handleRemove(l)} />
                 ))}
               </AnimatePresence>
             </ul>

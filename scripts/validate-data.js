@@ -207,7 +207,35 @@ if (products) {
       if (p.dateAdded !== undefined && (!/^\d{4}-\d{2}-\d{2}$/.test(p.dateAdded) || Number.isNaN(Date.parse(p.dateAdded)))) {
         err(F, where, `"dateAdded" should look like "2026-10-01" (year-month-day). Got "${p.dateAdded}".`)
       }
-      if (!p.size) warn(F, where, 'No "size" (e.g. "200 ml"). It helps customers and appears in WhatsApp orders.')
+      // Size & colour options (fashion)
+      if (p.sizes !== undefined) {
+        if (!Array.isArray(p.sizes) || p.sizes.some((s) => !isNonEmptyString(s))) err(F, where, '"sizes" should be a list of sizes in quotes, e.g. ["UK 7", "UK 8"] or ["S", "M", "L"].')
+        else if (new Set(p.sizes).size !== p.sizes.length) err(F, where, '"sizes" has the same size listed twice.')
+      }
+      if (p.unavailableSizes !== undefined) {
+        if (!Array.isArray(p.unavailableSizes)) err(F, where, '"unavailableSizes" should be a list, e.g. ["UK 11"].')
+        else p.unavailableSizes.filter((s) => !(p.sizes || []).includes(s)).forEach((s) => err(F, where, `"unavailableSizes" has "${s}", which is not in "sizes". Spelling must match exactly.`))
+        if (Array.isArray(p.sizes) && Array.isArray(p.unavailableSizes) && p.sizes.length && p.sizes.every((s) => p.unavailableSizes.includes(s)))
+          warn(F, where, 'Every size is marked unavailable. Consider setting "inStock": false instead.')
+      }
+      if (p.colors !== undefined) {
+        if (!Array.isArray(p.colors)) err(F, where, '"colors" should be a list like [{ "name": "Black", "hex": "#1F1F1F" }].')
+        else {
+          const names = new Set()
+          p.colors.forEach((col, j) => {
+            const cw = `${where} colors[${j}]`
+            if (!col || typeof col !== 'object' || !isNonEmptyString(col.name)) return err(F, cw, 'Each colour needs a "name", e.g. { "name": "Black", "hex": "#1F1F1F" }.')
+            if (names.has(col.name)) err(F, cw, `Colour "${col.name}" is listed twice.`)
+            names.add(col.name)
+            if (!/^#[0-9a-fA-F]{6}$/.test(col.hex || '')) err(F, cw, `Colour "${col.name}" needs a "hex" code like "#1F1F1F" (6 digits after #).`)
+            if (col.images !== undefined) {
+              if (!Array.isArray(col.images)) err(F, cw, '"images" for a colour should be a list of image paths.')
+              else col.images.forEach((img, k) => checkImage(F, `${cw} images[${k}]`, img))
+            }
+          })
+        }
+      }
+      if (!p.size && !(Array.isArray(p.sizes) && p.sizes.length)) warn(F, where, 'No "size" or "sizes". Add "sizes" for clothing/footwear, or "size" (e.g. "100 ml") for other items.')
       const known = ['bestseller', 'deal-of-the-day', 'new']
       ;(Array.isArray(p.tags) ? p.tags : []).forEach((t) => {
         if (typeof t !== 'string') err(F, where, 'Each tag should be text in quotes.')

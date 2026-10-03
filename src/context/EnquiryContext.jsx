@@ -8,16 +8,22 @@ const CUSTOMER_KEY = 'bf_customer_v1'
 const MAX_QTY = 99
 
 const clampQty = (q) => Math.max(1, Math.min(MAX_QTY, Math.floor(Number(q) || 1)))
+/** One line per product + size + colour, e.g. "bf-0001|UK 9|Black". */
+export const lineKey = (id, size = '', color = '') => [id, size || '', color || ''].join('|')
+
+function normalize(saved) {
+  if (!Array.isArray(saved)) return []
+  return saved
+    .filter((i) => i && i.id)
+    .map((i) => ({ key: lineKey(i.id, i.size, i.color), id: i.id, qty: clampQty(i.qty), size: i.size || '', color: i.color || '' }))
+}
 
 /**
- * The enquiry list works like a cart. Only { id, qty } is stored, so prices
- * always come from the latest products.json.
+ * The enquiry list works like a cart. Only { id, qty, size, color } is stored,
+ * so prices always come from the latest products.json.
  */
 export function EnquiryProvider({ children }) {
-  const [items, setItems] = useState(() => {
-    const saved = readStorage(ITEMS_KEY, [])
-    return Array.isArray(saved) ? saved.filter((i) => i && i.id).map((i) => ({ id: i.id, qty: clampQty(i.qty) })) : []
-  })
+  const [items, setItems] = useState(() => normalize(readStorage(ITEMS_KEY, [])))
   const [customer, setCustomer] = useState(() => readStorage(CUSTOMER_KEY, { name: '', location: '', notes: '' }))
 
   useEffect(() => writeStorage(ITEMS_KEY, items), [items])
@@ -26,25 +32,29 @@ export function EnquiryProvider({ children }) {
   // Keep multiple tabs in sync
   useEffect(() => {
     const onStorage = (e) => {
-      if (e.key === ITEMS_KEY) setItems(readStorage(ITEMS_KEY, []))
+      if (e.key === ITEMS_KEY) setItems(normalize(readStorage(ITEMS_KEY, [])))
     }
     window.addEventListener('storage', onStorage)
     return () => window.removeEventListener('storage', onStorage)
   }, [])
 
-  const add = useCallback((id, qty = 1) => {
+  /** add(id, qty, { size, color }) */
+  const add = useCallback((id, qty = 1, options = {}) => {
+    const size = options.size || ''
+    const color = options.color || ''
+    const key = lineKey(id, size, color)
     setItems((prev) => {
-      const existing = prev.find((i) => i.id === id)
-      if (existing) return prev.map((i) => (i.id === id ? { ...i, qty: clampQty(i.qty + qty) } : i))
-      return [...prev, { id, qty: clampQty(qty) }]
+      const existing = prev.find((i) => i.key === key)
+      if (existing) return prev.map((i) => (i.key === key ? { ...i, qty: clampQty(i.qty + qty) } : i))
+      return [...prev, { key, id, qty: clampQty(qty), size, color }]
     })
   }, [])
 
-  const setQty = useCallback((id, qty) => {
-    setItems((prev) => prev.map((i) => (i.id === id ? { ...i, qty: clampQty(qty) } : i)))
+  const setQty = useCallback((key, qty) => {
+    setItems((prev) => prev.map((i) => (i.key === key ? { ...i, qty: clampQty(qty) } : i)))
   }, [])
 
-  const remove = useCallback((id) => setItems((prev) => prev.filter((i) => i.id !== id)), [])
+  const remove = useCallback((key) => setItems((prev) => prev.filter((i) => i.key !== key)), [])
   const clear = useCallback(() => setItems([]), [])
   const updateCustomer = useCallback((patch) => setCustomer((c) => ({ ...c, ...patch })), [])
 
@@ -53,7 +63,7 @@ export function EnquiryProvider({ children }) {
       items,
       count: items.reduce((n, i) => n + i.qty, 0),
       has: (id) => items.some((i) => i.id === id),
-      qtyOf: (id) => items.find((i) => i.id === id)?.qty || 0,
+      qtyOf: (id) => items.filter((i) => i.id === id).reduce((n, i) => n + i.qty, 0),
       add,
       setQty,
       remove,

@@ -3,7 +3,7 @@
 Read this file and `PROGRESS.md` at the start of every session, then continue from where the last session stopped.
 
 ## Project summary
-**Branded Factory** is a premium online supermart storefront (branded skincare, household, grocery, etc.).
+**Branded Factory** is a premium online store for **original branded fashion**: sneakers, sports shoes, slides, men's/women's clothing, activewear, bags, watches, accessories, skincare and fragrances (Nike, Adidas, Puma…). No grocery/household items (owner decision, 2026-10-03).
 Brand promise: **Bumper Discounts · Assured Savings · Greatest Deals**. The UI should feel like a luxury retailer having a sale: premium and trustworthy, with discounts loud and clear.
 
 - No backend, no payment gateway. Customers build an **enquiry list** (cart replacement) and send it via **WhatsApp**.
@@ -63,7 +63,9 @@ Shared component classes in `src/index.css`: `container-px`, `btn-primary`, `btn
 
 **categories.json**: `[{ id, name, image, description, featured, order }]` (`featured: true` = show a showcase row on the home page)
 
-**products.json**: `[{ id, name, brand, category, subcategory, mrp, price, size, images[], shortDescription, description, highlights[], tags[], inStock, featured, rating, dateAdded }]`
+**products.json**: `[{ id, name, brand, category, subcategory, mrp, price, size?, sizes?[], unavailableSizes?[], colors?[{name, hex, images?[]}], images[], shortDescription, description, highlights[], tags[], inStock, featured, rating, dateAdded }]`
+- `sizes` (clothing/footwear) must be chosen before Add/Order; `size` is a fixed pack size (e.g. "100 ml"). `unavailableSizes` ⊆ `sizes` are shown sold out. `colors[0]` is the default; a colour's optional `images` replace the gallery.
+- Enquiry lines are keyed by `id|size|color` (`lineKey()` in EnquiryContext); WhatsApp lines read `Brand Name (Size UK 9, Black) × 1 — ₹6,497`.
 - Tags with special meaning: `bestseller`, `deal-of-the-day`, `new`.
 - `discountPercent` and `savings` are **computed** in `src/lib/data.js` (`enrichProduct`) via `utils.getDiscount()`. Never stored in JSON.
 

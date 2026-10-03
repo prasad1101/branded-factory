@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 700" width="1600" height="700" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Iconic Sneakers, Bumper Prices">
+  <defs>
+    <linearGradient id="bgb" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0F1B2D"/><stop offset="1" stop-color="#1C2B43"/></linearGradient>
+    <radialGradient id="glow" cx="72%" cy="45%" r="45%"><stop offset="0" stop-color="#C9A24B" stop-opacity=".45"/><stop offset="1" stop-color="#C9A24B" stop-opacity="0"/></radialGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#E8CF8D"/><stop offset="1" stop-color="#A9843A"/></linearGradient>
+    <linearGradient id="ink" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0F1B2D"/><stop offset="1" stop-color="#0F1B2D"/></linearGradient>
+    <radialGradient id="shadow"><stop offset="0" stop-color="#000" stop-opacity=".45"/><stop offset="1" stop-color="#000" stop-opacity="0"/></radialGradient>
+  </defs>
+  <rect width="1600" height="700" fill="url(#bgb)"/>
+  <rect width="1600" height="700" fill="url(#glow)"/>
+  <circle cx="1180" cy="360" r="300" fill="none" stroke="#C9A24B" stroke-opacity=".25" stroke-width="1.5"/>
+  <circle cx="1180" cy="360" r="240" fill="none" stroke="#C9A24B" stroke-opacity=".15" stroke-width="1"/>
+  <ellipse cx="1180" cy="620" rx="420" ry="40" fill="url(#shadow)"/>
+  <g transform="translate(930 420) scale(0.6)"><defs>
+      <linearGradient id="b1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f5f5f4"/><stop offset="1" stop-color="#d7d7d5"/></linearGradient>
+      <linearGradient id="d1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#868685"/><stop offset="1" stop-color="#626261"/></linearGradient>
+    </defs><g transform="translate(-15 10) scale(1.35)">
+        <path d="M-200,40 C-200,-10 -170,-40 -120,-50 L-60,-60 C-30,-110 30,-130 70,-120 L110,-80 C150,-60 200,-40 225,0 C240,25 235,45 225,55 L-195,55 C-205,55 -205,45 -200,40Z" fill="url(#b1)" stroke="#00000022" stroke-width="2"/>
+        <path d="M-205,50 L232,50 C238,70 228,85 210,85 L-185,85 C-205,85 -212,70 -205,50Z" fill="#FFFDF8" stroke="#00000022" stroke-width="2"/>
+        <path d="M-205,72 L230,72" stroke="url(#d1)" stroke-width="4" opacity=".35"/>
+        <path d="M-120,-10 C-40,-30 60,-30 170,10" fill="none" stroke="url(#d1)" stroke-width="16" stroke-linecap="round" opacity=".55"/>
+        <path d="M-40,-75 L40,-95 M-30,-55 L50,-75 M-20,-35 L60,-55" stroke="#FFFDF8" stroke-width="6" stroke-linecap="round" opacity=".9"/>
+        <path d="M70,-120 L110,-80" stroke="url(#d1)" stroke-width="10" stroke-linecap="round" opacity=".5"/>
+        <rect x="-175" y="-5" width="50" height="24" rx="4" fill="#FFFDF8" opacity=".92"/><text x="-150" y="12" text-anchor="middle" font-family="Georgia, serif" font-size="14" font-weight="700" fill="url(#ink)">A</text>
+      </g></g>
+<g transform="translate(1420 420) scale(0.6)"><defs>
+      <linearGradient id="b2" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#cf4b53"/><stop offset="1" stop-color="#b02d34"/></linearGradient>
+      <linearGradient id="d2" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#6e1c20"/><stop offset="1" stop-color="#501418"/></linearGradient>
+    </defs><g transform="translate(-15 10) scale(1.35)">
+        <path d="M-200,40 C-200,-10 -170,-40 -120,-50 L-60,-60 C-30,-110 30,-130 70,-120 L110,-80 C150,-60 200,-40 225,0 C240,25 235,45 225,55 L-195,55 C-205,55 -205,45 -200,40Z" fill="url(#b2)"/>
+        <path d="M-205,50 L232,50 C238,70 228,85 210,85 L-185,85 C-205,85 -212,70 -205,50Z" fill="#FFFDF8" stroke="#00000022" stroke-width="2"/>
+        <path d="M-205,72 L230,72" stroke="url(#d2)" stroke-width="4" opacity=".35"/>
+        <path d="M-120,-10 C-40,-30 60,-30 170,10" fill="none" stroke="url(#d2)" stroke-width="16" stroke-linecap="round" opacity=".55"/>
+        <path d="M-40,-75 L40,-95 M-30,-55 L50,-75 M-20,-35 L60,-55" stroke="#FFFDF8" stroke-width="6" stroke-linecap="round" opacity=".9"/>
+        <path d="M70,-120 L110,-80" stroke="url(#d2)" stroke-width="10" stroke-linecap="round" opacity=".5"/>
+        <rect x="-175" y="-5" width="50" height="24" rx="4" fill="#FFFDF8" opacity=".92"/><text x="-150" y="12" text-anchor="middle" font-family="Georgia, serif" font-size="14" font-weight="700" fill="url(#ink)">P</text>
+      </g></g>
+<g transform="translate(1180 360) scale(0.85)"><defs>
+      <linearGradient id="b0" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#3a3a3a"/><stop offset="1" stop-color="#1b1b1b"/></linearGradient>
+      <linearGradient id="d0" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#111111"/><stop offset="1" stop-color="#0c0c0c"/></linearGradient>
+    </defs><g transform="translate(-15 10) scale(1.35)">
+        <path d="M-200,40 C-200,-10 -170,-40 -120,-50 L-60,-60 C-30,-110 30,-130 70,-120 L110,-80 C150,-60 200,-40 225,0 C240,25 235,45 225,55 L-195,55 C-205,55 -205,45 -200,40Z" fill="url(#b0)"/>
+        <path d="M-205,50 L232,50 C238,70 228,85 210,85 L-185,85 C-205,85 -212,70 -205,50Z" fill="#FFFDF8" stroke="#00000022" stroke-width="2"/>
+        <path d="M-205,72 L230,72" stroke="url(#d0)" stroke-width="4" opacity=".35"/>
+        <path d="M-120,-10 C-40,-30 60,-30 170,10" fill="none" stroke="url(#d0)" stroke-width="16" stroke-linecap="round" opacity=".55"/>
+        <path d="M-40,-75 L40,-95 M-30,-55 L50,-75 M-20,-35 L60,-55" stroke="#FFFDF8" stroke-width="6" stroke-linecap="round" opacity=".9"/>
+        <path d="M70,-120 L110,-80" stroke="url(#d0)" stroke-width="10" stroke-linecap="round" opacity=".5"/>
+        <rect x="-175" y="-5" width="50" height="24" rx="4" fill="#FFFDF8" opacity=".92"/><text x="-150" y="12" text-anchor="middle" font-family="Georgia, serif" font-size="14" font-weight="700" fill="url(#ink)">N</text>
+      </g></g>
+</svg>

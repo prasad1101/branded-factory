@@ -78,6 +78,50 @@ export default function FilterPanel({ filters, facets, update, toggle, showSubca
         </Section>
       )}
 
+      {facets.sizes.length > 0 && (
+        <Section title="Size">
+          <div className="flex flex-wrap gap-2">
+            {facets.sizes.map(([name]) => {
+              const active = filters.size.includes(name)
+              return (
+                <button
+                  key={name}
+                  type="button"
+                  aria-pressed={active}
+                  onClick={() => toggle('size', name)}
+                  className={cn('min-w-11 rounded-lg border px-2.5 py-1.5 text-xs font-semibold transition', active ? 'border-navy bg-navy text-white' : 'border-navy/15 bg-white text-navy hover:border-navy/40')}
+                >
+                  {name}
+                </button>
+              )
+            })}
+          </div>
+        </Section>
+      )}
+
+      {facets.colors.length > 1 && (
+        <Section title="Colour">
+          <div className="flex flex-wrap gap-2">
+            {facets.colors.map(([name, count, hex]) => {
+              const active = filters.color.includes(name)
+              return (
+                <button
+                  key={name}
+                  type="button"
+                  aria-pressed={active}
+                  onClick={() => toggle('color', name)}
+                  className={cn('inline-flex items-center gap-1.5 rounded-full border py-1 pl-1 pr-2.5 text-xs font-semibold transition', active ? 'border-navy bg-navy text-white' : 'border-navy/15 bg-white text-navy hover:border-navy/40')}
+                >
+                  <span className="h-4 w-4 rounded-full border border-black/15" style={{ backgroundColor: hex }} aria-hidden="true" />
+                  {name}
+                  <span className={active ? 'text-white/70' : 'text-ink-muted'}>{count}</span>
+                </button>
+              )
+            })}
+          </div>
+        </Section>
+      )}
+
       {facets.brands.length > 1 && (
         <Section title="Brand">
           {brands.map(([name, count]) => (

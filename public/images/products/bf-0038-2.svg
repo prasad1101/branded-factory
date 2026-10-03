@@ -1,24 +1,23 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" width="800" height="800" role="img" aria-label="Baby Massage Oil with Almond">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" width="800" height="800" role="img" aria-label="Polarised Aviator Sunglasses">
   <defs>
     <radialGradient id="bg" cx="50%" cy="38%" r="75%">
-      <stop offset="0" stop-color="#DEE1F6"/>
-      <stop offset=".55" stop-color="#DEE1F6"/>
-      <stop offset="1" stop-color="#A9B3EA" stop-opacity="0.55"/>
+      <stop offset="0" stop-color="#F2F0EC"/>
+      <stop offset=".6" stop-color="#E2DDD3"/>
+      <stop offset="1" stop-color="#d0cbc2"/>
     </radialGradient>
-    <linearGradient id="body" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#A9B3EA"/><stop offset="1" stop-color="#7D89D4"/></linearGradient>
+    <linearGradient id="b" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#3a3a3a"/><stop offset="1" stop-color="#1b1b1b"/></linearGradient>
+    <linearGradient id="d" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#111111"/><stop offset="1" stop-color="#0c0c0c"/></linearGradient>
     <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#E8CF8D"/><stop offset="1" stop-color="#A9843A"/></linearGradient>
-    <linearGradient id="ink" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3A4593"/><stop offset="1" stop-color="#3A4593"/></linearGradient>
-    <radialGradient id="shadow"><stop offset="0" stop-color="#3A4593" stop-opacity=".35"/><stop offset="1" stop-color="#3A4593" stop-opacity="0"/></radialGradient>
+    <linearGradient id="ink" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2A2622"/><stop offset="1" stop-color="#2A2622"/></linearGradient>
+    <radialGradient id="shadow"><stop offset="0" stop-color="#2A2622" stop-opacity=".3"/><stop offset="1" stop-color="#2A2622" stop-opacity="0"/></radialGradient>
   </defs>
   <rect width="800" height="800" fill="url(#bg)"/>
-  <circle cx="640" cy="170" r="70" fill="#fff" opacity=".35"/><circle cx="160" cy="640" r="110" fill="#fff" opacity=".22"/>
-       <text x="60" y="730" font-family="Georgia, serif" font-size="22" font-style="italic" fill="#3A4593" opacity=".7">200 ml</text>
-  <ellipse cx="430" cy="660" rx="240" ry="34" fill="url(#shadow)"/>
-  <g transform="translate(430 420) rotate(-8) scale(.95)"><rect x="-26" y="-215" width="52" height="70" rx="22" fill="#2B2B2B"/>
-        <rect x="-40" y="-150" width="80" height="40" rx="6" fill="url(#gold)"/>
-        <rect x="-95" y="-115" width="190" height="320" rx="34" fill="url(#body)"/><rect x="-75" y="-95" width="14" height="260" rx="7" fill="#fff" opacity=".28"/>
-    <rect x="-75" y="-10" width="150" height="130" rx="10" fill="#FFFDF8" opacity=".95"/>
-    <text x="0" y="59" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="46" font-weight="700" fill="url(#ink)">TT</text>
-    <text x="0" y="85" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="10" letter-spacing="1.5" fill="url(#ink)" opacity=".75">TENDER TOUCH</text>
-    <line x1="-53" x2="53" y1="8" y2="8" stroke="url(#ink)" stroke-width="1" opacity=".3"/></g>
+  <circle cx="650" cy="160" r="70" fill="#fff" opacity=".35"/><circle cx="150" cy="650" r="110" fill="#fff" opacity=".22"/>
+  <ellipse cx="400" cy="640" rx="260" ry="34" fill="url(#shadow)"/>
+  <g transform="translate(410 400) rotate(-6) scale(.92)"><g transform="translate(0 10) scale(1.2)">
+        <path d="M-200,-60 L200,-60" stroke="url(#b)" stroke-width="10"/>
+        <path d="M-185,-60 L-15,-60 C-15,40 -50,70 -100,70 C-150,70 -185,40 -185,-60Z" fill="url(#d)" stroke="url(#b)" stroke-width="10"/><path d="M-155,-40 L-120,-40 L-150,20Z" fill="#fff" opacity=".25"/><path d="M15,-60 L185,-60 C185,40 150,70 100,70 C50,70 15,40 15,-60Z" fill="url(#d)" stroke="url(#b)" stroke-width="10"/><path d="M45,-40 L80,-40 L50,20Z" fill="#fff" opacity=".25"/>
+        <path d="M-15,-50 C-5,-70 5,-70 15,-50" fill="none" stroke="url(#b)" stroke-width="10"/>
+        <rect x="-25" y="100" width="50" height="24" rx="4" fill="#FFFDF8" opacity=".92"/><text x="0" y="117" text-anchor="middle" font-family="Georgia, serif" font-size="14" font-weight="700" fill="url(#ink)">F</text>
+      </g></g>
 </svg>
