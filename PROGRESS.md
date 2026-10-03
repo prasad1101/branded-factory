@@ -20,15 +20,15 @@
 - [x] 9. SEO, performance and accessibility pass (2026-10-03)
 - [x] 10. Data validation script, GitHub Actions deployment, `.nojekyll` (2026-10-03)
 - [x] 11. Owner README (2026-10-03)
-- [ ] 12. Final QA: build, test all routes, WhatsApp links and mobile layouts
+- [x] 12. Final QA: build, test all routes, WhatsApp links and mobile layouts (2026-10-03)
 
 ## Current status
-Owner README complete (editing on github.com, product template + field guide, images and naming, categories, banners/announcements/WhatsApp/contact, FAQ/About, how deploys and validation errors work, Pages setup, custom domain, local dev, pre-launch checklist). First CI run: validation ✓ and build ✓ on GitHub; "Configure GitHub Pages" failed because Pages is not enabled yet (needs Settings → Pages → Source: GitHub Actions). Next up: final QA.
+All 12 milestones done. QA: 18 routes × 360/768/1024/1440 with no console errors, no horizontal overflow, no broken images, one h1 per page; every WhatsApp link uses 917218150034; keyboard (skip link, mega-menu Enter/Escape, search suggestions with arrow keys), mobile drawer/bottom nav, refresh on filtered deep links and Back button all verified. GitHub Pages is not enabled yet (owner action). The owner has said they will sell **fashion** (clothes and shoes from brands like Puma, Nike, Adidas), so the catalog and data model are being adapted next.
 
 ## Next steps
-1. Final QA: every route at 360/768/1024/1440, WhatsApp links, keyboard nav, dev server
-2. Owner enables Pages (Settings → Pages → Source: GitHub Actions) and re-runs the workflow
-3. Verify https://prasad1101.github.io/branded-factory/ loads
+1. Owner: Settings → Pages → Source: GitHub Actions, then re-run the workflow
+2. Adapt catalog to fashion (categories, size/colour options, WhatsApp message with chosen size)
+3. Verify the live URL
 
 ## Decisions log
 - 2026-10-03: Using **HashRouter** because GitHub Pages has no server-side routing (deep links/refresh would 404).
@@ -55,6 +55,7 @@ Owner README complete (editing on github.com, product template + field guide, im
 - Owner to fill in: business address, email, social links, real product photos, FAQ answers marked `[EDIT: ...]` (payment options, delivery areas/time/charges, returns), About copy.
 
 ## Changelog
+- 2026-10-03: Final QA pass; not-found states now have an h1.
 - 2026-10-03: Owner README.
 - 2026-10-03: Data validator (`scripts/validate-data.js`) with GitHub Actions annotations; deploy workflow (checkout v7, setup-node v7, configure-pages v6, upload-pages-artifact v5, deploy-pages v5, Node 22).
 - 2026-10-03: Performance/a11y pass: PNG icons + OG image, non-blocking fonts, early JSON fetch + route chunk modulepreload + LCP image preload from index.html, LazyMotion (main bundle 102→~60 KB gz), lazy Fuse.js, `<Deferred>` sections, single-SVG rating stars (DOM −40%), no first-paint entrance animations, blur-free placeholder SVGs, AA contrast for WhatsApp teal (#0F7C70), heading order, label/target-size fixes.

@@ -20,7 +20,7 @@ export default function Category() {
     return (
       <div className="container-px py-12">
         <Seo title="Category not found" />
-        <EmptyState title="We couldn’t find that category" message="It may have been renamed or removed. Try one of these instead." />
+        <EmptyState as="h1" title="We couldn’t find that category" message="It may have been renamed or removed. Try one of these instead." />
       </div>
     )
   }

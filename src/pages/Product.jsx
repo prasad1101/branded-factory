@@ -87,7 +87,7 @@ export default function Product() {
     return (
       <div className="container-px py-12">
         <Seo title="Product not found" />
-        <EmptyState title="This product isn’t available" message="It may have been removed or the link is incorrect. Explore similar categories below." />
+        <EmptyState as="h1" title="This product isn’t available" message="It may have been removed or the link is incorrect. Explore similar categories below." />
       </div>
     )
   }
